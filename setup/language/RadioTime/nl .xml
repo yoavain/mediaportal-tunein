@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- RadioTime translation file -->
+<!-- Dutch -->
+<!-- Note: English is the fallback for any strings not found in other languages -->
+<strings>
+
+     <!-- A  -->
+    <string Field="AddToFavorites">Toevoegen aan favorieten</string>
+    
+    <!-- C  -->
+    <string Field="ComunicationError">Communicatiefout of foute gebruikersnaam of wachtwoord</string>
+    
+    <!-- D  -->
+
+
+    <!-- E  -->
+    <string Field="PlayError">Fout tijdens het afspelen van {0}</string>
+
+    <!-- F  -->
+ 
+    <!-- G  -->
+    <string Field="Genres">Genres</string>
+
+
+    <!-- H  -->
+    <string Field="Home">Home</string>
+
+    <!-- I  -->
+
+    <!-- L  -->
+
+    <!-- M  -->
+    <string Field="Message">Bericht</string>
+
+    <!-- N  -->
+    <string Field="NowPlaying">Nu afspelen</string>
+
+    <!-- O  -->
+
+    <!-- P  -->
+    <string Field="Presets">Mijn presets</string>
+
+    <!-- R  -->
+    <string Field="RemoveFromFavorites">Verwijderen uit favorieten</string>
+    <string Field="Random">Willekeurig afspelen</string>
+
+    <!-- S  -->
+    <string Field="Search">Zoeken</string>
+    <string Field="SearchArtist">Zoek artiest</string>
+    <string Field="SortByBitrate">Sorteren op bitrate</string>
+    <string Field="SortByName">Sorteren op naam</string>
+    <string Field="Sorting">Sorteren</string>
+    <string Field="ShowGiuide">Toon gids</string>
+    <string Field="StationNotAvaiable">Het station is niet beschikbaar</string>
+    <string Field="SimilarStations">Soortgelijke stations</string>    
+
+    <!-- T -->
+
+
+    <!-- U -->
+    <string Field="UseWebInterfaceToEditFavorites">Gebruik webinterface om favorieten aan te passen</string>
+    
+    <!-- V -->
+
+    <!-- W -->
+
+    <!-- Y -->
+</strings>

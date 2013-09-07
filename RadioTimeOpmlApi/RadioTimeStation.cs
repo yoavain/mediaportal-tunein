@@ -1,0 +1,174 @@
+﻿using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Text;
+using System.Net;
+using System.Xml;
+
+namespace RadioTimeOpmlApi
+{
+  public class RadioTimeStation: ICloneable
+  {
+    object ICloneable.Clone()
+    {
+      return this.Clone();
+    }
+
+    public RadioTimeStation Clone()
+    {
+      RadioTimeStation returnStation = (RadioTimeStation)this.MemberwiseClone();
+      return returnStation;
+    }
+
+    
+    public RadioTimeStation()
+    {
+      Genres = new List<RadioTimeOutline>();
+      Similar = new List<RadioTimeOutline>();
+    }
+
+    public string GuideId { get; set; }
+    public RadioTime Grabber { get; set; }
+    public List<RadioTimeOutline> Genres { get; set; }
+    public List<RadioTimeOutline> Similar { get; set; }
+
+    public string Name { get; set; }
+    public bool IsPreset { get; set; }
+    public bool IsAvailable { get; set; }
+    public bool HasSchedule { get; set; }
+    public string Language { get; set; }
+    public string Logo { get; set; }
+    public string Location { get; set; }
+    public string Frequency { get; set; }
+    public string Slogan { get; set; }
+    public string Adresss { get; set; }
+
+    public void Get(string guideid)
+    {
+      if (string.IsNullOrEmpty(guideid))
+        return;
+
+      GuideId = guideid;
+      string sUrl = string.Format("http://opml.radiotime.com/Describe.ashx?id={0}&detail=genre,recommendation&{1}", GuideId, Grabber.Settings.GetParamString());
+      
+      //Log.Debug("Get Station " + sUrl);
+      IsAvailable = false;
+      if(string.IsNullOrEmpty(GuideId))
+        return;
+      IsAvailable = true;
+      Stream response = RetrieveData(sUrl);
+      if (response != null)
+      {
+        Genres.Clear();
+        Similar.Clear();
+        StreamReader reader = new StreamReader(response, Encoding.UTF8, true);
+        String sXmlData = reader.ReadToEnd().Replace('\0', ' ');
+        response.Close();
+        reader.Close();
+        try
+        {
+          XmlDocument doc = new XmlDocument();
+          doc.LoadXml(sXmlData);
+          // skip xml node
+          XmlNode root = doc.FirstChild.NextSibling;
+          XmlNode bodynodes = root.SelectSingleNode("body");
+          int i = 0;
+          foreach (XmlNode node in bodynodes)
+          {
+            switch (i)
+            {
+              case 0:
+                foreach (XmlNode childNode in node.ChildNodes[0].ChildNodes)
+                {
+                  switch (childNode.Name.ToLower())
+                  {
+                    case "name":
+                      Name = childNode.InnerText;
+                      break;
+                    case "language":
+                      Language = childNode.InnerText;
+                      break;
+                    case "frequency":
+                      Frequency = childNode.InnerText;
+                      break;
+                    case "slogan":
+                      Slogan = childNode.InnerText;
+                      break;
+                    case "logo":
+                      Logo = childNode.InnerText;
+                      break;
+                    case "location":
+                      Location = childNode.InnerText;
+                      break;
+                    case "is_preset":
+                      IsPreset = childNode.InnerText == "false" ? false : true;
+                      break;
+                    case "is_available":
+                      IsAvailable = childNode.InnerText == "false" ? false : true;
+                      break;
+                    case "has_schedule":
+                      HasSchedule = childNode.InnerText == "false" ? false : true;
+                      break;
+                  }
+
+                }
+                break;
+              case 1:
+                foreach (XmlNode childNode in node.ChildNodes)
+                {
+                  Genres.Add(new RadioTimeOutline(childNode));
+                }
+                break;
+              case 2:
+                foreach (XmlNode childNode in node.ChildNodes)
+                {
+                  Similar.Add(new RadioTimeOutline(childNode));
+                }
+                break;
+            }
+ 
+            i++;
+          }
+        }
+        catch (Exception)
+        {
+        }
+        Slogan = string.IsNullOrEmpty(Slogan) ? " " : Slogan;
+        Language = string.IsNullOrEmpty(Language) ? " " : Language;
+      }
+    }
+
+    private System.IO.Stream RetrieveData(String sUrl)
+    {
+      if (string.IsNullOrEmpty(sUrl) || sUrl[0] == '/')
+      {
+        return null;
+      }
+      HttpWebRequest request = null;
+      HttpWebResponse response = null;
+      try
+      {
+        request = (HttpWebRequest)WebRequest.Create(sUrl);
+        // Note: some network proxies require the useragent string to be set or they will deny the http request
+        // this is true for instance for EVERY thailand internet connection (also needs to be set for banners/episodethumbs and any other http request we send)
+        //request.UserAgent = Settings.UserAgent;
+        request.Timeout = 20000;
+        response = (HttpWebResponse)request.GetResponse();
+
+        if (response != null) // Get the stream associated with the response.
+          return response.GetResponseStream();
+
+      }
+      catch (Exception)
+      {
+        // can't connect, timeout, etc
+      }
+      finally
+      {
+        //if (response != null) response.Close(); // screws up the decompression
+      }
+
+      return null;
+    }      
+  }
+}

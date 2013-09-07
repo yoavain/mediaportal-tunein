@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+    <id>25652</id>
+    <defaultcontrol>155</defaultcontrol>
+    <allowoverlay>no</allowoverlay>	
+    <define>#usePlayFanart:Yes</define>
+    <controls>
+    <control>
+      <type>image</type>
+      <description>BG</description>
+      <id>1</id>
+      <texture>Background.png</texture>
+      <width>1280</width>
+      <height>720</height>
+    </control>
+	<import>common.window.xml</import>
+	<import>common.music.play.fanart.xml</import>
+        <import>common.time.xml</import>
+        <control>
+            <type>label</type>
+            <description>Header Label</description>
+            <id>1</id>
+            <posX>60</posX>
+            <posY>27</posY>
+            <label>Radio Time</label>
+            <font>font16</font>
+            <align>left</align>
+            <textcolor>White</textcolor>
+        </control>        
+        <control>
+            <id>112</id>
+            <description>album art image</description>
+            <type>image</type>
+            <posX>914</posX>
+            <posY>180</posY>
+            <width>330</width>
+            <height>250</height>            
+            <texture>#RadioTime.Play.Image</texture>            
+            <keepaspectratio>yes</keepaspectratio>
+            <centered>yes</centered>
+            <animation effect="fade" time="70" reversible="false">visible</animation>
+        </control>
+        <control>
+            <type>image</type>
+            <id>1</id>
+            <posX>914</posX>
+            <posY>180</posY>
+            <width>338</width>
+            <height>250</height>            
+            <texture mask="Picturethumbmask.png">Picturethumbframe.png</texture>            
+            <animation effect="fade" time="70" reversible="false">visible</animation>
+        </control>
+        <control>
+            <id>0</id>
+            <description>Title label</description>
+            <type>fadelabel</type>
+            <posX>60</posX>
+            <posY>343</posY>
+            <width>460</width>
+            <height>30</height>
+            <font>font14</font>            
+            <label>#RadioTime.Play.Language</label>
+            <animation effect="fade" time="70" reversible="false">visible</animation>
+        </control>
+        <control>
+            <id>0</id>
+            <description>Artist label</description>
+            <type>fadelabel</type>
+            <posX>60</posX>
+            <posY>222</posY>
+            <width>460</width>
+            <height>28</height>
+            <font>font14</font>
+            <label>#RadioTime.Play.Description</label>
+            <animation effect="fade" time="70" reversible="false">visible</animation>
+        </control>
+        <control>
+            <id>0</id>
+            <description>Artist label</description>
+            <type>fadelabel</type>
+            <posX>60</posX>
+            <posY>180</posY>
+            <width>460</width>
+            <height>28</height>
+            <font>font16</font>
+            <label>#RadioTime.Play.Station</label>
+            <animation effect="fade" time="70" reversible="false">visible</animation>
+        </control>
+        <control>
+            <id>0</id>
+            <description>track label</description>
+            <type>fadelabel</type>
+            <posX>60</posX>
+            <posY>301</posY>
+            <width>460</width>
+            <height>28</height>
+            <font>font14</font>
+            <label>#RadioTime.Play.Slogan</label>
+            <animation effect="fade" time="70" reversible="false">visible</animation>
+        </control>
+        <control>
+            <id>0</id>
+            <description>track label</description>
+            <type>fadelabel</type>
+            <posX>60</posX>
+            <posY>262</posY>
+            <width>460</width>
+            <height>28</height>
+            <font>font14</font>
+            <label>#RadioTime.Play.Location</label>
+            <animation effect="fade" time="70" reversible="false">visible</animation>
+        </control>
+        <control>
+            <id>0</id>
+            <description>track label</description>
+            <type>fadelabel</type>
+            <posX>60</posX>
+            <posY>383</posY>
+            <width>460</width>
+            <height>28</height>
+            <font>font14</font>
+            <label>#Play.Current.Artist</label>
+            <animation effect="fade" time="70" reversible="false">visible</animation>
+        </control>
+        <control>
+            <id>0</id>
+            <description>track label</description>
+            <type>fadelabel</type>
+            <posX>60</posX>
+            <posY>423</posY>
+            <width>460</width>
+            <height>28</height>
+            <font>font14</font>
+            <label>#Play.Current.Title</label>
+            <animation effect="fade" time="70" reversible="false">visible</animation>            
+        </control>
+        <control>
+            <description>play logo</description>
+            <type>image</type>
+            <id>1</id>
+            <posX>1000</posX>
+            <posY>435</posY>
+            <width>52</width>
+            <height>52</height>
+            <align>LEFT</align> 
+            <texture>play_enabled.png</texture>
+            <animation effect="fade" time="70" reversible="false">visible</animation> 
+        </control>        
+        <control>
+            <id>0</id>
+            <description>track progress label</description>
+            <type>label</type>
+            <visible>player.hasmedia</visible>
+            <posX>1075</posX>
+            <posY>439</posY>
+            <font>font16</font>
+            <textcolor>ffa9d0f7</textcolor>
+            <align>LEFT</align>
+            <label>#currentplaytime</label>            
+        </control>        
+        <control>
+            <id>166</id>
+            <description>list genres</description>
+            <type>listcontrol</type>
+            <onright>155</onright>
+            <ondown>155</ondown>
+            <posX>60</posX>
+            <posY>545</posY>
+            <width>350</width>
+            <height>168</height>
+            <font>font11</font>
+            <textXOff>-30</textXOff>
+            <textXOff3>10</textXOff3>
+            <IconXOff>1980</IconXOff>
+            <spinWidth>46</spinWidth>
+	    <spinHeight>33</spinHeight>
+	    <spinPosX>1170</spinPosX>
+	    <spinPosY>670</spinPosY>
+	    <spinAlign>Right</spinAlign>
+	    <spinColor>ffffffff</spinColor>
+	    <spinCanFocus>no</spinCanFocus>
+        </control>
+        <control>
+            <id>155</id>
+            <description>list similar</description>
+            <type>listcontrol</type>
+            <onleft>166</onleft>
+            <onup>166</onup>
+            <posX>714</posX>
+            <posY>545</posY>
+            <width>533</width>
+            <height>168</height>
+            <font>font11</font>
+            <textXOff>-30</textXOff>
+            <textXOff3>10</textXOff3>
+            <IconXOff>1980</IconXOff>
+            <spinWidth>46</spinWidth>
+	    <spinHeight>33</spinHeight>
+	    <spinPosX>1170</spinPosX>
+	    <spinPosY>670</spinPosY>
+	    <spinAlign>Right</spinAlign>
+	    <spinColor>ffffffff</spinColor>
+	    <spinCanFocus>no</spinCanFocus>
+        </control>
+        <control>
+            <id>29</id>
+            <description>Genres</description>
+            <type>fadelabel</type>
+            <posX>60</posX>
+            <posY>515</posY>
+            <width>300</width>
+            <font>font11</font>
+            <textcolor>ffa9d0f7</textcolor>
+            <label>#RadioTime.Translation.Genres.Label</label>
+        </control>
+        <control>
+            <id>28</id>
+            <description>similar stations</description>
+            <type>fadelabel</type>
+            <posX>714</posX>
+            <posY>515</posY>
+            <width>300</width>
+            <font>font11</font>
+            <textcolor>ffa9d0f7</textcolor>      
+            <label>#RadioTime.Translation.SimilarStations.Label</label>
+        </control>
+        <control>
+            <type>fadelabel</type>
+            <posX>531</posX>
+            <posY>35</posY>
+            <width>711</width>
+        </control>
+    </controls>
+</window>

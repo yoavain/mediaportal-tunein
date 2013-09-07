@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- RadioTime translation file by NickYat -->
+<!-- Russian (RU). Copy it to (XP) C:\Documents and Settings\All Users\Application Data\Team MediaPortal\MediaPortal\Language\RadioTime -->
+<!-- Note: English is the fallback for any strings not found in other languages -->
+<strings>
+
+     <!-- A  -->
+    <string Field="AddToFavorites">Добавить в Избранное</string>
+    
+    <!-- C  -->
+    <string Field="ComunicationError">Ошибка связи или неверный логин пароль</string>
+    
+    <!-- D  -->
+
+
+    <!-- E  -->
+    <string Field="PlayError">Ошибка воспроизведения {0}</string>
+	<string Field="Empty">Пусто</string>
+
+    <!-- F  -->
+    <string Field="FastPresets">Быстрый список</string>
+ 
+    <!-- G  -->
+    <string Field="Genres">Жанры</string>
+
+
+    <!-- H  -->
+    <string Field="Home">Домой</string>
+
+    <!-- I  -->
+    <string Field="Items">Элементы</string>
+
+    <!-- L  -->
+
+    <!-- M  -->
+    <string Field="Message">Сообщение</string>
+
+    <!-- N  -->
+	<string Field="NewSearch">Новый поиск</string>
+	<string Field="NoSorting">Без сортировки</string>
+    <string Field="NowPlaying">Сейчас играет</string>
+    <string Field="NoStationsOrShowsAvailable">Нет доступных станций</string>
+
+    <!-- O  -->
+    <string Field="Objects">Объекты</string>
+
+    <!-- P  -->
+    <string Field="Presets">Мои списки</string>
+
+    <!-- R  -->
+    <string Field="RemoveFromFavorites">Удалить из Избранного</string>
+    <string Field="Random">Случаный выбор</string>
+
+    <!-- S  -->
+    <string Field="Search">Поиск</string>
+	<string Field="SearchHistory">История поиска</string>
+    <string Field="SearchArtist">Поиск: Артист</string>
+	<string Field="SelectPresetFolder">Указать папку списков</string>
+	<string Field="SelectPresetNumber">Указать номер списка</string>
+    <string Field="SortByBitrate">Битрейт</string>
+    <string Field="SortByName">По имени</string>
+    <string Field="Sorting">Сортировка</string>
+    <string Field="ShowGiuide">Руководство</string>
+    <string Field="StationNotAvaiable">Станция недоступна</string>
+    <string Field="SimilarStations">Похожая станция</string>    
+
+    <!-- T -->
+
+
+    <!-- U -->
+    <string Field="UseWebInterfaceToEditFavorites">Для правки Избранного используйте сайт RadioTime</string>
+    
+    <!-- V -->
+
+    <!-- W -->
+
+    <!-- Y -->
+</strings>

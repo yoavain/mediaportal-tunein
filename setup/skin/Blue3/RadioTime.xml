@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+  <id>25650</id>
+  <defaultcontrol>50</defaultcontrol>
+  <allowoverlay>yes</allowoverlay>
+  <define>#header.image:radiotime_logo.png</define>
+  <controls>
+
+    <import>common.window.xml</import>
+    <control>
+      <type>actiongroup</type>
+      <description>action menu</description>
+      <defaultcontrol>2</defaultcontrol>
+      <onexit>50</onexit>
+      <buttonX>0</buttonX>
+      <buttonY>0</buttonY>
+      <buttonwidth>60</buttonwidth>
+      <buttonheight>576</buttonheight>
+      <textureFocus>Action_focus.png</textureFocus>
+      <textureNoFocus>Action_nofocus.png</textureNoFocus>
+      <width>320</width>
+      <height>720</height>
+      <dimColor>00ffffff</dimColor>
+      <control>
+        <type>image</type>
+        <posX>15</posX>
+        <posY>63</posY>
+        <width>263</width>
+        <height>473</height>
+        <texture>Backslide.png</texture>
+        <colorDiffuse>fffffffff</colorDiffuse>
+        <visible>!Control.HasFocus(50)</visible>
+        <animation effect="slide" time="450" start="-300,0" reversible="false">visible</animation>
+        <animation effect="slide" time="450" end="-300,0" reversible="false">hidden</animation>
+      </control>
+      <control>
+        <description>group element</description>
+        <type>group</type>
+        <animation effect="slide" time="450" start="-300,0" reversible="false">visible</animation>
+        <animation effect="slide" time="450" end="-300,0" reversible="false">hidden</animation>
+        <posX>40</posX>
+        <posY>97</posY>
+        <layout>StackLayout</layout>
+        <visible>!Control.HasFocus(50)</visible>
+        <control>
+          <description>Search Button</description>
+          <type>button</type>
+          <id>5</id>
+          <label>25651</label>
+          <onright>50</onright>
+          <onup>4</onup>
+          <ondown>2</ondown>
+        </control>
+
+        <control>
+          <description>Sort Button</description>
+          <type>sortbutton</type>
+          <id>2</id>
+          <label></label>
+          <onright>50</onright>
+          <onup>5</onup>
+          <ondown>3</ondown>
+        </control>
+
+        <control>
+          <description>Swich view</description>
+          <type>button</type>
+          <id>3</id>
+          <label></label>
+          <onright>50</onright>
+          <onup>2</onup>
+          <ondown>4</ondown>
+        </control>
+
+        <control>
+          <description>Home</description>
+          <type>button</type>
+          <id>4</id>
+          <label>25661</label>
+          <onright>50</onright>
+          <onup>3</onup>
+          <ondown>6</ondown>
+        </control>
+
+
+        <control>
+          <description>My Presets</description>
+          <type>button</type>
+          <id>6</id>
+          <label>25652</label>
+          <onright>50</onright>
+          <onup>2</onup>
+          <ondown>99</ondown>
+        </control>
+      </control>
+
+     </control>
+
+    <control>
+      <description>station logo</description>
+      <type>image</type>
+      <id>51</id>
+      <posX>90</posX>
+      <posY>300</posY>
+      <texture />
+      <visible>facadeview.list</visible>
+    </control>
+
+    <control>
+      <description>meta label</description>
+      <type>label</type>
+      <id>47</id>
+      <posX>25</posX>
+      <posY>395</posY>
+      <label>#nowplaying</label>
+      <font>font12</font>
+      <align>left</align>
+      <textcolor>ffffffff</textcolor>
+      <visible>facadeview.list</visible>      
+    </control>
+
+    <import>common.facade.music.xml</import>
+    
+  </controls>
+</window>

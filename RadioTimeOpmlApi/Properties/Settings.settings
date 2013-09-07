@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="RadioTimeOpmlApi.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="RadioTimeOpmlApi_com_radiotime_services_RadioTimeWebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://services.radiotime.com/RadioTime.asmx</Value>
+    </Setting>
+    <Setting Name="RadioTimeOpmlApi_com_radiotime_opml_Radio" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://opml.radiotime.com/Radio.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
