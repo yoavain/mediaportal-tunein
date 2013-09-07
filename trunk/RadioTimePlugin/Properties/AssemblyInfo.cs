@@ -1,7 +1,6 @@
-﻿using System.Reflection;
-using System.Runtime.CompilerServices;
+﻿using MediaPortal.Common.Utils;
+using System.Reflection;
 using System.Runtime.InteropServices;
-using MediaPortal.Common.Utils;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
@@ -32,8 +31,8 @@ using MediaPortal.Common.Utils;
 //
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("0.7.1.0")]
-[assembly: AssemblyFileVersion("0.7.1.0")]
+[assembly: AssemblyVersion("1.0.0.$WCREV$")]
+[assembly: AssemblyFileVersion("1.0.0.$WCREV$")]
 
 [assembly: CompatibleVersion("1.1.6.27644")]
 //[assembly: CompatibleVersion("1.4.000.0", "1.4.000.0")]

@@ -121,8 +121,7 @@
   </Target>
   -->
   <PropertyGroup>
-    <PreBuildEvent>
-    </PreBuildEvent>
-    <PostBuildEvent>rem copy $(TargetPath) D:\HTPC\MediaPortal\plugins\windows</PostBuildEvent>
+    <PreBuildEvent>subwcrev ..\..\..\.. ..\..\Properties\AssemblyInfo.cs ..\..\Properties\AssemblyInfo.cs</PreBuildEvent>
+    <PostBuildEvent>svn revert ..\..\Properties\AssemblyInfo.cs</PostBuildEvent>
   </PropertyGroup>
 </Project>
