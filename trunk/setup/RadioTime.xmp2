@@ -366,9 +366,9 @@ Click Next to continue or Cancel to exit Setup.</Value>
     <ForumPage>http://forum.team-mediaportal.com/mediaportal-plugins-47/radiotime-plugin-40575/</ForumPage>
     <UpdateUrl>http://radiotime-plugin-for-mediaportal.googlecode.com/svn/trunk/setup/update.xml</UpdateUrl>
     <Version>
-      <Major>0</Major>
-      <Minor>7</Minor>
-      <Build>1</Build>
+      <Major>1</Major>
+      <Minor>0</Minor>
+      <Build>0</Build>
       <Revision>0</Revision>
     </Version>
     <ExtensionDescription>Plugin for browse and play more that 100.000 online radio stations from tunein.com</ExtensionDescription>
@@ -386,12 +386,12 @@ Click Next to continue or Cancel to exit Setup.</Value>
     <Params>
       <Items>
         <SectionParam Name="Icon">
-          <Value>radiotime_playlogo_100.png</Value>
+          <Value>tunein.png</Value>
           <ValueType>File</ValueType>
           <Description>The icon file of the package (jpg,png,bmp)</Description>
         </SectionParam>
         <SectionParam Name="Online Icon">
-          <Value>http://radiotime-plugin-for-mediaportal.googlecode.com/svn-history/r13/trunk/setup/radiotime_playlogo_100.png</Value>
+          <Value>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/tunein.png</Value>
           <ValueType>String</ValueType>
           <Description>The icon file of the package stored online (jpg,png,bmp)</Description>
         </SectionParam>
@@ -408,7 +408,7 @@ Click Next to continue or Cancel to exit Setup.</Value>
           <Description>Online stored screenshot urls separated by ; </Description>
         </SectionParam>
         <SectionParam Name="Force to uninstall on update">
-          <Value>yes</Value>
+          <Value>YES</Value>
           <ValueType>Bool</ValueType>
           <Description>Show dialog and force to uninstall previous version when updating an extension. Should only be disabled if you are using an NSIS/MSI installer.</Description>
         </SectionParam>
@@ -532,8 +532,8 @@ Click Next to continue or Cancel to exit Setup.</Value>
       <FileItem InstallType="CopyFile" SystemFile="true" Modified="true">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
-        <LocalFileName>radiotime_playlogo_100.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{bfcf5507-0ba5-4ff2-87dc-64b0a411b0c7}-radiotime_playlogo_100.png</ZipFileName>
+        <LocalFileName>tunein.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{a2e19d5e-e799-4dc9-a0cd-0a18a978e715}-tunein.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
     </Items>
