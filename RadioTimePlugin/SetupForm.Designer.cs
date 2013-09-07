@@ -63,7 +63,7 @@ namespace RadioTimePlugin
             this.linkLabel1.Size = new System.Drawing.Size(287, 13);
             this.linkLabel1.TabIndex = 4;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "For registering or making presets visit  www.radiotiome.com ";
+            this.linkLabel1.Text = "For registering or making presets visit  www.tunein.com ";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // groupBox2
