@@ -22,7 +22,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\mp\mediaportal\MediaPortal.Application\bin\Debug\plugins\Windows\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -121,7 +121,7 @@
   </Target>
   -->
   <PropertyGroup>
-    <PreBuildEvent>subwcrev ..\..\..\.. ..\..\Properties\AssemblyInfo.cs ..\..\Properties\AssemblyInfo.cs</PreBuildEvent>
+    <PreBuildEvent>subwcrev ..\.. ..\..\Properties\AssemblyInfo.cs ..\..\Properties\AssemblyInfo.cs</PreBuildEvent>
     <PostBuildEvent>svn revert ..\..\Properties\AssemblyInfo.cs</PostBuildEvent>
   </PropertyGroup>
 </Project>
