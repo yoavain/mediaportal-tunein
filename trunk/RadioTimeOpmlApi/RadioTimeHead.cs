@@ -4,13 +4,7 @@ namespace RadioTimeOpmlApi
 {
     public class RadioTimeHead
     {
-        private string _title;
-
-        public string Title
-        {
-            get { return _title; }
-            set { _title = value; }
-        }
+        public string Title { get; set; }
 
         public RadioTimeHead()
         {
