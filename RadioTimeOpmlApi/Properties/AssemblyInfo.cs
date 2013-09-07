@@ -7,9 +7,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("RadioTimeOpmlApi")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Duka Istvan")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("RadioTimeOpmlApi")]
-[assembly: AssemblyCopyright("Copyright © . 2008")]
+[assembly: AssemblyCopyright("Copyright © 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

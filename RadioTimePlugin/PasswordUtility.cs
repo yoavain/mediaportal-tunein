@@ -42,10 +42,10 @@ namespace RadioTimePlugin
             try
             {
                 // From base64
-                byte[] encryptedBytes = Convert.FromBase64String(encrptedPassword);
+                var encryptedBytes = Convert.FromBase64String(encrptedPassword);
 
                 // Decrypt the data
-                byte[] decryptedData = ProtectedData.Unprotect(encryptedBytes, Entropy, scope);
+                var decryptedData = ProtectedData.Unprotect(encryptedBytes, Entropy, scope);
 
                 // Convert to string
                 return Encoding.Default.GetString(decryptedData);
