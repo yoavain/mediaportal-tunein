@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("RadioTimePlugin")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Dukus")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("RadioTimePlugin")]
-[assembly: AssemblyCopyright("Copyright © . 2008")]
+[assembly: AssemblyCopyright("Copyright © 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -1,31 +1,27 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace RadioTimePlugin
 {
-  public class DownloadFileObject
-  {
-    private string  _fileName;
-
-    public string  FileName
+    public class DownloadFileObject
     {
-      get { return _fileName; }
-      set { _fileName = value; }
-    }
+        private string _fileName;
 
-    private string _url;
+        public string FileName
+        {
+            get { return _fileName; }
+            set { _fileName = value; }
+        }
 
-    public string Url
-    {
-      get { return _url; }
-      set { _url = value; }
-    }
+        private string _url;
 
-    public DownloadFileObject(string file, string url)
-    {
-      FileName = file;
-      Url = url;
+        public string Url
+        {
+            get { return _url; }
+            set { _url = value; }
+        }
+
+        public DownloadFileObject(string file, string url)
+        {
+            FileName = file;
+            Url = url;
+        }
     }
-  }
 }
