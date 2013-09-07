@@ -9,17 +9,11 @@ namespace RadioTimeOpmlApi
 {
     public class RadioTime
     {
-        private bool _cacheIsUsed;
-
         /// <summary>
         /// Gets or sets a value indicating whether [cache is used].
         /// </summary>
         /// <value><c>true</c> if [cache is used]; otherwise, <c>false</c>.</value>
-        public bool CacheIsUsed
-        {
-            get { return _cacheIsUsed; }
-            set { _cacheIsUsed = value; }
-        }
+        public bool CacheIsUsed { get; set; }
 
         /// <summary>
         /// Gets or sets the curent URL.
@@ -27,89 +21,47 @@ namespace RadioTimeOpmlApi
         /// <value>The curent URL.</value>
         public String CurentUrl { get; set; }
 
-        private RadioTime _parent;
-
         /// <summary>
         /// Gets or sets the parent.
         /// </summary>
         /// <value>The parent.</value>
-        public RadioTime Parent
-        {
-            get { return _parent; }
-            set { _parent = value; }
-        }
-
-        private string _parentUrl;
+        public RadioTime Parent { get; set; }
 
         /// <summary>
         /// Gets or sets the parent URL.
         /// </summary>
         /// <value>The parent URL.</value>
-        public string ParentUrl
-        {
-            get { return _parentUrl; }
-            set { _parentUrl = value; }
-        }
-
-        private RadioTimeHead _head;
+        public string ParentUrl { get; set; }
 
         /// <summary>
         /// Gets or sets the head description.
         /// </summary>
         /// <value>The head.</value>
-        public RadioTimeHead Head
-        {
-            get { return _head; }
-            set { _head = value; }
-        }
-
-        private List<RadioTimeOutline> _body;
+        public RadioTimeHead Head { get; set; }
 
         /// <summary>
         /// Gets or sets the body elements.
         /// </summary>
         /// <value>The body.</value>
-        public List<RadioTimeOutline> Body
-        {
-            get { return _body; }
-            set { _body = value; }
-        }
-
-        private RadioTimeSetting _settings;
+        public List<RadioTimeOutline> Body { get; set; }
 
         /// <summary>
         /// Gets or sets the settings.
         /// </summary>
         /// <value>The settings.</value>
-        public RadioTimeSetting Settings
-        {
-            get { return _settings; }
-            set { _settings = value; }
-        }
-
-        private Dictionary<string, RadioTime> _cache;
+        public RadioTimeSetting Settings { get; set; }
 
         /// <summary>
         /// Gets or sets the cache.
         /// </summary>
         /// <value>The cache.</value>
-        public Dictionary<string, RadioTime> Cache
-        {
-            get { return _cache; }
-            set { _cache = value; }
-        }
-
-        private string _navigationTitle;
+        public Dictionary<string, RadioTime> Cache { get; set; }
 
         /// <summary>
         /// Gets or sets the parent URL.
         /// </summary>
         /// <value>The parent URL.</value>
-        public string NavigationTitle
-        {
-            get { return _navigationTitle; }
-            set { _navigationTitle = value; }
-        }
+        public string NavigationTitle { get; set; }
 
         public object Selected { get; set; }
 

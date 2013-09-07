@@ -85,21 +85,9 @@ namespace RadioTimePlugin
             set { pluginName = value; }
         }
 
-        private bool usevideo;
+        public bool UseVideo { get; set; }
 
-        public bool UseVideo
-        {
-            get { return usevideo; }
-            set { usevideo = value; }
-        }
-
-        private bool jumpNowPlaying;
-
-        public bool JumpNowPlaying
-        {
-            get { return jumpNowPlaying; }
-            set { jumpNowPlaying = value; }
-        }
+        public bool JumpNowPlaying { get; set; }
 
         public void Save()
         {
