@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- RadioTime translation file -->
+<!-- French -->
+<strings>
+
+     <!-- A  -->
+    <string Field="AddToFavorites">Ajouter aux favoris</string>
+    
+    <!-- C  -->
+    <string Field="ComunicationError">Erreur de communication: mauvais nom d'utilisateur ou mot de passe</string>
+    
+    <!-- D  -->
+
+
+    <!-- E  -->
+    <string Field="PlayError">Erreur de lecture{0}</string>
+	<string Field="Empty">Vide</string>
+
+    <!-- F  -->
+    <string Field="FastPresets">préférences</string>
+ 
+    <!-- G  -->
+    <string Field="Genres">Genres</string>
+
+
+    <!-- H  -->
+    <string Field="Home">Page de démarrage</string>
+
+    <!-- I  -->
+    <string Field="Items">Articles</string>
+
+    <!-- L  -->
+
+    <!-- M  -->
+    <string Field="Message">Message</string>
+
+    <!-- N  -->
+	<string Field="NewSearch">Nouvelle recherche</string>
+	<string Field="NoSorting">Annuler les filtres</string>
+    <string Field="NowPlaying">Lecture en cours</string>
+    <string Field="NoStationsOrShowsAvailable">Aucune station de radio disponible</string>
+    <string Field="NoPresetFoldersFound">Aucun dossier de vos préférences n'à été trouvé</string>
+
+    <!-- O  -->
+    <string Field="Objects">Objets</string>
+
+    <!-- P  -->
+    <string Field="Presets">Mes préférences</string>
+
+    <!-- R  -->
+    <string Field="RemoveFromFavorites">Supprimer des favoris</string>
+    <string Field="Random">Lecture aléatoire</string>
+
+    <!-- S  -->
+    <string Field="Search">Recherche</string>
+	<string Field="SearchHistory">Historique des recherches</string>
+    <string Field="SearchArtist">Recherche d'artistes</string>
+	<string Field="SelectPresetFolder">Sélectionner un dossier de préférence</string>
+	<string Field="SelectPresetNumber">Sélectionnez un numéro de préréglage</string>
+    <string Field="SortByBitrate">Trier par bitrate</string>
+    <string Field="SortByName">Trier par nom</string>
+    <string Field="Sorting">Tri</string>
+    <string Field="ShowGiuide">Voir guide des programmes</string>
+    <string Field="StationNotAvaiable">La station n'est plus disponible</string>
+    <string Field="SimilarStations">Stations similaires</string>    
+
+    <!-- T -->
+
+
+    <!-- U -->
+    <string Field="UseWebInterfaceToEditFavorites">Utiliser l'interface web pour modifier vos favoris</string>
+    
+    <!-- V -->
+
+    <!-- W -->
+
+    <!-- Y -->
+</strings>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- RadioTime translation file -->
+<!-- English (US) -->
+<!-- Note: English is the fallback for any strings not found in other languages -->
+<strings>
+
+     <!-- A  -->
+    <string Field="AddToFavorites">Add to favorites</string>
+    
+    <!-- C  -->
+    <string Field="ComunicationError">Comunication error or wrong user name or password</string>
+    
+    <!-- D  -->
+
+
+    <!-- E  -->
+    <string Field="PlayError">Error in  playback {0}</string>
+	<string Field="Empty">Empty</string>
+
+    <!-- F  -->
+    <string Field="FastPresets">Fast presets</string>
+ 
+    <!-- G  -->
+    <string Field="Genres">Genres</string>
+
+
+    <!-- H  -->
+    <string Field="Home">Home</string>
+
+    <!-- I  -->
+    <string Field="Items">Items</string>
+
+    <!-- L  -->
+
+    <!-- M  -->
+    <string Field="Message">Message</string>
+
+    <!-- N  -->
+	<string Field="NewSearch">New Search</string>
+	<string Field="NoSorting">No sorting</string>
+    <string Field="NowPlaying">Now Playing</string>
+    <string Field="NoStationsOrShowsAvailable">No stations or shows available</string>
+    <string Field="NoPresetFoldersFound">No preset folders found</string>
+
+    <!-- O  -->
+    <string Field="Objects">Objects</string>
+
+    <!-- P  -->
+    <string Field="Presets">My Presets</string>
+
+    <!-- R  -->
+    <string Field="RemoveFromFavorites">Remove from favorites</string>
+    <string Field="Random">Random Play</string>
+
+    <!-- S  -->
+    <string Field="Search">Search</string>
+	<string Field="SearchHistory">Search History</string>
+    <string Field="SearchArtist">Search Artist</string>
+	<string Field="SelectPresetFolder">Select Preset Folder</string>
+	<string Field="SelectPresetNumber">Select Preset number</string>
+    <string Field="SortByBitrate">Sort by bitrate</string>
+    <string Field="SortByName">Sort by name</string>
+    <string Field="Sorting">Sorting</string>
+    <string Field="ShowGiuide">Show guide</string>
+    <string Field="StationNotAvaiable">The station isn't avaiable</string>
+    <string Field="SimilarStations">Similar stations</string>    
+
+    <!-- T -->
+
+
+    <!-- U -->
+    <string Field="UseWebInterfaceToEditFavorites">Use web interface to edit favorites</string>
+    
+    <!-- V -->
+
+    <!-- W -->
+
+    <!-- Y -->
+</strings>

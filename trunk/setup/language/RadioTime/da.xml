@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- RadioTime translation file -->
+<!-- Danish (da) -->
+<!-- Note: English is the fallback for any strings not found in other languages -->
+<!-- Contributed by steffansp 22. marts 2010 -->
+<strings>
+
+     <!-- A  -->
+    <string Field="AddToFavorites">Tilføj til favoritter</string>
+    
+    <!-- C  -->
+    <string Field="ComunicationError">Kommunikations fejl, forkert brugernavn eller kodeord</string>
+    
+    <!-- D  -->
+
+
+    <!-- E  -->
+    <string Field="PlayError">Fejl i afspilning {0}</string>
+	<string Field="Empty">Tom</string>
+	
+    <!-- F  -->
+    <string Field="FastPresets">Hurtige spillelister</string>
+	
+    <!-- G  -->
+    <string Field="Genres">Genre</string>
+
+
+    <!-- H  -->
+    <string Field="Home">Hjem</string>
+
+    <!-- I  -->
+    <string Field="Items">Elementer</string>
+	
+    <!-- L  -->
+
+    <!-- M  -->
+    <string Field="Message">Besked</string>
+
+    <!-- N  -->
+	<string Field="NewSearch">Ny søgning</string>
+	<string Field="NoSorting">Ingen sortering</string>
+    <string Field="NowPlaying">Spiller nu</string>
+    <string Field="NoStationsOrShowsAvailable">Ingen stationer eller shows tilgængelig</string>
+	
+    <!-- O  -->
+    <string Field="Objects">Objekter</string>
+	
+    <!-- P  -->
+    <string Field="Presets">Mine spillelister</string>
+
+    <!-- R  -->
+    <string Field="RemoveFromFavorites">Fjern fra favoritter</string>
+    <string Field="Random">Tilfældig afspilning</string>
+
+    <!-- S  -->
+    <string Field="Search">Søg</string>
+	<string Field="SearchHistory">Søge historik</string>
+    <string Field="SearchArtist">Søg kunstner</string>
+	<string Field="SelectPresetFolder">Vælg spilleliste mappe</string>
+	<string Field="SelectPresetNumber">Vælg spilleliste nummer</string>
+    <string Field="SortByBitrate">Sorter efter bitrate</string>
+    <string Field="SortByName">Sorter efter navn</string>
+    <string Field="Sorting">Sorting</string>
+    <string Field="ShowGiuide">Vis guide</string>
+    <string Field="StationNotAvaiable">Stationen er utilgængelig</string>
+    <string Field="SimilarStations">Lignende stationer</string>    
+
+    <!-- T -->
+
+
+    <!-- U -->
+    <string Field="UseWebInterfaceToEditFavorites">Brug webinterface til at redigere favoritter</string>
+    
+    <!-- V -->
+
+    <!-- W -->
+
+    <!-- Y -->
+</strings>

@@ -1,0 +1,21 @@
+<extension_settings>
+	<settings section="Configuration">
+	<!-- 
+	  type : - string
+			 - bool 
+			 - list
+			 - int
+	<setting name="" entryname="" displayname="" defaultvalue="" type="" listvalues="" displaylistvalues=""/> 
+	-->	
+ 		<setting name="user" entryname="radiotime" displayname="User Name" defaultvalue="" type="string" listvalues="" displaylistvalues=""/> 
+		<setting name="password" entryname="radiotime" displayname="Password" defaultvalue="" type="string" listvalues="" displaylistvalues=""/> 
+		<setting name="pluginname" entryname="radiotime" displayname="Plugin Name" defaultvalue="RadioTime" type="string" listvalues="" displaylistvalues=""/> 		
+		<setting name="StartWithFastPreset" entryname="radiotime" displayname="Show fast preset on startup" defaultvalue="no" type="string" listvalues="yes|no" displaylistvalues="Yes|No"/> 		
+	</settings>
+	<settings section="Plugin">
+			<setting entryname="plugins" name="RadioTime" displayname="Plugin Enabled" defaultvalue="yes" type="string" listvalues="yes|no" displaylistvalues="Yes|No"/> 
+			<setting entryname="home" name="RadioTime" displayname="Listed in Home" defaultvalue="yes" type="string" listvalues="yes|no" displaylistvalues="Yes|No"/> 
+			<setting entryname="myplugins" name="RadioTime" displayname="Listed in My Plugins" defaultvalue="no" type="string" listvalues="yes|no" displaylistvalues="Yes|No"/> 
+	</settings>
+
+</extension_settings>

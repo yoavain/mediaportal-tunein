@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.sonos.com/Services/1.1" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.sonos.com/Services/1.1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.sonos.com/Services/1.1">
+      <s:element name="getMetadata">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="index" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="count" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="recursive" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMetadataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getMetadataResult" type="tns:metadataResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="metadataResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="index" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="count" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="total" type="s:int" />
+          <s:choice minOccurs="0" maxOccurs="unbounded">
+            <s:element minOccurs="0" maxOccurs="1" name="mediaMetadata" type="tns:mediaMetadata" />
+            <s:element minOccurs="0" maxOccurs="1" name="mediaCollection" type="tns:mediaCollection" />
+          </s:choice>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="mediaMetadata">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mimeType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="itemType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="genreId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="genre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="twitterId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="liveNow" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="onDemand" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="trackMetadata" type="tns:trackMetadata" />
+          <s:element minOccurs="0" maxOccurs="1" name="streamMetadata" type="tns:streamMetadata" />
+          <s:element minOccurs="0" maxOccurs="1" name="scheduleMetadata" type="tns:scheduleMetadata" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="trackMetadata">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="artistId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="artist" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="composerId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="composer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="albumId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="album" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="albumArtURI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="albumArtistId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="albumArtist" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="genreId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="genre" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="duration" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="associatedShow" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="associatedHost" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="title" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="streamMetadata">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="currentShowId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="currentShow" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="currentHost" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="bitrate" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="reliability" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="logo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="subtitle" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="secondsRemaining" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="secondsToNextShow" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="nextShowStationId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="nextShowSeconds" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="scheduleMetadata">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="startTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="endTime" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="duration" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="stationId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="showId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="logo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="isRecurring" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="recurDays" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="mediaCollection">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="itemType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="authRequired" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="canPlay" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="canEnumerate" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="canCache" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="homogeneous" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="canAddToFavorite" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="canScroll" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="credentials" type="tns:credentials" />
+      <s:complexType name="credentials">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="deviceId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="deviceProvider" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sessionId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tracking" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="directives" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="getMediaMetadata">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMediaMetadataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getMediaMetadataResult" type="tns:mediaMetadata" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMediaURI">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMediaURIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getMediaURIResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="search">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="term" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="index" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="count" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="searchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="searchResult" type="tns:metadataResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getScrollIndices">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getScrollIndicesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getScrollIndicesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSessionId">
+        <s:complexType />
+      </s:element>
+      <s:element name="getSessionIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getSessionIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLastUpdate">
+        <s:complexType />
+      </s:element>
+      <s:element name="getLastUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getLastUpdateResult" type="tns:GetLastUpdateResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetLastUpdateResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="catalog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="favorites" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="pollInterval" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="reportStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="url" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="reportStatusResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getMetadataSoapIn">
+    <wsdl:part name="parameters" element="tns:getMetadata" />
+  </wsdl:message>
+  <wsdl:message name="getMetadataSoapOut">
+    <wsdl:part name="parameters" element="tns:getMetadataResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMetadatacredentials">
+    <wsdl:part name="credentials" element="tns:credentials" />
+  </wsdl:message>
+  <wsdl:message name="getMediaMetadataSoapIn">
+    <wsdl:part name="parameters" element="tns:getMediaMetadata" />
+  </wsdl:message>
+  <wsdl:message name="getMediaMetadataSoapOut">
+    <wsdl:part name="parameters" element="tns:getMediaMetadataResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMediaMetadatacredentials">
+    <wsdl:part name="credentials" element="tns:credentials" />
+  </wsdl:message>
+  <wsdl:message name="getMediaURISoapIn">
+    <wsdl:part name="parameters" element="tns:getMediaURI" />
+  </wsdl:message>
+  <wsdl:message name="getMediaURISoapOut">
+    <wsdl:part name="parameters" element="tns:getMediaURIResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMediaURIcredentials">
+    <wsdl:part name="credentials" element="tns:credentials" />
+  </wsdl:message>
+  <wsdl:message name="searchSoapIn">
+    <wsdl:part name="parameters" element="tns:search" />
+  </wsdl:message>
+  <wsdl:message name="searchSoapOut">
+    <wsdl:part name="parameters" element="tns:searchResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchcredentials">
+    <wsdl:part name="credentials" element="tns:credentials" />
+  </wsdl:message>
+  <wsdl:message name="getScrollIndicesSoapIn">
+    <wsdl:part name="parameters" element="tns:getScrollIndices" />
+  </wsdl:message>
+  <wsdl:message name="getScrollIndicesSoapOut">
+    <wsdl:part name="parameters" element="tns:getScrollIndicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getScrollIndicescredentials">
+    <wsdl:part name="credentials" element="tns:credentials" />
+  </wsdl:message>
+  <wsdl:message name="getSessionIdSoapIn">
+    <wsdl:part name="parameters" element="tns:getSessionId" />
+  </wsdl:message>
+  <wsdl:message name="getSessionIdSoapOut">
+    <wsdl:part name="parameters" element="tns:getSessionIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSessionIdcredentials">
+    <wsdl:part name="credentials" element="tns:credentials" />
+  </wsdl:message>
+  <wsdl:message name="getLastUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:getLastUpdate" />
+  </wsdl:message>
+  <wsdl:message name="getLastUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:getLastUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLastUpdatecredentials">
+    <wsdl:part name="credentials" element="tns:credentials" />
+  </wsdl:message>
+  <wsdl:message name="reportStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:reportStatus" />
+  </wsdl:message>
+  <wsdl:message name="reportStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:reportStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="reportStatuscredentials">
+    <wsdl:part name="credentials" element="tns:credentials" />
+  </wsdl:message>
+  <wsdl:portType name="RadioSoap">
+    <wsdl:operation name="getMetadata">
+      <wsdl:input message="tns:getMetadataSoapIn" />
+      <wsdl:output message="tns:getMetadataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getMediaMetadata">
+      <wsdl:input message="tns:getMediaMetadataSoapIn" />
+      <wsdl:output message="tns:getMediaMetadataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getMediaURI">
+      <wsdl:input message="tns:getMediaURISoapIn" />
+      <wsdl:output message="tns:getMediaURISoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="search">
+      <wsdl:input message="tns:searchSoapIn" />
+      <wsdl:output message="tns:searchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getScrollIndices">
+      <wsdl:input message="tns:getScrollIndicesSoapIn" />
+      <wsdl:output message="tns:getScrollIndicesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSessionId">
+      <wsdl:input message="tns:getSessionIdSoapIn" />
+      <wsdl:output message="tns:getSessionIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getLastUpdate">
+      <wsdl:input message="tns:getLastUpdateSoapIn" />
+      <wsdl:output message="tns:getLastUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="reportStatus">
+      <wsdl:input message="tns:reportStatusSoapIn" />
+      <wsdl:output message="tns:reportStatusSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RadioSoap" type="tns:RadioSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getMetadata">
+      <soap:operation soapAction="http://www.sonos.com/Services/1.1#getMetadata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getMetadatacredentials" part="credentials" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMediaMetadata">
+      <soap:operation soapAction="http://www.sonos.com/Services/1.1#getMediaMetadata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getMediaMetadatacredentials" part="credentials" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMediaURI">
+      <soap:operation soapAction="http://www.sonos.com/Services/1.1#getMediaURI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getMediaURIcredentials" part="credentials" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="search">
+      <soap:operation soapAction="http://www.sonos.com/Services/1.1#search" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:searchcredentials" part="credentials" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getScrollIndices">
+      <soap:operation soapAction="http://www.sonos.com/Services/1.1#getScrollIndices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getScrollIndicescredentials" part="credentials" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSessionId">
+      <soap:operation soapAction="http://www.sonos.com/Services/1.1#getSessionId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getSessionIdcredentials" part="credentials" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLastUpdate">
+      <soap:operation soapAction="http://www.sonos.com/Services/1.1#getLastUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getLastUpdatecredentials" part="credentials" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reportStatus">
+      <soap:operation soapAction="http://www.sonos.com/Services/1.1#reportStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:reportStatuscredentials" part="credentials" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="RadioSoap12" type="tns:RadioSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getMetadata">
+      <soap12:operation soapAction="http://www.sonos.com/Services/1.1#getMetadata" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getMetadatacredentials" part="credentials" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMediaMetadata">
+      <soap12:operation soapAction="http://www.sonos.com/Services/1.1#getMediaMetadata" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getMediaMetadatacredentials" part="credentials" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMediaURI">
+      <soap12:operation soapAction="http://www.sonos.com/Services/1.1#getMediaURI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getMediaURIcredentials" part="credentials" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="search">
+      <soap12:operation soapAction="http://www.sonos.com/Services/1.1#search" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:searchcredentials" part="credentials" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getScrollIndices">
+      <soap12:operation soapAction="http://www.sonos.com/Services/1.1#getScrollIndices" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getScrollIndicescredentials" part="credentials" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSessionId">
+      <soap12:operation soapAction="http://www.sonos.com/Services/1.1#getSessionId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getSessionIdcredentials" part="credentials" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLastUpdate">
+      <soap12:operation soapAction="http://www.sonos.com/Services/1.1#getLastUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getLastUpdatecredentials" part="credentials" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reportStatus">
+      <soap12:operation soapAction="http://www.sonos.com/Services/1.1#reportStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:reportStatuscredentials" part="credentials" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Radio">
+    <wsdl:port name="RadioSoap" binding="tns:RadioSoap">
+      <soap:address location="http://opml.radiotime.com/Radio.asmx" />
+    </wsdl:port>
+    <wsdl:port name="RadioSoap12" binding="tns:RadioSoap12">
+      <soap12:address location="http://opml.radiotime.com/Radio.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

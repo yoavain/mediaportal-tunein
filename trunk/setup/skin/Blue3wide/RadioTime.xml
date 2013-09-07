@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+  <id>25650</id>
+  <defaultcontrol>50</defaultcontrol>
+  <allowoverlay>[facadeview.list|facadeview.filmstrip|facadeview.coverflow]</allowoverlay>
+  <controls>
+    <control>
+      <description>BG</description>
+      <type>image</type>
+      <id>1</id>
+      <texture>Background.png</texture>
+      <width>1280</width>
+      <height>720</height>
+    </control>
+    <import>common.window.xml</import>
+    <import>common.time.xml</import>
+    <control>
+      <type>label</type>
+      <description>Header Label</description>
+      <id>1</id>
+      <posX>60</posX>
+      <posY>27</posY>
+      <label>Radio Time</label>
+      <font>font16</font>
+      <align>left</align>
+      <textcolor>White</textcolor>
+    </control>
+    <control>
+      <type>actiongroup</type>
+      <description>action menu</description>
+      <defaultcontrol>2</defaultcontrol>
+      <onexit>50</onexit>
+      <buttonX>0</buttonX>
+      <buttonY>0</buttonY>
+      <buttonwidth>106</buttonwidth>
+      <buttonheight>720</buttonheight>
+      <textureFocus>-</textureFocus>
+      <textureNoFocus>Action_nofocus.png</textureNoFocus>
+      <width>275</width>
+      <height>900</height>
+      <dimColor>00ffffff</dimColor>
+      <control>
+        <type>image</type>
+        <posX>26</posX>
+        <posY>78</posY>
+        <width>367</width>
+        <height>591</height>
+        <texture>Backslide.png</texture>
+        <colorDiffuse>fffffffff</colorDiffuse>
+        <visible>!Control.HasFocus(50)</visible>
+        <animation effect="slide" time="70" start="-300,0" reversible="false">visible</animation>
+        <animation effect="slide" time="70" end="-300,0" reversible="false">hidden</animation>
+      </control>
+      <control>
+        <description>group element</description>
+        <type>group</type>
+        <animation effect="slide" time="70" start="-300,0" reversible="false">visible</animation>
+        <animation effect="slide" time="70" end="-300,0" reversible="false">hidden</animation>
+        <visible>!Control.HasFocus(50)</visible>        
+        <control>
+          <description>group element</description>
+          <type>group</type>
+          <animation effect="slide" time="70" start="-300,0" reversible="false">visible</animation>
+          <animation effect="slide" time="70" end="-300,0" reversible="false">hidden</animation>
+          <posX>71</posX>
+          <posY>121</posY>
+          <layout>StackLayout</layout>
+          <visible>!Control.HasFocus(50)</visible>
+          <control>
+            <description>Search Button</description>
+            <type>button</type>
+            <id>5</id>
+            <label>#RadioTime.Translation.Search.Label</label>
+            <onright>50</onright>
+            <onup>11</onup>
+            <ondown>7</ondown>
+          </control>
+          <control>
+            <description>Search Artist Button</description>
+            <type>button</type>
+            <id>7</id>
+            <label>#RadioTime.Translation.SearchArtist.Label</label>
+            <onright>50</onright>
+            <onup>5</onup>
+            <ondown>2</ondown>            
+          </control>
+          <control>
+            <description>Sort Button</description>
+            <type>sortbutton</type>
+            <id>2</id>
+            <label></label>
+            <onright>50</onright>
+            <onup>7</onup>
+            <ondown>3</ondown>
+          </control>
+          <control>
+            <description>Swich view</description>
+            <type>button</type>
+            <id>3</id>
+            <label></label>            
+            <onright>50</onright>
+            <onup>2</onup>
+            <ondown>4</ondown>            
+          </control>
+          <control>
+            <description>Home</description>
+            <type>button</type>
+            <id>4</id>
+            <label>#RadioTime.Translation.Home.Label</label>
+            <onright>50</onright>
+            <onup>3</onup>
+            <ondown>8</ondown>
+          </control>
+          <control>
+            <description>genres</description>
+            <type>button</type>
+            <id>8</id>
+            <label>#RadioTime.Translation.Genres.Label</label>
+            <onright>50</onright>
+            <onup>4</onup>
+            <ondown>6</ondown>
+          </control>
+          <control>
+            <description>My Presets</description>
+            <type>button</type>
+            <id>6</id>
+            <label>#RadioTime.Translation.Presets.Label</label>
+            <onright>50</onright>
+            <onup>8</onup>
+            <ondown>9</ondown>
+          </control>
+          <control>
+            <description>Now playing</description>
+            <type>button</type>
+            <id>9</id>
+            <label>#RadioTime.Translation.NowPlaying.Label</label>
+            <onright>50</onright>
+            <onup>6</onup>
+            <ondown>10</ondown>
+          </control>
+          <control>
+            <description>Random</description>
+            <type>button</type>
+            <id>10</id>
+            <label>#RadioTime.Translation.Random.Label</label>
+            <onright>50</onright>
+            <onup>9</onup>
+            <ondown>11</ondown>
+          </control>
+          <control>
+            <description>Fast Presets</description>
+            <type>button</type>
+            <id>11</id>
+            <label>#RadioTime.Translation.FastPresets.Label</label>
+            <onright>50</onright>
+            <onup>10</onup>
+            <ondown>5</ondown>            
+          </control>
+        </control>
+      </control>
+    </control>
+    <import>common.facade.music.xml</import>    
+    <control>
+      <id>51</id>
+      <description>Station Logo</description>
+      <type>image</type>
+      <posX>78</posX>
+      <posY>160</posY>
+      <width>210</width>
+      <height>202</height>
+      <keepaspectratio>yes</keepaspectratio>
+      <centered>yes</centered>
+      <texture>-</texture>
+      <visible>facadeview.list</visible>
+      <animation effect="fade" time="70" reversible="false">visible</animation>
+    </control>
+    <control>
+      <type>image</type>
+      <id>1</id>
+      <posX>78</posX>
+      <posY>160</posY>
+      <width>215</width>
+      <height>202</height>
+      <texture mask="Picturethumbmask.png">Picturethumbframe.png</texture>
+      <visible>facadeview.list</visible>
+      <animation effect="fade" time="70" reversible="false">visible</animation>
+    </control>
+    <control>
+      <description>Meta label</description>
+      <type>fadelabel</type>
+      <id>47</id>
+      <posX>78</posX>
+      <posY>412</posY>
+      <width>355</width>
+      <label>#RadioTime.Selected.NowPlaying</label>
+      <font>font14</font>
+      <visible>facadeview.list</visible> 
+      <animation effect="fade" time="70" reversible="false">visible</animation>
+    </control>
+    <control>
+      <description>Meta label</description>
+      <type>fadelabel</type>
+      <id>47</id>
+      <posX>78</posX>
+      <posY>442</posY>
+      <width>355</width>
+      <label>#RadioTime.Selected.Subtext</label>
+      <font>font14</font>
+      <visible>facadeview.list</visible>
+      <animation effect="fade" time="70" reversible="false">visible</animation>
+    </control>
+    <control>
+      <description>Meta label</description>
+      <type>fadelabel</type>
+      <id>47</id>
+      <posX>78</posX>
+      <posY>475</posY>
+      <width>355</width>
+      <label>#RadioTime.Selected.Format</label>
+      <font>font12</font>
+      <textcolor>ffa9d0f7</textcolor>
+      <visible>facadeview.list</visible>
+      <animation effect="fade" time="70" reversible="false">visible</animation>
+    </control>
+    <control>
+      <id>81</id>
+      <description>Existent Rating2</description>
+      <type>imagelist</type>
+      <visible>no</visible>
+      <posX>78</posX>
+      <posY>510</posY>
+      <width>142</width>
+      <height>40</height>
+      <textureHeight>25</textureHeight>
+      <textureWidth>25</textureWidth>
+      <percentage>#RadioTime.Selected.Reliability</percentage>
+      <imagesToDraw>5</imagesToDraw>
+      <orientation>HORIZONTAL</orientation>
+      <align>LEFT</align>
+      <subitems>
+          <subitem>greystar.png</subitem>
+          <subitem>stargood.png</subitem>
+      </subitems>
+      <visible>facadeview.list</visible>
+      <animation effect="fade" time="70" reversible="false">visible</animation>
+      </control>
+    
+  </controls>
+</window>
