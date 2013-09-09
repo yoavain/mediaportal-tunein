@@ -1,29 +1,37 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!-- German (DE) -->
 <!-- Note: English is the fallback for any strings not found in other languages -->
-<!-- Last Updated: 05th May 2013 -->
+<!-- Last Updated: 23rd July 2013 -->
 <strings>
-    <string Field="AddToFavorites">Zu Favoriten hinzufügen</string>   
-    <string Field="ComunicationError">Kommunikations Fehler</string>
-	<string Field="PlayError">Wiedergabenfehler</string>
-	<string Field="Genres">Genres</string>
-	<string Field="Home">Home</string>
-	<string Field="Message">Mitteilung</string>
-	<string Field="NowPlaying">Aktuelle Wiedergabe</string>
-	<string Field="Presets">Meine Favoriten</string>
-	<string Field="FastPresets">Schnell - Favoriten</string>
-	<string Field="RemoveFromFavorites">Von Favoriten entfernen</string>
-    <string Field="Random">Zufällige Wiedergabe</string>
-	<string Field="Search">Suchen</string>
-	<string Field="SearchHistory">Letzte Suche</string>
-	<string Field="NewSearch">Neue Suche</string>
-    <string Field="SearchArtist">Suche Interpret</string>
-    <string Field="SortByBitrate">Sortieren nach Bitrate</string>
-    <string Field="SortByName">Sortieren nach Name</string>
-    <string Field="Sorting">Sortieren</string>
-	<string Field="NoSorting">Keine Sortierung</string>
-    <string Field="ShowGiuide">Zeige Guide</string>
-    <string Field="StationNotAvaiable">Station nicht Verfügbar</string>
-    <string Field="SimilarStations">Ähnliche Stationen</string>    
-	<string Field="UseWebInterfaceToEditFavorites">Benutze Webinterface um Favortien zu editieren</string>
+  <string Field="AddToFavorites">Zu Favoriten hinzufügen</string>
+  <string Field="ComunicationError">Verbindungsfehler</string>
+  <string Field="PlayError">Fehler bei Wiedergabe {0}</string>
+  <string Field="Empty">Leer</string>
+  <string Field="FastPresets">Schnell-Favoriten</string>
+  <string Field="Folders">Favoriten-Ordner</string>
+  <string Field="Genres">Genres</string>
+  <string Field="Home">Hauptmenü</string>
+  <string Field="Items">Elemente</string>
+  <string Field="Message">Mitteilung</string>
+  <string Field="NewSearch">Neue Suche</string>
+  <string Field="NowPlaying">Aktuelle Wiedergabe</string>
+  <string Field="NoSorting">Keine Sortierung</string>
+  <string Field="NoStationsOrShowsAvailable">Keine Sender oder Sendungen verfügbar</string>
+  <string Field="NoPresetFoldersFound">Kein Favoriten-Ordner gefunden</string>
+  <string Field="Objects">Objekte</string>
+  <string Field="Presets">Favoriten</string>
+  <string Field="RemoveFromFavorites">Aus Favoriten entfernen</string>
+  <string Field="Random">Zufällige Wiedergabe</string>
+  <string Field="Search">Suchen</string>
+  <string Field="SearchHistory">Letzte Suche</string>
+  <string Field="SearchArtist">Suche Interpret</string>
+  <string Field="SelectPresetFolder">Favoriten-Ordner wählen</string>
+  <string Field="SelectPresetNumber">Nummer des Favoriten wählen</string>
+  <string Field="SortByBitrate">Sortieren nach Bitrate</string>
+  <string Field="SortByName">Sortieren nach Name</string>
+  <string Field="Sorting">Sortieren</string>
+  <string Field="ShowGiuide">Programmführer</string>
+  <string Field="StationNotAvaiable">Sender nicht verfügbar</string>
+  <string Field="SimilarStations">Ähnliche Sender</string>
+  <string Field="UseWebInterfaceToEditFavorites">Benutze Webinterface zum Editieren der Favortien</string>
 </strings>
