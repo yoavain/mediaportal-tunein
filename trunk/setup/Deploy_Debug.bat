@@ -15,4 +15,3 @@ copy /y "RadioTimePlugin\bin\Debug\RadioTimePlugin.dll" "%PROGS%\Team MediaPorta
 copy /y "RadioTimePlugin\bin\Debug\RadioTimeOpmlApi.dll" "%PROGS%\Team MediaPortal\MediaPortal\plugins\Windows\"
 
 cd setup
-pause
