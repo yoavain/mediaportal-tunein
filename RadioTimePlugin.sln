@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadioTimePlugin", "RadioTimePlugin\RadioTimePlugin.csproj", "{45A603C0-BDA2-4FF0-B5B6-D066F0864A34}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadioTimeOpmlApi", "RadioTimeOpmlApi\RadioTimeOpmlApi.csproj", "{82B4EC67-0245-4FA9-9B30-F740BF78D0C8}"
