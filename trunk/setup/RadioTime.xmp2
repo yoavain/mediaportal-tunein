@@ -161,13 +161,6 @@
             <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
               <Param1 />
               <UpdateOption>OverwriteIfOlder</UpdateOption>
-              <LocalFileName>..\RadioTimePlugin\bin\Release\RadioTimeOpmlApi.XmlSerializers.dll</LocalFileName>
-              <ZipFileName>Installer{CopyFile}\{f7055224-9690-4efe-a907-bdb7293fc78b}-RadioTimeOpmlApi.XmlSerializers.dll</ZipFileName>
-              <DestinationFilename>%Plugins%\Windows\RadioTimeOpmlApi.XmlSerializers.dll</DestinationFilename>
-            </FileItem>
-            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
-              <Param1 />
-              <UpdateOption>OverwriteIfOlder</UpdateOption>
               <LocalFileName>..\RadioTimePlugin\bin\Release\RadioTimePlugin.dll</LocalFileName>
               <ZipFileName>Installer{CopyFile}\{1db2137d-791d-47ed-b64a-2c9c8abe39b8}-RadioTimePlugin.dll</ZipFileName>
               <DestinationFilename>%Plugins%\Windows\RadioTimePlugin.dll</DestinationFilename>
@@ -349,7 +342,7 @@ Click Next to continue or Cancel to exit Setup.</Value>
   <GeneralInfo>
     <Name>RadioTime</Name>
     <Id>71cc3381-de92-482d-9556-7e86f67f8067</Id>
-    <Author>Dukus; (released by pünktchen)</Author>
+    <Author>Dukus; (released by yoavain)</Author>
     <HomePage>http://code.google.com/p/radiotime-plugin-for-mediaportal/</HomePage>
     <ForumPage>http://forum.team-mediaportal.com/mediaportal-plugins-47/radiotime-plugin-40575/</ForumPage>
     <UpdateUrl>http://radiotime-plugin-for-mediaportal.googlecode.com/svn/trunk/setup/update.xml</UpdateUrl>
@@ -360,7 +353,7 @@ Click Next to continue or Cancel to exit Setup.</Value>
       <Revision>0</Revision>
     </Version>
     <ExtensionDescription>Plugin for browse and play more that 100.000 online radio stations from tunein.com</ExtensionDescription>
-    <VersionDescription>Unofficial Stable Release
+    <VersionDescription>Stable Release
 
 
 
@@ -523,13 +516,6 @@ Click Next to continue or Cancel to exit Setup.</Value>
         <LocalFileName>..\RadioTimePlugin\bin\Release\RadioTimeOpmlApi.dll</LocalFileName>
         <ZipFileName>Installer{CopyFile}\{ca4b62d3-a055-47ab-84b7-07f0a8e16867}-RadioTimeOpmlApi.dll</ZipFileName>
         <DestinationFilename>%Plugins%\Windows\RadioTimeOpmlApi.dll</DestinationFilename>
-      </FileItem>
-      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
-        <Param1 />
-        <UpdateOption>OverwriteIfOlder</UpdateOption>
-        <LocalFileName>..\RadioTimePlugin\bin\Release\RadioTimeOpmlApi.XmlSerializers.dll</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{f7055224-9690-4efe-a907-bdb7293fc78b}-RadioTimeOpmlApi.XmlSerializers.dll</ZipFileName>
-        <DestinationFilename>%Plugins%\Windows\RadioTimeOpmlApi.XmlSerializers.dll</DestinationFilename>
       </FileItem>
       <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
         <Param1 />
