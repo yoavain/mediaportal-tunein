@@ -91,9 +91,9 @@ namespace RadioTimePlugin
 
         public void Save()
         {
-            using (
-                var xmlwriter =
-                    new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "MediaPortal.xml")))
+            SaveEncryptedPassword();
+            
+            using (var xmlwriter = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "MediaPortal.xml")))
             {
                 xmlwriter.SetValueAsBool("radiotime", "mp3", Mp3);
                 xmlwriter.SetValueAsBool("radiotime", "wma", Wma);
@@ -101,9 +101,6 @@ namespace RadioTimePlugin
                 xmlwriter.SetValueAsBool("radiotime", "UseVideo", UseVideo);
                 xmlwriter.SetValueAsBool("radiotime", "JumpNowPlaying", JumpNowPlaying);
                 xmlwriter.SetValue("radiotime", "user", User);
-                xmlwriter.SetValue("radiotime", "encryptedPassword",
-                    PasswordUtility.EncryptData(Password, DataProtectionScope.LocalMachine));
-                xmlwriter.RemoveEntry("radiotime", "password");
                 xmlwriter.SetValueAsBool("radiotime", "showpresets", ShowPresets);
                 xmlwriter.SetValue("radiotime", "pluginname", PluginName);
                 xmlwriter.SetValue("radiotime", "FolderId", FolderId);
@@ -127,9 +124,9 @@ namespace RadioTimePlugin
 
         public void Load()
         {
-            using (
-                var xmlreader =
-                    new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "MediaPortal.xml")))
+            var passwordNeedsUpdate = false;
+
+            using (var xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "MediaPortal.xml")))
             {
                 Mp3 = xmlreader.GetValueAsBool("radiotime", "mp3", true);
                 Wma = xmlreader.GetValueAsBool("radiotime", "wma", true);
@@ -146,6 +143,7 @@ namespace RadioTimePlugin
                 else
                 {
                     Password = xmlreader.GetValueAsString("radiotime", "password", string.Empty);
+                    passwordNeedsUpdate = true;
                 }
                 FolderId = xmlreader.GetValueAsString("radiotime", "FolderId", string.Empty);
                 PluginName = xmlreader.GetValueAsString("radiotime", "pluginname", "RadioTime");
@@ -177,6 +175,22 @@ namespace RadioTimePlugin
 
 
                 PartnerId = "41";
+            }
+
+            if (passwordNeedsUpdate)
+            {
+                SaveEncryptedPassword();
+            }
+        }
+
+        private void SaveEncryptedPassword()
+        {
+            using (
+                var xmlwriter = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "MediaPortal.xml")))
+            {
+                xmlwriter.SetValue("radiotime", "encryptedPassword",
+                    PasswordUtility.EncryptData(Password, DataProtectionScope.LocalMachine));
+                xmlwriter.RemoveEntry("radiotime", "password");
             }
         }
     }
