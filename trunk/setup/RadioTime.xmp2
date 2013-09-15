@@ -124,6 +124,13 @@
               <ZipFileName>Installer{CopyFile}\{1c360882-e418-4d24-b84a-3e7fa0448a8a}-ru.xml</ZipFileName>
               <DestinationFilename>%Language%\RadioTime\ru.xml</DestinationFilename>
             </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>language\RadioTime\tr.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{572a10e8-aee4-4155-8874-32c3c29cdf06}-tr.xml</ZipFileName>
+              <DestinationFilename>%Language%\RadioTime\tr.xml</DestinationFilename>
+            </FileItem>
           </Items>
         </Files>
       </GroupItem>
@@ -502,6 +509,13 @@ Click Next to continue or Cancel to exit Setup.</Value>
         <LocalFileName>language\RadioTime\ru.xml</LocalFileName>
         <ZipFileName>Installer{CopyFile}\{1c360882-e418-4d24-b84a-3e7fa0448a8a}-ru.xml</ZipFileName>
         <DestinationFilename>%Language%\RadioTime\ru.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>language\RadioTime\tr.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{572a10e8-aee4-4155-8874-32c3c29cdf06}-tr.xml</ZipFileName>
+        <DestinationFilename>%Language%\RadioTime\tr.xml</DestinationFilename>
       </FileItem>
       <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
         <Param1 />
