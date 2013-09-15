@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- RadioTime translation file -->
+<!-- Turkish (TR) -->
+<!-- Note: English is the fallback for any strings not found in other languages -->
+<strings>
+
+     <!-- A  -->
+    <string Field="AddToFavorites">Favorilere ekle</string>
+    
+    <!-- C  -->
+    <string Field="ComunicationError">İletişim hatası ya da yanlış kullanıcı adı veya şifre</string>
+    
+    <!-- D  -->
+
+
+    <!-- E  -->
+    <string Field="PlayError">Oynatım hatası {0}</string>
+	<string Field="Empty">Boş</string>
+	<string Field="Folders">Listeler</string>	<!-- not in en us version -->
+
+    <!-- F  -->
+    <string Field="FastPresets">Favoriler</string>
+ 
+    <!-- G  -->
+    <string Field="Genres">Müzik tarzları</string>
+
+
+    <!-- H  -->
+    <string Field="Home">Ana sayfa</string>
+
+    <!-- I  -->
+    <string Field="Items">Items</string>
+
+    <!-- L  -->
+
+    <!-- M  -->
+    <string Field="Message">İleti</string>
+
+    <!-- N  -->
+	<string Field="NewSearch">Yeni arama</string>
+	<string Field="NoSorting">Sıralama yok</string>
+    <string Field="NowPlaying">Şimdi oynatılıyor</string>
+    <string Field="NoStationsOrShowsAvailable">İstasyon ya da program yok</string>
+    <string Field="NoPresetFoldersFound">Tanımlanmış liste yok</string>
+
+    <!-- O  -->
+    <string Field="Objects">Nesne</string>
+
+    <!-- P  -->
+    <string Field="Presets">Listeler</string>
+
+    <!-- R  -->
+    <string Field="RemoveFromFavorites">Favorilerden çıkar</string>
+    <string Field="Random">Rastgele çal</string>
+
+    <!-- S  -->
+    <string Field="Search">Ara</string>
+	<string Field="SearchHistory">Arama geçmişi</string>
+    <string Field="SearchArtist">Şarkıcı ara</string>
+	<string Field="SelectPresetFolder">Liste seç</string>
+	<string Field="SelectPresetNumber">Liste numarası seç</string>
+    <string Field="SortByBitrate">Bit oranına göre sırala</string>
+    <string Field="SortByName">İsme göre sırala</string>
+    <string Field="Sorting">Sıralama</string>
+    <string Field="ShowGiuide">Rehber göster</string>
+    <string Field="StationNotAvaiable">İstasyon mevcut değil</string>
+    <string Field="SimilarStations">Benzer istasyonlar</string>    
+
+    <!-- T -->
+
+
+    <!-- U -->
+    <string Field="UseWebInterfaceToEditFavorites">Favorileri düzenlemek için web arayüzünü kullanın</string>
+    
+    <!-- V -->
+
+    <!-- W -->
+
+    <!-- Y -->
+</strings>
