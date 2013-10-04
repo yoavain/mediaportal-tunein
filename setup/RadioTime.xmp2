@@ -388,7 +388,7 @@ Click Next to continue or Cancel to exit Setup.</Value>
 
 </VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
-    <OnlineLocation>http://radiotime-plugin-for-mediaportal.googlecode.com/files/RadioTime.0.7.0.0.mpe1</OnlineLocation>
+    <OnlineLocation>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/builds/RadioTime-{VERSION}.MPE1</OnlineLocation>
     <ReleaseDate>2011-10-04T22:38:05</ReleaseDate>
     <Tags>radio, online</Tags>
     <Location>builds\RadioTime-MAJOR.MINOR.BUILD.REVISION.MPE1</Location>
