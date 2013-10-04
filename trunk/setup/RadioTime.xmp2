@@ -373,7 +373,7 @@ Click Next to continue or Cancel to exit Setup.</Value>
     <Author>Dukus; (released by yoavain)</Author>
     <HomePage>http://code.google.com/p/radiotime-plugin-for-mediaportal/</HomePage>
     <ForumPage>http://forum.team-mediaportal.com/mediaportal-plugins-47/radiotime-plugin-40575/</ForumPage>
-    <UpdateUrl>http://radiotime-plugin-for-mediaportal.googlecode.com/svn/trunk/setup/update.xml</UpdateUrl>
+    <UpdateUrl>https://code.google.com/p/mediaportal-tunein/source/browse/trunk/setup/update.xml</UpdateUrl>
     <Version>
       <Major>1</Major>
       <Minor>0</Minor>
