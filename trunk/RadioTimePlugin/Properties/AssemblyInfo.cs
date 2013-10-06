@@ -34,7 +34,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyVersion("1.0.0.$WCREV$")]
 [assembly: AssemblyFileVersion("1.0.0.$WCREV$")]
 
-[assembly: CompatibleVersion("1.1.6.27644")]
+[assembly: CompatibleVersion("1.3.100.0", "1.3.100.0")]
 //[assembly: CompatibleVersion("1.4.000.0", "1.4.000.0")]
 //[assembly: UsesSubsystem("MP.SkinEngine")]
 //[assembly: UsesSubsystem("MP.Players.Video")]
