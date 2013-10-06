@@ -1,11 +1,10 @@
-﻿using System.ComponentModel;
-using System.IO;
-using MediaPortal.Dialogs;
+﻿using MediaPortal.Dialogs;
 using MediaPortal.GUI.Library;
-using MediaPortal.Player;
 using MediaPortal.MusicPlayer.BASS;
-using MediaPortal.TagReader;
+using MediaPortal.Player;
 using RadioTimeOpmlApi;
+using System.ComponentModel;
+using System.IO;
 using Action = MediaPortal.GUI.Library.Action;
 
 namespace RadioTimePlugin
