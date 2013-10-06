@@ -2,6 +2,13 @@
 using System.Reflection;
 using System.Runtime.InteropServices;
 
+[assembly: CompatibleVersion("1.3.100.0", "1.3.100.0")]
+//[assembly: CompatibleVersion("1.4.000.0", "1.4.000.0")]
+[assembly: UsesSubsystem("MP.SkinEngine")]
+[assembly: UsesSubsystem("MP.Players.Video")]
+[assembly: UsesSubsystem("MP.Players.Music")]
+[assembly: UsesSubsystem("MP.Config")]
+
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
@@ -33,10 +40,3 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
 [assembly: AssemblyVersion("1.0.0.$WCREV$")]
 [assembly: AssemblyFileVersion("1.0.0.$WCREV$")]
-
-[assembly: CompatibleVersion("1.3.100.0", "1.3.100.0")]
-//[assembly: CompatibleVersion("1.4.000.0", "1.4.000.0")]
-//[assembly: UsesSubsystem("MP.SkinEngine")]
-//[assembly: UsesSubsystem("MP.Players.Video")]
-//[assembly: UsesSubsystem("MP.Players.Music")]
-//[assembly: UsesSubsystem("MP.Config")]
