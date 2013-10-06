@@ -325,47 +325,33 @@ Click Next to continue or Cancel to exit Setup.</Value>
           <Build>6</Build>
           <Revision>27644</Revision>
         </MaxVersion>
-        <WarnOnly>false</WarnOnly>
-        <Message>requires MediaPortal version 1.1.6.27644 to 1.1.6.27644.</Message>
+        <WarnOnly>true</WarnOnly>
+        <Message>requires MediaPortal version 1.4.0 or higher!</Message>
         <Name>MediaPortal</Name>
       </DependencyItem>
       <DependencyItem>
-        <Type>MediaPortal</Type>
+        <Type>Skin</Type>
         <Id />
         <MinVersion>
           <Major>1</Major>
-          <Minor>1</Minor>
-          <Build>6</Build>
-          <Revision>27644</Revision>
+          <Minor>4</Minor>
+          <Build>0</Build>
+          <Revision>0</Revision>
         </MinVersion>
         <MaxVersion>
           <Major>1</Major>
-          <Minor>1</Minor>
-          <Build>6</Build>
-          <Revision>27644</Revision>
+          <Minor>4</Minor>
+          <Build>0</Build>
+          <Revision>0</Revision>
         </MaxVersion>
-        <WarnOnly>false</WarnOnly>
-        <Message>requires MediaPortal version 1.1.6.27644 to 1.1.6.27644.</Message>
-        <Name>MediaPortal</Name>
+        <WarnOnly>true</WarnOnly>
+        <Message>requires Skin version 1.4.0.0 to 1.4.0.0.</Message>
+        <Name>Skin</Name>
       </DependencyItem>
     </Items>
   </Dependencies>
   <PluginDependencies>
-    <Items>
-      <PluginDependencyItem AssemblyName="RadioTimePlugin.dll">
-        <CompatibleVersion>
-          <Items>
-            <CompatibleVersionItem>
-              <MinRequiredVersion>1.1.6.27644</MinRequiredVersion>
-              <DesignedForVersion>1.1.6.27644</DesignedForVersion>
-            </CompatibleVersionItem>
-          </Items>
-        </CompatibleVersion>
-        <SubSystemsUsed>
-          <Items />
-        </SubSystemsUsed>
-      </PluginDependencyItem>
-    </Items>
+    <Items />
   </PluginDependencies>
   <GeneralInfo>
     <Name>RadioTime</Name>
