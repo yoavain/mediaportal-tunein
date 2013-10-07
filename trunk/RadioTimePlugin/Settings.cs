@@ -185,12 +185,14 @@ namespace RadioTimePlugin
 
         private void SaveEncryptedPassword()
         {
-            using (
-                var xmlwriter = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "MediaPortal.xml")))
+            if (!string.IsNullOrEmpty(Password))
             {
-                xmlwriter.SetValue("radiotime", "encryptedPassword",
-                    PasswordUtility.EncryptData(Password, DataProtectionScope.LocalMachine));
-                xmlwriter.RemoveEntry("radiotime", "password");
+                using (var xmlwriter = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "MediaPortal.xml")))
+                {
+                    xmlwriter.SetValue("radiotime", "encryptedPassword",
+                        PasswordUtility.EncryptData(Password, DataProtectionScope.LocalMachine));
+                    xmlwriter.RemoveEntry("radiotime", "password");
+                }
             }
         }
     }
