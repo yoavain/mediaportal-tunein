@@ -1545,7 +1545,7 @@ This changes are done by SilentExcept</VersionDescription>
         <Author>Dukus; (released by yoavain)</Author>
         <HomePage>http://code.google.com/p/radiotime-plugin-for-mediaportal/</HomePage>
         <ForumPage>http://forum.team-mediaportal.com/mediaportal-plugins-47/radiotime-plugin-40575/</ForumPage>
-        <UpdateUrl>https://code.google.com/p/mediaportal-tunein/source/browse/trunk/setup/update.xml</UpdateUrl>
+        <UpdateUrl>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/update.xml</UpdateUrl>
         <Version>
           <Major>1</Major>
           <Minor>0</Minor>
@@ -1711,7 +1711,7 @@ Initial release.
         <Author>Dukus; (released by yoavain)</Author>
         <HomePage>http://code.google.com/p/radiotime-plugin-for-mediaportal/</HomePage>
         <ForumPage>http://forum.team-mediaportal.com/mediaportal-plugins-47/radiotime-plugin-40575/</ForumPage>
-        <UpdateUrl>https://code.google.com/p/mediaportal-tunein/source/browse/trunk/setup/update.xml</UpdateUrl>
+        <UpdateUrl>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/update.xml</UpdateUrl>
         <Version>
           <Major>1</Major>
           <Minor>0</Minor>
