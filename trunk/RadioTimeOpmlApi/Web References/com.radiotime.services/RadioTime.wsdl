@@ -1,14 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-
-<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
-                  xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/"
-                  xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
-                  xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
-                  xmlns:tns="http://services.radiotime.com/radiotime/" xmlns:s="http://www.w3.org/2001/XMLSchema"
-                  xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
-                  xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
-                  targetNamespace="http://services.radiotime.com/radiotime/"
-                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://services.radiotime.com/radiotime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://services.radiotime.com/radiotime/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://services.radiotime.com/radiotime/">
       <s:element name="Account_UserAuthenticate">
@@ -196,6 +187,7 @@
               <s:enumeration value="WMVoice" />
               <s:enumeration value="WMPro" />
               <s:enumeration value="WMVideo" />
+              <s:enumeration value="HLS" />
               <s:enumeration value="All" />
             </s:restriction>
           </s:simpleType>
@@ -378,8 +370,7 @@
       <s:element name="Account_UserUpdateLocationResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="Account_UserUpdateLocationResult"
-                       type="tns:WebServiceResponse" />
+            <s:element minOccurs="0" maxOccurs="1" name="Account_UserUpdateLocationResult" type="tns:WebServiceResponse" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -402,8 +393,7 @@
       <s:element name="Account_UserUpdateTimeZoneResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="Account_UserUpdateTimeZoneResult"
-                       type="tns:WebServiceResponse" />
+            <s:element minOccurs="0" maxOccurs="1" name="Account_UserUpdateTimeZoneResult" type="tns:WebServiceResponse" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -428,8 +418,7 @@
       <s:element name="Account_UserUpdateListenFilterResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="Account_UserUpdateListenFilterResult"
-                       type="tns:WebServiceResponse" />
+            <s:element minOccurs="0" maxOccurs="1" name="Account_UserUpdateListenFilterResult" type="tns:WebServiceResponse" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -494,8 +483,7 @@
       <s:element name="Domain_TimeZonesGetResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="Domain_TimeZonesGetResult"
-                       type="tns:DomainTimeZoneGetResponse" />
+            <s:element minOccurs="0" maxOccurs="1" name="Domain_TimeZonesGetResult" type="tns:DomainTimeZoneGetResponse" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -652,8 +640,7 @@
       <s:element name="Domain_StateProvinceGetResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="Domain_StateProvinceGetResult"
-                       type="tns:DomainStateProvinceGetResponse" />
+            <s:element minOccurs="0" maxOccurs="1" name="Domain_StateProvinceGetResult" type="tns:DomainStateProvinceGetResponse" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -691,8 +678,7 @@
       <s:element name="Domain_AffiliateGetResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="Domain_AffiliateGetResult"
-                       type="tns:DomainAffiliateGetResponse" />
+            <s:element minOccurs="0" maxOccurs="1" name="Domain_AffiliateGetResult" type="tns:DomainAffiliateGetResponse" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -760,8 +746,7 @@
       <s:element name="Favorite_FolderListGetResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="Favorite_FolderListGetResult"
-                       type="tns:FavoriteFolderGetResponse" />
+            <s:element minOccurs="0" maxOccurs="1" name="Favorite_FolderListGetResult" type="tns:FavoriteFolderGetResponse" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -776,8 +761,7 @@
       </s:complexType>
       <s:complexType name="ArrayOfFavoriteFolder">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="FavoriteFolder" nillable="true"
-                     type="tns:FavoriteFolder" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FavoriteFolder" nillable="true" type="tns:FavoriteFolder" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="FavoriteFolder">
@@ -985,6 +969,7 @@
               <s:enumeration value="Station" />
               <s:enumeration value="Program" />
               <s:enumeration value="Topic" />
+              <s:enumeration value="Url" />
               <s:enumeration value="All" />
               <s:enumeration value="None" />
             </s:restriction>
@@ -1060,8 +1045,7 @@
       <s:element name="Favorite_StationLineupGetResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="Favorite_StationLineupGetResult"
-                       type="tns:StationLineupGetResponse" />
+            <s:element minOccurs="0" maxOccurs="1" name="Favorite_StationLineupGetResult" type="tns:StationLineupGetResponse" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -1091,8 +1075,7 @@
       </s:complexType>
       <s:complexType name="ArrayOfProgramBroadcast">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="ProgramBroadcast" nillable="true"
-                     type="tns:ProgramBroadcast" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProgramBroadcast" nillable="true" type="tns:ProgramBroadcast" />
         </s:sequence>
       </s:complexType>
       <s:element name="Favorite_FolderAdd">
@@ -1219,8 +1202,7 @@
       <s:element name="Favorite_StationListDeleteResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="Favorite_StationListDeleteResult"
-                       type="tns:WebServiceResponse" />
+            <s:element minOccurs="0" maxOccurs="1" name="Favorite_StationListDeleteResult" type="tns:WebServiceResponse" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -1273,8 +1255,7 @@
       <s:element name="Favorite_ProgramListDeleteResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="Favorite_ProgramListDeleteResult"
-                       type="tns:WebServiceResponse" />
+            <s:element minOccurs="0" maxOccurs="1" name="Favorite_ProgramListDeleteResult" type="tns:WebServiceResponse" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -1437,8 +1418,7 @@
       <s:element name="Program_ListeningOptionGetResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="Program_ListeningOptionGetResult"
-                       type="tns:ProgramListeningOptionGetResponse" />
+            <s:element minOccurs="0" maxOccurs="1" name="Program_ListeningOptionGetResult" type="tns:ProgramListeningOptionGetResponse" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -1453,8 +1433,7 @@
       </s:complexType>
       <s:complexType name="ArrayOfListeningOption">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="ListeningOption" nillable="true"
-                     type="tns:ListeningOption" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ListeningOption" nillable="true" type="tns:ListeningOption" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="ListeningOption">
@@ -1592,8 +1571,7 @@
       <s:element name="Station_AvailabilityListGetResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="Station_AvailabilityListGetResult"
-                       type="tns:StationAvailabilityListGetResponse" />
+            <s:element minOccurs="0" maxOccurs="1" name="Station_AvailabilityListGetResult" type="tns:StationAvailabilityListGetResponse" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -1630,8 +1608,7 @@
       <s:element name="Program_AvailabilityListGetResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="Program_AvailabilityListGetResult"
-                       type="tns:ProgramAvailabilityListGetResponse" />
+            <s:element minOccurs="0" maxOccurs="1" name="Program_AvailabilityListGetResult" type="tns:ProgramAvailabilityListGetResponse" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -1646,8 +1623,7 @@
       </s:complexType>
       <s:complexType name="ArrayOfProgramAvailability">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="ProgramAvailability" nillable="true"
-                     type="tns:ProgramAvailability" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProgramAvailability" nillable="true" type="tns:ProgramAvailability" />
         </s:sequence>
       </s:complexType>
       <s:element name="Channel_ChannelListGet">
@@ -1736,8 +1712,7 @@
       <s:element name="Recommendation_RecentlyUpdatedGetResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="Recommendation_RecentlyUpdatedGetResult"
-                       type="tns:SearchResponse" />
+            <s:element minOccurs="0" maxOccurs="1" name="Recommendation_RecentlyUpdatedGetResult" type="tns:SearchResponse" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -1781,8 +1756,7 @@
       <s:element name="Recording_CandidateScheduleGetResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="Recording_CandidateScheduleGetResult"
-                       type="tns:RecordingScheduleResponse" />
+            <s:element minOccurs="0" maxOccurs="1" name="Recording_CandidateScheduleGetResult" type="tns:RecordingScheduleResponse" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -1797,8 +1771,7 @@
       </s:complexType>
       <s:complexType name="ArrayOfRecordingSchedule">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="RecordingSchedule" nillable="true"
-                     type="tns:RecordingSchedule" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RecordingSchedule" nillable="true" type="tns:RecordingSchedule" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="RecordingSchedule">
@@ -1898,8 +1871,7 @@
       <s:element name="Recording_ScheduleAddResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="Recording_ScheduleAddResult"
-                       type="tns:ScheduledRecordingResponse" />
+            <s:element minOccurs="0" maxOccurs="1" name="Recording_ScheduleAddResult" type="tns:ScheduledRecordingResponse" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -1967,8 +1939,7 @@
       </s:simpleType>
       <s:complexType name="ArrayOfRecordingSource">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="RecordingSource" nillable="true"
-                     type="tns:RecordingSource" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RecordingSource" nillable="true" type="tns:RecordingSource" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="RecordingSource">
@@ -2023,8 +1994,7 @@
       </s:complexType>
       <s:complexType name="ArrayOfRecordingTrack">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="RecordingTrack" nillable="true"
-                     type="tns:RecordingTrack" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RecordingTrack" nillable="true" type="tns:RecordingTrack" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="RecordingTrack">
@@ -2064,8 +2034,7 @@
       <s:element name="Recording_ScheduleUpdateResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="Recording_ScheduleUpdateResult"
-                       type="tns:ScheduledRecordingResponse" />
+            <s:element minOccurs="0" maxOccurs="1" name="Recording_ScheduleUpdateResult" type="tns:ScheduledRecordingResponse" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -2111,8 +2080,7 @@
       <s:element name="Recording_ScheduleGetResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="Recording_ScheduleGetResult"
-                       type="tns:RecordingScheduleResponse" />
+            <s:element minOccurs="0" maxOccurs="1" name="Recording_ScheduleGetResult" type="tns:RecordingScheduleResponse" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -2138,8 +2106,7 @@
       <s:element name="Recording_ScheduledRecordingGetResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="Recording_ScheduledRecordingGetResult"
-                       type="tns:ScheduledRecordingResponse" />
+            <s:element minOccurs="0" maxOccurs="1" name="Recording_ScheduledRecordingGetResult" type="tns:ScheduledRecordingResponse" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -2227,8 +2194,7 @@
       <s:element name="Recording_ConfigurationUpdateResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="Recording_ConfigurationUpdateResult"
-                       type="tns:WebServiceResponse" />
+            <s:element minOccurs="0" maxOccurs="1" name="Recording_ConfigurationUpdateResult" type="tns:WebServiceResponse" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -2267,8 +2233,7 @@
       </s:complexType>
       <s:complexType name="ArrayOfRecorderAction">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="RecorderAction" nillable="true"
-                     type="tns:RecorderAction" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RecorderAction" nillable="true" type="tns:RecorderAction" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="RecorderAction">
@@ -2434,8 +2399,7 @@
       </s:complexType>
       <s:complexType name="ArrayOfSearchCategory">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="SearchCategory" nillable="true"
-                     type="tns:SearchCategory" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SearchCategory" nillable="true" type="tns:SearchCategory" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="SearchCategory">
@@ -2470,8 +2434,7 @@
       <s:element name="Search_CategoryGetByCategoryResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="Search_CategoryGetByCategoryResult"
-                       type="tns:CategoryGetResponse" />
+            <s:element minOccurs="0" maxOccurs="1" name="Search_CategoryGetByCategoryResult" type="tns:CategoryGetResponse" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -2650,8 +2613,7 @@
       <s:element name="Station_NowPlayingListGetResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="Station_NowPlayingListGetResult"
-                       type="tns:StationNowPlayingListGetResponse" />
+            <s:element minOccurs="0" maxOccurs="1" name="Station_NowPlayingListGetResult" type="tns:StationNowPlayingListGetResponse" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -2666,8 +2628,7 @@
       </s:complexType>
       <s:complexType name="ArrayOfProgramListing">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="ProgramListing" nillable="true"
-                     type="tns:ProgramListing" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProgramListing" nillable="true" type="tns:ProgramListing" />
         </s:sequence>
       </s:complexType>
       <s:element name="Tuner_Tune">
@@ -3506,8 +3467,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Account_UserUpdateListenFilter">
-      <soap:operation soapAction="http://services.radiotime.com/radiotime/Account_UserUpdateListenFilter"
-                      style="document" />
+      <soap:operation soapAction="http://services.radiotime.com/radiotime/Account_UserUpdateListenFilter" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -3804,8 +3764,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Recommendation_RecentlyUpdatedGet">
-      <soap:operation soapAction="http://services.radiotime.com/radiotime/Recommendation_RecentlyUpdatedGet"
-                      style="document" />
+      <soap:operation soapAction="http://services.radiotime.com/radiotime/Recommendation_RecentlyUpdatedGet" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -3823,8 +3782,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Recording_CandidateScheduleGet">
-      <soap:operation soapAction="http://services.radiotime.com/radiotime/Recording_CandidateScheduleGet"
-                      style="document" />
+      <soap:operation soapAction="http://services.radiotime.com/radiotime/Recording_CandidateScheduleGet" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -3869,8 +3827,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Recording_ScheduledRecordingGet">
-      <soap:operation soapAction="http://services.radiotime.com/radiotime/Recording_ScheduledRecordingGet"
-                      style="document" />
+      <soap:operation soapAction="http://services.radiotime.com/radiotime/Recording_ScheduledRecordingGet" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -3897,8 +3854,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Recording_ConfigurationUpdate">
-      <soap:operation soapAction="http://services.radiotime.com/radiotime/Recording_ConfigurationUpdate"
-                      style="document" />
+      <soap:operation soapAction="http://services.radiotime.com/radiotime/Recording_ConfigurationUpdate" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -3943,8 +3899,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Search_CategoryGetByCategory">
-      <soap:operation soapAction="http://services.radiotime.com/radiotime/Search_CategoryGetByCategory"
-                      style="document" />
+      <soap:operation soapAction="http://services.radiotime.com/radiotime/Search_CategoryGetByCategory" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -4091,8 +4046,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Account_UserUpdateLocation">
-      <soap12:operation soapAction="http://services.radiotime.com/radiotime/Account_UserUpdateLocation"
-                        style="document" />
+      <soap12:operation soapAction="http://services.radiotime.com/radiotime/Account_UserUpdateLocation" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -4101,8 +4055,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Account_UserUpdateTimeZone">
-      <soap12:operation soapAction="http://services.radiotime.com/radiotime/Account_UserUpdateTimeZone"
-                        style="document" />
+      <soap12:operation soapAction="http://services.radiotime.com/radiotime/Account_UserUpdateTimeZone" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -4111,8 +4064,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Account_UserUpdateListenFilter">
-      <soap12:operation soapAction="http://services.radiotime.com/radiotime/Account_UserUpdateListenFilter"
-                        style="document" />
+      <soap12:operation soapAction="http://services.radiotime.com/radiotime/Account_UserUpdateListenFilter" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -4265,8 +4217,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Favorite_StationListDelete">
-      <soap12:operation soapAction="http://services.radiotime.com/radiotime/Favorite_StationListDelete"
-                        style="document" />
+      <soap12:operation soapAction="http://services.radiotime.com/radiotime/Favorite_StationListDelete" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -4293,8 +4244,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Favorite_ProgramListDelete">
-      <soap12:operation soapAction="http://services.radiotime.com/radiotime/Favorite_ProgramListDelete"
-                        style="document" />
+      <soap12:operation soapAction="http://services.radiotime.com/radiotime/Favorite_ProgramListDelete" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -4348,8 +4298,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Program_ListeningOptionGet">
-      <soap12:operation soapAction="http://services.radiotime.com/radiotime/Program_ListeningOptionGet"
-                        style="document" />
+      <soap12:operation soapAction="http://services.radiotime.com/radiotime/Program_ListeningOptionGet" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -4367,8 +4316,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Station_AvailabilityListGet">
-      <soap12:operation soapAction="http://services.radiotime.com/radiotime/Station_AvailabilityListGet"
-                        style="document" />
+      <soap12:operation soapAction="http://services.radiotime.com/radiotime/Station_AvailabilityListGet" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -4377,8 +4325,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Program_AvailabilityListGet">
-      <soap12:operation soapAction="http://services.radiotime.com/radiotime/Program_AvailabilityListGet"
-                        style="document" />
+      <soap12:operation soapAction="http://services.radiotime.com/radiotime/Program_AvailabilityListGet" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -4405,8 +4352,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Recommendation_FeaturedGet">
-      <soap12:operation soapAction="http://services.radiotime.com/radiotime/Recommendation_FeaturedGet"
-                        style="document" />
+      <soap12:operation soapAction="http://services.radiotime.com/radiotime/Recommendation_FeaturedGet" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -4415,8 +4361,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Recommendation_RecentlyUpdatedGet">
-      <soap12:operation soapAction="http://services.radiotime.com/radiotime/Recommendation_RecentlyUpdatedGet"
-                        style="document" />
+      <soap12:operation soapAction="http://services.radiotime.com/radiotime/Recommendation_RecentlyUpdatedGet" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -4434,8 +4379,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Recording_CandidateScheduleGet">
-      <soap12:operation soapAction="http://services.radiotime.com/radiotime/Recording_CandidateScheduleGet"
-                        style="document" />
+      <soap12:operation soapAction="http://services.radiotime.com/radiotime/Recording_CandidateScheduleGet" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -4480,8 +4424,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Recording_ScheduledRecordingGet">
-      <soap12:operation soapAction="http://services.radiotime.com/radiotime/Recording_ScheduledRecordingGet"
-                        style="document" />
+      <soap12:operation soapAction="http://services.radiotime.com/radiotime/Recording_ScheduledRecordingGet" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -4508,8 +4451,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Recording_ConfigurationUpdate">
-      <soap12:operation soapAction="http://services.radiotime.com/radiotime/Recording_ConfigurationUpdate"
-                        style="document" />
+      <soap12:operation soapAction="http://services.radiotime.com/radiotime/Recording_ConfigurationUpdate" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -4554,8 +4496,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Search_CategoryGetByCategory">
-      <soap12:operation soapAction="http://services.radiotime.com/radiotime/Search_CategoryGetByCategory"
-                        style="document" />
+      <soap12:operation soapAction="http://services.radiotime.com/radiotime/Search_CategoryGetByCategory" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
