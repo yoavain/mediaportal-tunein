@@ -2,8 +2,7 @@
 using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: CompatibleVersion("1.3.100.0", "1.3.100.0")]
-//[assembly: CompatibleVersion("1.4.000.0", "1.4.000.0")]
+[assembly: CompatibleVersion("1.5.100.0", "1.5.100.0")]
 [assembly: UsesSubsystem("MP.SkinEngine")]
 [assembly: UsesSubsystem("MP.Players.Video")]
 [assembly: UsesSubsystem("MP.Players.Music")]
