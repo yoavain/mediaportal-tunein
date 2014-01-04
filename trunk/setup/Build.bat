@@ -12,6 +12,6 @@ if "%programfiles(x86)%XXX"=="XXX" goto 32BIT
 :CONT
 
 :: Build
-"%WINDIR%\Microsoft.NET\Framework\v4.0.30319\MSBUILD.exe" /target:Rebuild /property:Configuration=RELEASE RadioTimePlugin.sln
+"%WINDIR%\Microsoft.NET\Framework\v4.0.30319\MSBUILD.exe" /target:Rebuild /property:Configuration=RELEASE /fl /flp:logfile=RadioTimePlugin.log;verbosity=diagnostic RadioTimePlugin.sln
 
 cd setup
