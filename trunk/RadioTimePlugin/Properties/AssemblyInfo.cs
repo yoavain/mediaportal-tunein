@@ -1,6 +1,6 @@
-﻿using MediaPortal.Common.Utils;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.InteropServices;
+using MediaPortal.Common.Utils;
 
 [assembly: CompatibleVersion("1.5.100.0", "1.5.100.0")]
 [assembly: UsesSubsystem("MP.SkinEngine")]
@@ -11,12 +11,13 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
+
 [assembly: AssemblyTitle("RadioTimePlugin")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("RadioTimePlugin")]
-[assembly: AssemblyCopyright("Copyright © 2013")]
+[assembly: AssemblyCopyright("Copyright © 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
