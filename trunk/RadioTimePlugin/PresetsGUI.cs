@@ -67,7 +67,7 @@ namespace RadioTimePlugin
             //Log.Error(" PresetsGUI OnMessage: " + message.Message.ToString());
 
             if (message.Message == GUIMessage.MessageType.GUI_MSG_SETFOCUS && message.TargetControlId > 100 &&
-                message.TargetControlId <= Settings.LOCAL_PRESETS_NUMBER + 100)
+                message.TargetControlId <= Settings.LocalPresetsNumber + 100)
             {
                 if (_setting.PresetStations.Count >= message.TargetControlId - 100)
                     UpdateSelectedLabels(_setting.PresetStations[message.TargetControlId - 100 - 1]);
@@ -79,7 +79,7 @@ namespace RadioTimePlugin
         {
             if (control.GetType() == typeof (GUIButtonControl))
             {
-                if (controlId > 100 && controlId <= Settings.LOCAL_PRESETS_NUMBER + 100 &&
+                if (controlId > 100 && controlId <= Settings.LocalPresetsNumber + 100 &&
                     _setting.PresetStations[controlId - 100 - 1] != null &&
                     _setting.PresetStations[controlId - 100 - 1].GuidId != null)
                 {
@@ -117,7 +117,7 @@ namespace RadioTimePlugin
             {
                 File.Copy(Path.GetTempPath() + @"\station.png", curentDownlodingFile.FileName, true);
                 var focusID = GetFocusControlId();
-                if (focusID > 100 && focusID <= Settings.LOCAL_PRESETS_NUMBER + 100)
+                if (focusID > 100 && focusID <= Settings.LocalPresetsNumber + 100)
                     UpdateSelectedLabels(_setting.PresetStations[focusID - 100 - 1]);
             }
         }

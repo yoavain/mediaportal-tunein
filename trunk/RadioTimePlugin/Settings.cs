@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using RadioTimeOpmlApi;
@@ -14,7 +15,7 @@ namespace RadioTimePlugin
 
     public class Settings : RadioTimeSetting
     {
-        public const int LOCAL_PRESETS_NUMBER = 10;
+        public const int LocalPresetsNumber = 10;
 
         public static RadioTimeStation NowPlayingStation { get; set; }
         public static RadioTimeNowPlaying NowPlaying { get; set; }
@@ -70,19 +71,15 @@ namespace RadioTimePlugin
             FirtsStart = true;
         }
 
-        private string pluginName;
+        private string _pluginName;
 
         public string PluginName
         {
             get
             {
-                if (!string.IsNullOrEmpty(pluginName))
-                {
-                    return pluginName;
-                }
-                return "TuneIn";
+                return !string.IsNullOrEmpty(_pluginName) ? _pluginName : "TuneIn";
             }
-            set { pluginName = value; }
+            set { _pluginName = value; }
         }
 
         public bool UseVideo { get; set; }
@@ -138,7 +135,14 @@ namespace RadioTimePlugin
                 var encryptedPassword = xmlreader.GetValueAsString("radiotime", "encryptedPassword", string.Empty);
                 if (!string.IsNullOrEmpty(encryptedPassword))
                 {
-                    Password = PasswordUtility.DecryptData(encryptedPassword, DataProtectionScope.LocalMachine);
+                    {
+                        Password = PasswordUtility.DecryptData(encryptedPassword, DataProtectionScope.LocalMachine);
+                        if (string.IsNullOrEmpty(Password))
+                        {
+                            Password = string.Empty;
+                            passwordNeedsUpdate = true;
+                        }
+                    }
                 }
                 else
                 {
