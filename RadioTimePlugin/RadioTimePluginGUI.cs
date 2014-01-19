@@ -934,7 +934,7 @@ namespace RadioTimePlugin
                 }
 
                 // then i fill x number of presets
-                for (var i = 0; i < (biggestPresetNumber + Settings.LOCAL_PRESETS_NUMBER); i++)
+                for (var i = 0; i < (biggestPresetNumber + Settings.LocalPresetsNumber); i++)
                 {
                     tempresets.Add(new RadioTimeOutline());
                 }
@@ -986,7 +986,7 @@ namespace RadioTimePlugin
                 return;
             dlg.Reset();
 
-            for (var i = 0; i < Settings.LOCAL_PRESETS_NUMBER; i++)
+            for (var i = 0; i < Settings.LocalPresetsNumber; i++)
             {
                 if (_setting.PresetStations.Count > i + 1)
                 {

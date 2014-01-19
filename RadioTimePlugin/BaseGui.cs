@@ -395,7 +395,7 @@ namespace RadioTimePlugin
         public void LoadLocalPresetStations()
         {
             _setting.PresetStations.Clear();
-            for (var i = 0; i < Settings.LOCAL_PRESETS_NUMBER; i++)
+            for (var i = 0; i < Settings.LocalPresetsNumber; i++)
             {
                 _setting.PresetStations.Add(new RadioTimeOutline());
             }
@@ -433,7 +433,7 @@ namespace RadioTimePlugin
                 foreach (var body in grabber.Body)
                 {
                     if (!string.IsNullOrEmpty(body.PresetNumber) &&
-                        body.PresetNumberAsInt - 1 < Settings.LOCAL_PRESETS_NUMBER)
+                        body.PresetNumberAsInt - 1 < Settings.LocalPresetsNumber)
                     {
                         _setting.PresetStations[body.PresetNumberAsInt - 1] = body;
                     }
@@ -460,7 +460,7 @@ namespace RadioTimePlugin
 
         private void PopulatePresetsLabels()
         {
-            for (var i = 0; i < Settings.LOCAL_PRESETS_NUMBER; i++)
+            for (var i = 0; i < Settings.LocalPresetsNumber; i++)
             {
                 if (string.IsNullOrEmpty(_setting.PresetStations[i].Text))
                     GUIPropertyManager.SetProperty(string.Format("#RadioTime.Presets.{0}.Name", i + 1),
