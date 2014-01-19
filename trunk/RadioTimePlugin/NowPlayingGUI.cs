@@ -28,11 +28,11 @@ namespace RadioTimePlugin
 
         public NowPlayingGUI()
         {
-            var _setting = new Settings();
-            _setting.Load();
-            grabber.Settings.User = _setting.User;
-            grabber.Settings.Password = _setting.Password;
-            grabber.Settings.PartnerId = _setting.PartnerId;
+            var setting = new Settings();
+            setting.Load();
+            grabber.Settings.User = setting.User;
+            grabber.Settings.Password = setting.Password;
+            grabber.Settings.PartnerId = setting.PartnerId;
         }
 
         private void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)

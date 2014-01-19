@@ -140,7 +140,6 @@ namespace RadioTimePlugin
                         if (string.IsNullOrEmpty(Password))
                         {
                             Password = string.Empty;
-                            passwordNeedsUpdate = true;
                         }
                     }
                 }
