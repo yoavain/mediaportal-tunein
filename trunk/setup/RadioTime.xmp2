@@ -113,9 +113,9 @@
             <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
               <Param1 />
               <UpdateOption>OverwriteIfOlder</UpdateOption>
-              <LocalFileName>language\RadioTime\nl .xml</LocalFileName>
-              <ZipFileName>Installer{CopyFile}\{ce332097-ffcd-47b9-8097-cf6de51babb4}-nl .xml</ZipFileName>
-              <DestinationFilename>%Language%\RadioTime\nl .xml</DestinationFilename>
+              <LocalFileName>language\RadioTime\nl.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{ce332097-ffcd-47b9-8097-cf6de51babb4}-nl.xml</ZipFileName>
+              <DestinationFilename>%Language%\RadioTime\nl.xml</DestinationFilename>
             </FileItem>
             <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
               <Param1 />
@@ -526,9 +526,9 @@ Initial release.
       <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
-        <LocalFileName>language\RadioTime\nl .xml</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{ce332097-ffcd-47b9-8097-cf6de51babb4}-nl .xml</ZipFileName>
-        <DestinationFilename>%Language%\RadioTime\nl .xml</DestinationFilename>
+        <LocalFileName>language\RadioTime\nl.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{ce332097-ffcd-47b9-8097-cf6de51babb4}-nl.xml</ZipFileName>
+        <DestinationFilename>%Language%\RadioTime\nl.xml</DestinationFilename>
       </FileItem>
       <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
         <Param1 />
