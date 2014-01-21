@@ -377,12 +377,12 @@ Click Next to continue or Cancel to exit Setup.</Value>
     <Id>71cc3381-de92-482d-9556-7e86f67f8067</Id>
     <Author>Dukus; (released by yoavain)</Author>
     <HomePage>http://code.google.com/p/radiotime-plugin-for-mediaportal/</HomePage>
-    <ForumPage>http://forum.team-mediaportal.com/mediaportal-plugins-47/radiotime-plugin-40575/</ForumPage>
+    <ForumPage>http://forum.team-mediaportal.com/forums/radiotime.666/</ForumPage>
     <UpdateUrl>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/update.xml</UpdateUrl>
     <Version>
       <Major>1</Major>
       <Minor>0</Minor>
-      <Build>0</Build>
+      <Build>1</Build>
       <Revision>0</Revision>
     </Version>
     <ExtensionDescription>Plugin for browse and play more that 100.000 online radio stations from tunein.com</ExtensionDescription>
