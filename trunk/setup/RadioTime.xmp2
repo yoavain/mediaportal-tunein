@@ -326,7 +326,7 @@ Click Next to continue or Cancel to exit Setup.</Value>
           <Revision>27644</Revision>
         </MaxVersion>
         <WarnOnly>true</WarnOnly>
-        <Message>requires MediaPortal version 1.4.0 or higher!</Message>
+        <Message>requires MediaPortal version 1.7.0 or higher!</Message>
         <Name>MediaPortal</Name>
       </DependencyItem>
       <DependencyItem>
@@ -348,6 +348,25 @@ Click Next to continue or Cancel to exit Setup.</Value>
         <Message>requires Skin version 1.4.0.0 to 1.4.0.0.</Message>
         <Name>Skin</Name>
       </DependencyItem>
+      <DependencyItem>
+        <Type>Installer</Type>
+        <Id />
+        <MinVersion>
+          <Major>1</Major>
+          <Minor>6</Minor>
+          <Build>100</Build>
+          <Revision>0</Revision>
+        </MinVersion>
+        <MaxVersion>
+          <Major>1</Major>
+          <Minor>7</Minor>
+          <Build>0</Build>
+          <Revision>0</Revision>
+        </MaxVersion>
+        <WarnOnly>true</WarnOnly>
+        <Message>requires Installer version 1.6.100.0 to 1.7.0.0.</Message>
+        <Name>Installer</Name>
+      </DependencyItem>
     </Items>
   </Dependencies>
   <PluginDependencies>
@@ -356,8 +375,8 @@ Click Next to continue or Cancel to exit Setup.</Value>
         <CompatibleVersion>
           <Items>
             <CompatibleVersionItem>
-              <MinRequiredVersion>1.3.100.0</MinRequiredVersion>
-              <DesignedForVersion>1.3.100.0</DesignedForVersion>
+              <MinRequiredVersion>1.6.100.0</MinRequiredVersion>
+              <DesignedForVersion>1.6.100.0</DesignedForVersion>
             </CompatibleVersionItem>
           </Items>
         </CompatibleVersion>
@@ -381,21 +400,18 @@ Click Next to continue or Cancel to exit Setup.</Value>
     <UpdateUrl>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/update.xml</UpdateUrl>
     <Version>
       <Major>1</Major>
-      <Minor>0</Minor>
-      <Build>1</Build>
+      <Minor>1</Minor>
+      <Build>0</Build>
       <Revision>0</Revision>
     </Version>
     <ExtensionDescription>Plugin for browse and play more that 100.000 online radio stations from tunein.com</ExtensionDescription>
-    <VersionDescription>Rebranded to TuneIn.
-Initial release.
-
-
+    <VersionDescription>Compatibility for 1.7 Pre
 
 
 </VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
     <OnlineLocation>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/builds/RadioTime-{VERSION}.MPE1</OnlineLocation>
-    <ReleaseDate>2011-10-04T22:38:05</ReleaseDate>
+    <ReleaseDate>2014-03-03T22:38:05</ReleaseDate>
     <Tags>radio, online</Tags>
     <Location>builds\RadioTime-MAJOR.MINOR.BUILD.REVISION.MPE1</Location>
     <Params>
