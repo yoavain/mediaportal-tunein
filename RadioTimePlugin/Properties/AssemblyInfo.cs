@@ -5,6 +5,10 @@ using MediaPortal.Common.Utils;
 // Version Compatibility
 // http://wiki.team-mediaportal.com/1_MEDIAPORTAL_1/18_Contribute/6_Plugins/Plugin_Related_Changes/1.6.0_to_1.7.0
 [assembly: CompatibleVersion("1.7.0.0", "1.7.0.0")]
+[assembly: SubsystemVersion("MP.SkinEngine", "1.3.100.0")] // MP 1.4.0 Pre Release
+[assembly: SubsystemVersion("MP.Players.Video", "1.1.6.27644")]
+[assembly: SubsystemVersion("MP.Players.Music", "1.7.0.0")]
+[assembly: SubsystemVersion("MP.Config", "1.1.6.27644")]
 
 [assembly: UsesSubsystem("MP.SkinEngine")]
 [assembly: UsesSubsystem("MP.Players.Video")]
