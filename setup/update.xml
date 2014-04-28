@@ -2191,11 +2191,11 @@ Initial release.
             <MaxVersion>
               <Major>1</Major>
               <Minor>7</Minor>
-              <Build>0</Build>
+              <Build>99</Build>
               <Revision>0</Revision>
             </MaxVersion>
             <WarnOnly>false</WarnOnly>
-            <Message>requires Installer version 1.7.0.0 to 1.7.0.0.</Message>
+            <Message>requires Installer version 1.7.0.0 to 1.7.99.0.</Message>
             <Name>Installer</Name>
           </DependencyItem>
         </Items>
@@ -2233,13 +2233,13 @@ Initial release.
           <Major>1</Major>
           <Minor>2</Minor>
           <Build>0</Build>
-          <Revision>69</Revision>
+          <Revision>75</Revision>
         </Version>
         <ExtensionDescription>Plugin for browse and play more that 100.000 online radio stations from tunein.com</ExtensionDescription>
-        <VersionDescription>Compatibility for 1.7 Final</VersionDescription>
+        <VersionDescription>Compatibility for 1.7 Final / 1.7.1 HotFix</VersionDescription>
         <DevelopmentStatus>Stable</DevelopmentStatus>
-        <OnlineLocation>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/builds/RadioTime-1.2.0.69.MPE1</OnlineLocation>
-        <ReleaseDate>2014-04-17T17:29:15.6421165+03:00</ReleaseDate>
+        <OnlineLocation>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/builds/RadioTime-1.2.0.75.MPE1</OnlineLocation>
+        <ReleaseDate>2014-04-28T22:55:39.8993249+03:00</ReleaseDate>
         <Tags>radio, online</Tags>
         <Location>builds\RadioTime-MAJOR.MINOR.BUILD.REVISION.MPE1</Location>
         <Params>
