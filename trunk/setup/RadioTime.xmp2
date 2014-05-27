@@ -360,11 +360,11 @@ Click Next to continue or Cancel to exit Setup.</Value>
         <MaxVersion>
           <Major>1</Major>
           <Minor>7</Minor>
-          <Build>99</Build>
+          <Build>100</Build>
           <Revision>0</Revision>
         </MaxVersion>
         <WarnOnly>false</WarnOnly>
-        <Message>requires Installer version 1.7.0.0 to 1.7.99.0.</Message>
+        <Message>requires Installer version 1.7.0.0 to 1.7.100.0.</Message>
         <Name>Installer</Name>
       </DependencyItem>
     </Items>
@@ -401,14 +401,14 @@ Click Next to continue or Cancel to exit Setup.</Value>
     <Version>
       <Major>1</Major>
       <Minor>2</Minor>
-      <Build>0</Build>
+      <Build>1</Build>
       <Revision>0</Revision>
     </Version>
     <ExtensionDescription>Plugin for browse and play more that 100.000 online radio stations from tunein.com</ExtensionDescription>
-    <VersionDescription>Compatibility for 1.7 Final / 1.7.1 HotFix</VersionDescription>
+    <VersionDescription>Compatibility for 1.8 Pre-Release</VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
     <OnlineLocation>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/builds/RadioTime-{VERSION}.MPE1</OnlineLocation>
-    <ReleaseDate>2014-04-28T22:38:05</ReleaseDate>
+    <ReleaseDate>2014-05-27T22:38:05</ReleaseDate>
     <Tags>radio, online</Tags>
     <Location>builds\RadioTime-MAJOR.MINOR.BUILD.REVISION.MPE1</Location>
     <Params>
