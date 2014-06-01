@@ -2412,13 +2412,13 @@ Initial release.
           <Major>1</Major>
           <Minor>2</Minor>
           <Build>1</Build>
-          <Revision>78</Revision>
+          <Revision>79</Revision>
         </Version>
         <ExtensionDescription>Plugin for browse and play more that 100.000 online radio stations from tunein.com</ExtensionDescription>
         <VersionDescription>Compatibility for 1.8 Pre-Release</VersionDescription>
         <DevelopmentStatus>Stable</DevelopmentStatus>
-        <OnlineLocation>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/builds/RadioTime-1.2.1.78.MPE1</OnlineLocation>
-        <ReleaseDate>2014-05-27T18:35:22.0429604+03:00</ReleaseDate>
+        <OnlineLocation>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/builds/RadioTime-1.2.1.79.MPE1</OnlineLocation>
+        <ReleaseDate>2014-06-01T18:35:22.0429604+03:00</ReleaseDate>
         <Tags>radio, online</Tags>
         <Location>builds\RadioTime-MAJOR.MINOR.BUILD.REVISION.MPE1</Location>
         <Params>

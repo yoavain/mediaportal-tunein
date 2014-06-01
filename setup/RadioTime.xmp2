@@ -360,11 +360,11 @@ Click Next to continue or Cancel to exit Setup.</Value>
         <MaxVersion>
           <Major>1</Major>
           <Minor>7</Minor>
-          <Build>100</Build>
-          <Revision>0</Revision>
+          <Build>999</Build>
+          <Revision>999</Revision>
         </MaxVersion>
         <WarnOnly>false</WarnOnly>
-        <Message>requires Installer version 1.7.0.0 to 1.7.100.0.</Message>
+        <Message>requires Installer version 1.7.0.0 to 1.7.999.999.</Message>
         <Name>Installer</Name>
       </DependencyItem>
     </Items>
