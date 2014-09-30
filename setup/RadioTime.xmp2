@@ -353,13 +353,13 @@ Click Next to continue or Cancel to exit Setup.</Value>
         <Id />
         <MinVersion>
           <Major>1</Major>
-          <Minor>8</Minor>
+          <Minor>9</Minor>
           <Build>0</Build>
           <Revision>0</Revision>
         </MinVersion>
         <MaxVersion>
           <Major>1</Major>
-          <Minor>8</Minor>
+          <Minor>9</Minor>
           <Build>999</Build>
           <Revision>999</Revision>
         </MaxVersion>
@@ -400,15 +400,15 @@ Click Next to continue or Cancel to exit Setup.</Value>
     <UpdateUrl>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/update.xml</UpdateUrl>
     <Version>
       <Major>1</Major>
-      <Minor>2</Minor>
-      <Build>5</Build>
+      <Minor>3</Minor>
+      <Build>0</Build>
       <Revision>0</Revision>
     </Version>
     <ExtensionDescription>Plugin for browse and play more that 100.000 online radio stations from tunein.com</ExtensionDescription>
-    <VersionDescription>Compatibility for 1.8 Final</VersionDescription>
+    <VersionDescription>Compatibility for 1.9 Final</VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
     <OnlineLocation>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/builds/RadioTime-{VERSION}.MPE1</OnlineLocation>
-    <ReleaseDate>2014-07-01T22:38:05</ReleaseDate>
+    <ReleaseDate>2014-09-30T22:38:05</ReleaseDate>
     <Tags>radio, online</Tags>
     <Location>builds\RadioTime-MAJOR.MINOR.BUILD.REVISION.MPE1</Location>
     <Params>
