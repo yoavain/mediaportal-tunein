@@ -359,7 +359,7 @@ Click Next to continue or Cancel to exit Setup.</Value>
         </MinVersion>
         <MaxVersion>
           <Major>1</Major>
-          <Minor>9</Minor>
+          <Minor>99</Minor>
           <Build>999</Build>
           <Revision>999</Revision>
         </MaxVersion>
