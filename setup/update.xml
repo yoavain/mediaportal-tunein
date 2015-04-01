@@ -44,9 +44,9 @@
         <Name>RadioTime</Name>
         <Id>71cc3381-de92-482d-9556-7e86f67f8067</Id>
         <Author>Dukus</Author>
-        <HomePage>http://code.google.com/p/radiotime-plugin-for-mediaportal/</HomePage>
+        <HomePage>https://github.com/yoavain/mediaportal-tunein</HomePage>
         <ForumPage>http://forum.team-mediaportal.com/mediaportal-plugins-47/radiotime-plugin-40575/</ForumPage>
-        <UpdateUrl>http://radiotime-plugin-for-mediaportal.googlecode.com/svn/trunk/setup/update.xml</UpdateUrl>
+        <UpdateUrl>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/update.xml</UpdateUrl>
         <Version>
           <Major>0</Major>
           <Minor>5</Minor>
@@ -56,7 +56,7 @@
         <ExtensionDescription>Plugin for browse online radio stations from RadioTime.com</ExtensionDescription>
         <VersionDescription>Improved playback </VersionDescription>
         <DevelopmentStatus>Beta</DevelopmentStatus>
-        <OnlineLocation>http://radiotime-plugin-for-mediaportal.googlecode.com/files/RadioTime.0.5.3.0.mpe1</OnlineLocation>
+        <OnlineLocation>https://github.com/yoavain/mediaportal-tunein/raw/master/setup/builds/RadioTime.0.5.3.0.mpe1</OnlineLocation>
         <ReleaseDate>2010-02-16T22:38:05.53125+02:00</ReleaseDate>
         <Tags>radio, online</Tags>
         <Location>F:\devel\vs2005\RadioTimePlugin\setup\RadioTime.[Version].mpe1</Location>
@@ -138,9 +138,9 @@
         <Name>RadioTime</Name>
         <Id>71cc3381-de92-482d-9556-7e86f67f8067</Id>
         <Author>Dukus</Author>
-        <HomePage>http://code.google.com/p/radiotime-plugin-for-mediaportal/</HomePage>
+        <HomePage>https://github.com/yoavain/mediaportal-tunein</HomePage>
         <ForumPage>http://forum.team-mediaportal.com/mediaportal-plugins-47/radiotime-plugin-40575/</ForumPage>
-        <UpdateUrl>http://radiotime-plugin-for-mediaportal.googlecode.com/svn/trunk/setup/update.xml</UpdateUrl>
+        <UpdateUrl>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/update.xml</UpdateUrl>
         <Version>
           <Major>0</Major>
           <Minor>5</Minor>
@@ -150,7 +150,7 @@
         <ExtensionDescription>Plugin for browse online radio stations from RadioTime.com</ExtensionDescription>
         <VersionDescription>Radio guide  </VersionDescription>
         <DevelopmentStatus>Beta</DevelopmentStatus>
-        <OnlineLocation>http://radiotime-plugin-for-mediaportal.googlecode.com/files/RadioTime.0.5.3.1.mpe1</OnlineLocation>
+        <OnlineLocation>https://github.com/yoavain/mediaportal-tunein/raw/master/setup/builds/RadioTime.0.5.3.1.mpe1</OnlineLocation>
         <ReleaseDate>2010-02-16T22:38:05.53125+02:00</ReleaseDate>
         <Tags>radio, online</Tags>
         <Location>F:\devel\vs2005\RadioTimePlugin\setup\RadioTime.[Version].mpe1</Location>
@@ -232,9 +232,9 @@
         <Name>RadioTime</Name>
         <Id>71cc3381-de92-482d-9556-7e86f67f8067</Id>
         <Author>Dukus</Author>
-        <HomePage>http://code.google.com/p/radiotime-plugin-for-mediaportal/</HomePage>
+        <HomePage>https://github.com/yoavain/mediaportal-tunein</HomePage>
         <ForumPage>http://forum.team-mediaportal.com/mediaportal-plugins-47/radiotime-plugin-40575/</ForumPage>
-        <UpdateUrl>http://radiotime-plugin-for-mediaportal.googlecode.com/svn/trunk/setup/update.xml</UpdateUrl>
+        <UpdateUrl>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/update.xml</UpdateUrl>
         <Version>
           <Major>0</Major>
           <Minor>5</Minor>
@@ -244,7 +244,7 @@
         <ExtensionDescription>Plugin for browse online radio stations from RadioTime.com</ExtensionDescription>
         <VersionDescription>Radio guide  </VersionDescription>
         <DevelopmentStatus>Beta</DevelopmentStatus>
-        <OnlineLocation>http://radiotime-plugin-for-mediaportal.googlecode.com/files/RadioTime.0.5.3.2.mpe1</OnlineLocation>
+        <OnlineLocation>https://github.com/yoavain/mediaportal-tunein/raw/master/setup/builds/RadioTime.0.5.3.2.mpe1</OnlineLocation>
         <ReleaseDate>2010-02-16T22:38:05.53125+02:00</ReleaseDate>
         <Tags>radio, online</Tags>
         <Location>F:\devel\vs2005\RadioTimePlugin\setup\RadioTime.[Version].mpe1</Location>
@@ -326,9 +326,9 @@
         <Name>RadioTime</Name>
         <Id>71cc3381-de92-482d-9556-7e86f67f8067</Id>
         <Author>Dukus</Author>
-        <HomePage>http://code.google.com/p/radiotime-plugin-for-mediaportal/</HomePage>
+        <HomePage>https://github.com/yoavain/mediaportal-tunein</HomePage>
         <ForumPage>http://forum.team-mediaportal.com/mediaportal-plugins-47/radiotime-plugin-40575/</ForumPage>
-        <UpdateUrl>http://radiotime-plugin-for-mediaportal.googlecode.com/svn/trunk/setup/update.xml</UpdateUrl>
+        <UpdateUrl>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/update.xml</UpdateUrl>
         <Version>
           <Major>0</Major>
           <Minor>5</Minor>
@@ -341,7 +341,7 @@ Now playing screen
 Random Play button
 </VersionDescription>
         <DevelopmentStatus>Beta</DevelopmentStatus>
-        <OnlineLocation>http://radiotime-plugin-for-mediaportal.googlecode.com/files/RadioTime.0.5.3.3.mpe1</OnlineLocation>
+        <OnlineLocation>https://github.com/yoavain/mediaportal-tunein/raw/master/setup/builds/RadioTime.0.5.3.3.mpe1</OnlineLocation>
         <ReleaseDate>2010-02-16T22:38:05.53125+02:00</ReleaseDate>
         <Tags>radio, online</Tags>
         <Location>F:\devel\vs2005\RadioTimePlugin\setup\RadioTime.[Version].mpe1</Location>
@@ -431,9 +431,9 @@ Random Play button
         <Name>RadioTime</Name>
         <Id>71cc3381-de92-482d-9556-7e86f67f8067</Id>
         <Author>Dukus</Author>
-        <HomePage>http://code.google.com/p/radiotime-plugin-for-mediaportal/</HomePage>
+        <HomePage>https://github.com/yoavain/mediaportal-tunein</HomePage>
         <ForumPage>http://forum.team-mediaportal.com/mediaportal-plugins-47/radiotime-plugin-40575/</ForumPage>
-        <UpdateUrl>http://radiotime-plugin-for-mediaportal.googlecode.com/svn/trunk/setup/update.xml</UpdateUrl>
+        <UpdateUrl>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/update.xml</UpdateUrl>
         <Version>
           <Major>0</Major>
           <Minor>5</Minor>
@@ -443,7 +443,7 @@ Random Play button
         <ExtensionDescription>Plugin for browse more that 100.000 online radio stations from RadioTime.com</ExtensionDescription>
         <VersionDescription>Language support</VersionDescription>
         <DevelopmentStatus>Beta</DevelopmentStatus>
-        <OnlineLocation>http://radiotime-plugin-for-mediaportal.googlecode.com/files/RadioTime.0.5.3.4.mpe1</OnlineLocation>
+        <OnlineLocation>https://github.com/yoavain/mediaportal-tunein/raw/master/setup/builds/RadioTime.0.5.3.4.mpe1</OnlineLocation>
         <ReleaseDate>2010-02-16T22:38:05.53125+02:00</ReleaseDate>
         <Tags>radio, online</Tags>
         <Location>F:\devel\vs2005\RadioTimePlugin\setup\RadioTime.[Version].mpe1</Location>
@@ -525,9 +525,9 @@ Random Play button
         <Name>RadioTime</Name>
         <Id>71cc3381-de92-482d-9556-7e86f67f8067</Id>
         <Author>Dukus</Author>
-        <HomePage>http://code.google.com/p/radiotime-plugin-for-mediaportal/</HomePage>
+        <HomePage>https://github.com/yoavain/mediaportal-tunein</HomePage>
         <ForumPage>http://forum.team-mediaportal.com/mediaportal-plugins-47/radiotime-plugin-40575/</ForumPage>
-        <UpdateUrl>http://radiotime-plugin-for-mediaportal.googlecode.com/svn/trunk/setup/update.xml</UpdateUrl>
+        <UpdateUrl>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/update.xml</UpdateUrl>
         <Version>
           <Major>0</Major>
           <Minor>5</Minor>
@@ -540,7 +540,7 @@ Search history
 Minor bug fixes 
 </VersionDescription>
         <DevelopmentStatus>Beta</DevelopmentStatus>
-        <OnlineLocation>http://radiotime-plugin-for-mediaportal.googlecode.com/files/RadioTime.0.5.3.5.mpe1</OnlineLocation>
+        <OnlineLocation>https://github.com/yoavain/mediaportal-tunein/raw/master/setup/builds/RadioTime.0.5.3.5.mpe1</OnlineLocation>
         <ReleaseDate>2010-02-16T22:38:05.53125+02:00</ReleaseDate>
         <Tags>radio, online</Tags>
         <Location>F:\devel\vs2005\RadioTimePlugin\setup\RadioTime.[Version].mpe1</Location>
@@ -622,9 +622,9 @@ Minor bug fixes
         <Name>RadioTime</Name>
         <Id>71cc3381-de92-482d-9556-7e86f67f8067</Id>
         <Author>Dukus</Author>
-        <HomePage>http://code.google.com/p/radiotime-plugin-for-mediaportal/</HomePage>
+        <HomePage>https://github.com/yoavain/mediaportal-tunein</HomePage>
         <ForumPage>http://forum.team-mediaportal.com/mediaportal-plugins-47/radiotime-plugin-40575/</ForumPage>
-        <UpdateUrl>http://radiotime-plugin-for-mediaportal.googlecode.com/svn/trunk/setup/update.xml</UpdateUrl>
+        <UpdateUrl>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/update.xml</UpdateUrl>
         <Version>
           <Major>0</Major>
           <Minor>6</Minor>
@@ -636,7 +636,7 @@ Minor bug fixes
 Search history
 Minor bug fixes</VersionDescription>
         <DevelopmentStatus>Stable</DevelopmentStatus>
-        <OnlineLocation>http://radiotime-plugin-for-mediaportal.googlecode.com/files/RadioTime.0.6.0.0.mpe1</OnlineLocation>
+        <OnlineLocation>https://github.com/yoavain/mediaportal-tunein/raw/master/setup/builds/RadioTime.0.6.0.0.mpe1</OnlineLocation>
         <ReleaseDate>2010-02-16T22:38:05.53125+02:00</ReleaseDate>
         <Tags>radio, online</Tags>
         <Location>F:\devel\vs2005\RadioTimePlugin\setup\RadioTime.[Version].mpe1</Location>
@@ -648,7 +648,7 @@ Minor bug fixes</VersionDescription>
               <Description>The icon file of the package (jpg,png,bmp)</Description>
             </SectionParam>
             <SectionParam Name="Online Icon">
-              <Value>http://radiotime-plugin-for-mediaportal.googlecode.com/svn-history/r13/trunk/setup/radiotime_playlogo_100.png</Value>
+              <Value>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/tunein.png</Value>
               <ValueType>String</ValueType>
               <Description>The icon file of the package stored online (jpg,png,bmp)</Description>
             </SectionParam>
@@ -726,9 +726,9 @@ Minor bug fixes</VersionDescription>
         <Name>RadioTime</Name>
         <Id>71cc3381-de92-482d-9556-7e86f67f8067</Id>
         <Author>Dukus</Author>
-        <HomePage>http://code.google.com/p/radiotime-plugin-for-mediaportal/</HomePage>
+        <HomePage>https://github.com/yoavain/mediaportal-tunein</HomePage>
         <ForumPage>http://forum.team-mediaportal.com/mediaportal-plugins-47/radiotime-plugin-40575/</ForumPage>
-        <UpdateUrl>http://radiotime-plugin-for-mediaportal.googlecode.com/svn/trunk/setup/update.xml</UpdateUrl>
+        <UpdateUrl>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/update.xml</UpdateUrl>
         <Version>
           <Major>0</Major>
           <Minor>6</Minor>
@@ -741,7 +741,7 @@ Minor bug fixes</VersionDescription>
 * Better preset management
 * Option for no sorting </VersionDescription>
         <DevelopmentStatus>Beta</DevelopmentStatus>
-        <OnlineLocation>http://radiotime-plugin-for-mediaportal.googlecode.com/files/RadioTime.0.6.1.0.mpe1</OnlineLocation>
+        <OnlineLocation>https://github.com/yoavain/mediaportal-tunein/raw/master/setup/builds/RadioTime.0.6.1.0.mpe1</OnlineLocation>
         <ReleaseDate>2010-02-16T22:38:05.53125+02:00</ReleaseDate>
         <Tags>radio, online</Tags>
         <Location>F:\devel\vs2005\RadioTimePlugin\setup\RadioTime.[Version].mpe1</Location>
@@ -753,7 +753,7 @@ Minor bug fixes</VersionDescription>
               <Description>The icon file of the package (jpg,png,bmp)</Description>
             </SectionParam>
             <SectionParam Name="Online Icon">
-              <Value>http://radiotime-plugin-for-mediaportal.googlecode.com/svn-history/r13/trunk/setup/radiotime_playlogo_100.png</Value>
+              <Value>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/tunein.png</Value>
               <ValueType>String</ValueType>
               <Description>The icon file of the package stored online (jpg,png,bmp)</Description>
             </SectionParam>
@@ -839,9 +839,9 @@ Minor bug fixes</VersionDescription>
         <Name>RadioTime</Name>
         <Id>71cc3381-de92-482d-9556-7e86f67f8067</Id>
         <Author>Dukus</Author>
-        <HomePage>http://code.google.com/p/radiotime-plugin-for-mediaportal/</HomePage>
+        <HomePage>https://github.com/yoavain/mediaportal-tunein</HomePage>
         <ForumPage>http://forum.team-mediaportal.com/mediaportal-plugins-47/radiotime-plugin-40575/</ForumPage>
-        <UpdateUrl>http://radiotime-plugin-for-mediaportal.googlecode.com/svn/trunk/setup/update.xml</UpdateUrl>
+        <UpdateUrl>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/update.xml</UpdateUrl>
         <Version>
           <Major>0</Major>
           <Minor>6</Minor>
@@ -857,7 +857,7 @@ Improved add to favorites
   - more than 10 favorites can be stored. presets are shown as they are in the folder (together with empty spaces) and then 10 more empty presets are added for user to choose from - hard to describe :))
 This changes are done by SilentExcept</VersionDescription>
         <DevelopmentStatus>Beta</DevelopmentStatus>
-        <OnlineLocation>http://radiotime-plugin-for-mediaportal.googlecode.com/files/RadioTime.0.6.2.0.mpe1</OnlineLocation>
+        <OnlineLocation>https://github.com/yoavain/mediaportal-tunein/raw/master/setup/builds/RadioTime.0.6.2.0.mpe1</OnlineLocation>
         <ReleaseDate>2010-02-16T22:38:05.53125+02:00</ReleaseDate>
         <Tags>radio, online</Tags>
         <Location>d:\devel\vs2005\RadioTimePlugin\setup\RadioTime.[Version].mpe1</Location>
@@ -869,7 +869,7 @@ This changes are done by SilentExcept</VersionDescription>
               <Description>The icon file of the package (jpg,png,bmp)</Description>
             </SectionParam>
             <SectionParam Name="Online Icon">
-              <Value>http://radiotime-plugin-for-mediaportal.googlecode.com/svn-history/r13/trunk/setup/radiotime_playlogo_100.png</Value>
+              <Value>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/tunein.png</Value>
               <ValueType>String</ValueType>
               <Description>The icon file of the package stored online (jpg,png,bmp)</Description>
             </SectionParam>
@@ -960,9 +960,9 @@ This changes are done by SilentExcept</VersionDescription>
         <Name>RadioTime</Name>
         <Id>71cc3381-de92-482d-9556-7e86f67f8067</Id>
         <Author>Dukus</Author>
-        <HomePage>http://code.google.com/p/radiotime-plugin-for-mediaportal/</HomePage>
+        <HomePage>https://github.com/yoavain/mediaportal-tunein</HomePage>
         <ForumPage>http://forum.team-mediaportal.com/mediaportal-plugins-47/radiotime-plugin-40575/</ForumPage>
-        <UpdateUrl>http://radiotime-plugin-for-mediaportal.googlecode.com/svn/trunk/setup/update.xml</UpdateUrl>
+        <UpdateUrl>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/update.xml</UpdateUrl>
         <Version>
           <Major>0</Major>
           <Minor>6</Minor>
@@ -972,7 +972,7 @@ This changes are done by SilentExcept</VersionDescription>
         <ExtensionDescription>Plugin for browse and play more that 100.000 online radio stations from RadioTime.com</ExtensionDescription>
         <VersionDescription>Some skinning improvements </VersionDescription>
         <DevelopmentStatus>Beta</DevelopmentStatus>
-        <OnlineLocation>http://radiotime-plugin-for-mediaportal.googlecode.com/files/RadioTime.0.6.3.0.mpe1</OnlineLocation>
+        <OnlineLocation>https://github.com/yoavain/mediaportal-tunein/raw/master/setup/builds/RadioTime.0.6.3.0.mpe1</OnlineLocation>
         <ReleaseDate>2010-08-27T22:38:05</ReleaseDate>
         <Tags>radio, online</Tags>
         <Location>d:\devel\vs2005\RadioTimePlugin\setup\RadioTime.[Version].mpe1</Location>
@@ -984,7 +984,7 @@ This changes are done by SilentExcept</VersionDescription>
               <Description>The icon file of the package (jpg,png,bmp)</Description>
             </SectionParam>
             <SectionParam Name="Online Icon">
-              <Value>http://radiotime-plugin-for-mediaportal.googlecode.com/svn-history/r13/trunk/setup/radiotime_playlogo_100.png</Value>
+              <Value>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/tunein.png</Value>
               <ValueType>String</ValueType>
               <Description>The icon file of the package stored online (jpg,png,bmp)</Description>
             </SectionParam>
@@ -1075,9 +1075,9 @@ This changes are done by SilentExcept</VersionDescription>
         <Name>RadioTime</Name>
         <Id>71cc3381-de92-482d-9556-7e86f67f8067</Id>
         <Author>Dukus</Author>
-        <HomePage>http://code.google.com/p/radiotime-plugin-for-mediaportal/</HomePage>
+        <HomePage>https://github.com/yoavain/mediaportal-tunein</HomePage>
         <ForumPage>http://forum.team-mediaportal.com/mediaportal-plugins-47/radiotime-plugin-40575/</ForumPage>
-        <UpdateUrl>http://radiotime-plugin-for-mediaportal.googlecode.com/svn/trunk/setup/update.xml</UpdateUrl>
+        <UpdateUrl>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/update.xml</UpdateUrl>
         <Version>
           <Major>0</Major>
           <Minor>6</Minor>
@@ -1093,7 +1093,7 @@ This changes are done by SilentExcept</VersionDescription>
 - few other minor fixes
 </VersionDescription>
         <DevelopmentStatus>Beta</DevelopmentStatus>
-        <OnlineLocation>http://radiotime-plugin-for-mediaportal.googlecode.com/files/RadioTime.0.6.5.0.mpe1</OnlineLocation>
+        <OnlineLocation>https://github.com/yoavain/mediaportal-tunein/raw/master/setup/builds/RadioTime.0.6.5.0.mpe1</OnlineLocation>
         <ReleaseDate>2011-04-21T22:38:05</ReleaseDate>
         <Tags>radio, online</Tags>
         <Location>d:\devel\vs2005\RadioTimePlugin\setup\RadioTime.[Version].mpe1</Location>
@@ -1105,7 +1105,7 @@ This changes are done by SilentExcept</VersionDescription>
               <Description>The icon file of the package (jpg,png,bmp)</Description>
             </SectionParam>
             <SectionParam Name="Online Icon">
-              <Value>http://radiotime-plugin-for-mediaportal.googlecode.com/svn-history/r13/trunk/setup/radiotime_playlogo_100.png</Value>
+              <Value>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/tunein.png</Value>
               <ValueType>String</ValueType>
               <Description>The icon file of the package stored online (jpg,png,bmp)</Description>
             </SectionParam>
@@ -1235,9 +1235,9 @@ This changes are done by SilentExcept</VersionDescription>
         <Name>RadioTime</Name>
         <Id>71cc3381-de92-482d-9556-7e86f67f8067</Id>
         <Author>Dukus</Author>
-        <HomePage>http://code.google.com/p/radiotime-plugin-for-mediaportal/</HomePage>
+        <HomePage>https://github.com/yoavain/mediaportal-tunein</HomePage>
         <ForumPage>http://forum.team-mediaportal.com/mediaportal-plugins-47/radiotime-plugin-40575/</ForumPage>
-        <UpdateUrl>http://radiotime-plugin-for-mediaportal.googlecode.com/svn/trunk/setup/update.xml</UpdateUrl>
+        <UpdateUrl>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/update.xml</UpdateUrl>
         <Version>
           <Major>0</Major>
           <Minor>6</Minor>
@@ -1249,14 +1249,14 @@ This changes are done by SilentExcept</VersionDescription>
 
 </VersionDescription>
         <DevelopmentStatus>Beta</DevelopmentStatus>
-        <OnlineLocation>http://radiotime-plugin-for-mediaportal.googlecode.com/files/RadioTime.0.6.7.0.mpe1</OnlineLocation>
+        <OnlineLocation>https://github.com/yoavain/mediaportal-tunein/raw/master/setup/builds/RadioTime.0.6.7.0.mpe1</OnlineLocation>
         <ReleaseDate>2011-09-02T22:38:05</ReleaseDate>
         <Tags>radio, online</Tags>
         <Location>d:\devel\vs2005\RadioTimePlugin\setup\RadioTime.[Version].mpe1</Location>
         <Params>
           <Items>
             <SectionParam Name="Online Icon">
-              <Value>http://radiotime-plugin-for-mediaportal.googlecode.com/svn-history/r13/trunk/setup/radiotime_playlogo_100.png</Value>
+              <Value>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/tunein.png</Value>
               <ValueType>String</ValueType>
               <Description>The icon file of the package stored online (jpg,png,bmp)</Description>
             </SectionParam>
@@ -1386,9 +1386,9 @@ This changes are done by SilentExcept</VersionDescription>
         <Name>RadioTime</Name>
         <Id>71cc3381-de92-482d-9556-7e86f67f8067</Id>
         <Author>Dukus</Author>
-        <HomePage>http://code.google.com/p/radiotime-plugin-for-mediaportal/</HomePage>
+        <HomePage>https://github.com/yoavain/mediaportal-tunein</HomePage>
         <ForumPage>http://forum.team-mediaportal.com/mediaportal-plugins-47/radiotime-plugin-40575/</ForumPage>
-        <UpdateUrl>http://radiotime-plugin-for-mediaportal.googlecode.com/svn/trunk/setup/update.xml</UpdateUrl>
+        <UpdateUrl>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/update.xml</UpdateUrl>
         <Version>
           <Major>0</Major>
           <Minor>7</Minor>
@@ -1400,14 +1400,14 @@ This changes are done by SilentExcept</VersionDescription>
 
 </VersionDescription>
         <DevelopmentStatus>Stable</DevelopmentStatus>
-        <OnlineLocation>http://radiotime-plugin-for-mediaportal.googlecode.com/files/RadioTime.0.7.0.0.mpe1</OnlineLocation>
+        <OnlineLocation>https://github.com/yoavain/mediaportal-tunein/raw/master/setup/builds/RadioTime.0.7.0.0.mpe1</OnlineLocation>
         <ReleaseDate>2011-10-04T22:38:05</ReleaseDate>
         <Tags>radio, online</Tags>
         <Location>d:\devel\vs2005\RadioTimePlugin\setup\RadioTime.[Version].mpe1</Location>
         <Params>
           <Items>
             <SectionParam Name="Online Icon">
-              <Value>http://radiotime-plugin-for-mediaportal.googlecode.com/svn-history/r13/trunk/setup/radiotime_playlogo_100.png</Value>
+              <Value>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/tunein.png</Value>
               <ValueType>String</ValueType>
               <Description>The icon file of the package stored online (jpg,png,bmp)</Description>
             </SectionParam>
@@ -1543,9 +1543,9 @@ This changes are done by SilentExcept</VersionDescription>
         <Name>RadioTime</Name>
         <Id>71cc3381-de92-482d-9556-7e86f67f8067</Id>
         <Author>Dukus; (released by yoavain)</Author>
-        <HomePage>http://code.google.com/p/radiotime-plugin-for-mediaportal/</HomePage>
+        <HomePage>https://github.com/yoavain/mediaportal-tunein</HomePage>
         <ForumPage>http://forum.team-mediaportal.com/mediaportal-plugins-47/radiotime-plugin-40575/</ForumPage>
-        <UpdateUrl>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/update.xml</UpdateUrl>
+        <UpdateUrl>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/update.xml</UpdateUrl>
         <Version>
           <Major>1</Major>
           <Minor>0</Minor>
@@ -1561,14 +1561,14 @@ Initial release.
 
 </VersionDescription>
         <DevelopmentStatus>Stable</DevelopmentStatus>
-        <OnlineLocation>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/builds/RadioTime-1.0.0.31.MPE1</OnlineLocation>
+        <OnlineLocation>https://github.com/yoavain/mediaportal-tunein/raw/master/setup/builds/RadioTime-1.0.0.31.MPE1</OnlineLocation>
         <ReleaseDate>2013-10-04T23:22:43.5862316+03:00</ReleaseDate>
         <Tags>radio, online</Tags>
         <Location>builds\RadioTime-MAJOR.MINOR.BUILD.REVISION.MPE1</Location>
         <Params>
           <Items>
             <SectionParam Name="Online Icon">
-              <Value>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/tunein.png</Value>
+              <Value>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/tunein.png</Value>
               <ValueType>String</ValueType>
               <Description>The icon file of the package stored online (jpg,png,bmp)</Description>
             </SectionParam>
@@ -1709,9 +1709,9 @@ Initial release.
         <Name>RadioTime</Name>
         <Id>71cc3381-de92-482d-9556-7e86f67f8067</Id>
         <Author>Dukus; (released by yoavain)</Author>
-        <HomePage>http://code.google.com/p/radiotime-plugin-for-mediaportal/</HomePage>
+        <HomePage>https://github.com/yoavain/mediaportal-tunein</HomePage>
         <ForumPage>http://forum.team-mediaportal.com/mediaportal-plugins-47/radiotime-plugin-40575/</ForumPage>
-        <UpdateUrl>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/update.xml</UpdateUrl>
+        <UpdateUrl>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/update.xml</UpdateUrl>
         <Version>
           <Major>1</Major>
           <Minor>0</Minor>
@@ -1727,14 +1727,14 @@ Fixed installation on a clean machine (with no previous version installed).
 
 </VersionDescription>
         <DevelopmentStatus>Stable</DevelopmentStatus>
-        <OnlineLocation>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/builds/RadioTime-1.0.0.44.MPE1</OnlineLocation>
+        <OnlineLocation>https://github.com/yoavain/mediaportal-tunein/raw/master/setup/builds/RadioTime-1.0.0.44.MPE1</OnlineLocation>
         <ReleaseDate>2013-10-07T22:07:36.3922443+03:00</ReleaseDate>
         <Tags>radio, online</Tags>
         <Location>builds\RadioTime-MAJOR.MINOR.BUILD.REVISION.MPE1</Location>
         <Params>
           <Items>
             <SectionParam Name="Online Icon">
-              <Value>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/tunein.png</Value>
+              <Value>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/tunein.png</Value>
               <ValueType>String</ValueType>
               <Description>The icon file of the package stored online (jpg,png,bmp)</Description>
             </SectionParam>
@@ -1875,9 +1875,9 @@ Fixed installation on a clean machine (with no previous version installed).
         <Name>RadioTime</Name>
         <Id>71cc3381-de92-482d-9556-7e86f67f8067</Id>
         <Author>Dukus; (released by yoavain)</Author>
-        <HomePage>http://code.google.com/p/radiotime-plugin-for-mediaportal/</HomePage>
+        <HomePage>https://github.com/yoavain/mediaportal-tunein</HomePage>
         <ForumPage>http://forum.team-mediaportal.com/mediaportal-plugins-47/radiotime-plugin-40575/</ForumPage>
-        <UpdateUrl>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/update.xml</UpdateUrl>
+        <UpdateUrl>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/update.xml</UpdateUrl>
         <Version>
           <Major>1</Major>
           <Minor>0</Minor>
@@ -1893,14 +1893,14 @@ Initial release.
 
 </VersionDescription>
         <DevelopmentStatus>Stable</DevelopmentStatus>
-        <OnlineLocation>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/builds/RadioTime-1.0.0.56.MPE1</OnlineLocation>
+        <OnlineLocation>https://github.com/yoavain/mediaportal-tunein/raw/master/setup/builds/RadioTime-1.0.0.56.MPE1</OnlineLocation>
         <ReleaseDate>2014-01-19T20:20:26.2145739+02:00</ReleaseDate>
         <Tags>radio, online</Tags>
         <Location>builds\RadioTime-MAJOR.MINOR.BUILD.REVISION.MPE1</Location>
         <Params>
           <Items>
             <SectionParam Name="Online Icon">
-              <Value>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/tunein.png</Value>
+              <Value>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/tunein.png</Value>
               <ValueType>String</ValueType>
               <Description>The icon file of the package stored online (jpg,png,bmp)</Description>
             </SectionParam>
@@ -2041,9 +2041,9 @@ Initial release.
         <Name>RadioTime</Name>
         <Id>71cc3381-de92-482d-9556-7e86f67f8067</Id>
         <Author>Dukus; (released by yoavain)</Author>
-        <HomePage>http://code.google.com/p/radiotime-plugin-for-mediaportal/</HomePage>
+        <HomePage>https://github.com/yoavain/mediaportal-tunein</HomePage>
         <ForumPage>http://forum.team-mediaportal.com/forums/radiotime.666/</ForumPage>
-        <UpdateUrl>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/update.xml</UpdateUrl>
+        <UpdateUrl>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/update.xml</UpdateUrl>
         <Version>
           <Major>1</Major>
           <Minor>0</Minor>
@@ -2059,14 +2059,14 @@ Initial release.
 
 </VersionDescription>
         <DevelopmentStatus>Stable</DevelopmentStatus>
-        <OnlineLocation>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/builds/RadioTime-1.0.1.62.MPE1</OnlineLocation>
+        <OnlineLocation>https://github.com/yoavain/mediaportal-tunein/raw/master/setup/builds/RadioTime-1.0.1.62.MPE1</OnlineLocation>
         <ReleaseDate>2014-01-21T09:00:50.5846384+02:00</ReleaseDate>
         <Tags>radio, online</Tags>
         <Location>builds\RadioTime-MAJOR.MINOR.BUILD.REVISION.MPE1</Location>
         <Params>
           <Items>
             <SectionParam Name="Online Icon">
-              <Value>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/tunein.png</Value>
+              <Value>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/tunein.png</Value>
               <ValueType>String</ValueType>
               <Description>The icon file of the package stored online (jpg,png,bmp)</Description>
             </SectionParam>
@@ -2226,9 +2226,9 @@ Initial release.
         <Name>RadioTime</Name>
         <Id>71cc3381-de92-482d-9556-7e86f67f8067</Id>
         <Author>Dukus; (released by yoavain)</Author>
-        <HomePage>http://code.google.com/p/radiotime-plugin-for-mediaportal/</HomePage>
+        <HomePage>https://github.com/yoavain/mediaportal-tunein</HomePage>
         <ForumPage>http://forum.team-mediaportal.com/forums/radiotime.666/</ForumPage>
-        <UpdateUrl>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/update.xml</UpdateUrl>
+        <UpdateUrl>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/update.xml</UpdateUrl>
         <Version>
           <Major>1</Major>
           <Minor>2</Minor>
@@ -2238,14 +2238,14 @@ Initial release.
         <ExtensionDescription>Plugin for browse and play more that 100.000 online radio stations from tunein.com</ExtensionDescription>
         <VersionDescription>Compatibility for 1.7 Final / 1.7.1 HotFix</VersionDescription>
         <DevelopmentStatus>Stable</DevelopmentStatus>
-        <OnlineLocation>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/builds/RadioTime-1.2.0.75.MPE1</OnlineLocation>
+        <OnlineLocation>https://github.com/yoavain/mediaportal-tunein/raw/master/setup/builds/RadioTime-1.2.0.75.MPE1</OnlineLocation>
         <ReleaseDate>2014-04-28T22:55:39.8993249+03:00</ReleaseDate>
         <Tags>radio, online</Tags>
         <Location>builds\RadioTime-MAJOR.MINOR.BUILD.REVISION.MPE1</Location>
         <Params>
           <Items>
             <SectionParam Name="Online Icon">
-              <Value>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/tunein.png</Value>
+              <Value>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/tunein.png</Value>
               <ValueType>String</ValueType>
               <Description>The icon file of the package stored online (jpg,png,bmp)</Description>
             </SectionParam>
@@ -2405,9 +2405,9 @@ Initial release.
         <Name>RadioTime</Name>
         <Id>71cc3381-de92-482d-9556-7e86f67f8067</Id>
         <Author>Dukus; (released by yoavain)</Author>
-        <HomePage>http://code.google.com/p/radiotime-plugin-for-mediaportal/</HomePage>
+        <HomePage>https://github.com/yoavain/mediaportal-tunein</HomePage>
         <ForumPage>http://forum.team-mediaportal.com/forums/radiotime.666/</ForumPage>
-        <UpdateUrl>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/update.xml</UpdateUrl>
+        <UpdateUrl>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/update.xml</UpdateUrl>
         <Version>
           <Major>1</Major>
           <Minor>2</Minor>
@@ -2417,14 +2417,14 @@ Initial release.
         <ExtensionDescription>Plugin for browse and play more that 100.000 online radio stations from tunein.com</ExtensionDescription>
         <VersionDescription>Compatibility for 1.8 Pre-Release</VersionDescription>
         <DevelopmentStatus>Stable</DevelopmentStatus>
-        <OnlineLocation>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/builds/RadioTime-1.2.1.79.MPE1</OnlineLocation>
+        <OnlineLocation>https://github.com/yoavain/mediaportal-tunein/raw/master/setup/builds/RadioTime-1.2.1.79.MPE1</OnlineLocation>
         <ReleaseDate>2014-06-01T18:35:22.0429604+03:00</ReleaseDate>
         <Tags>radio, online</Tags>
         <Location>builds\RadioTime-MAJOR.MINOR.BUILD.REVISION.MPE1</Location>
         <Params>
           <Items>
             <SectionParam Name="Online Icon">
-              <Value>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/tunein.png</Value>
+              <Value>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/tunein.png</Value>
               <ValueType>String</ValueType>
               <Description>The icon file of the package stored online (jpg,png,bmp)</Description>
             </SectionParam>
@@ -2584,9 +2584,9 @@ Initial release.
         <Name>RadioTime</Name>
         <Id>71cc3381-de92-482d-9556-7e86f67f8067</Id>
         <Author>Dukus; (released by yoavain)</Author>
-        <HomePage>http://code.google.com/p/radiotime-plugin-for-mediaportal/</HomePage>
+        <HomePage>https://github.com/yoavain/mediaportal-tunein</HomePage>
         <ForumPage>http://forum.team-mediaportal.com/forums/radiotime.666/</ForumPage>
-        <UpdateUrl>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/update.xml</UpdateUrl>
+        <UpdateUrl>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/update.xml</UpdateUrl>
         <Version>
           <Major>1</Major>
           <Minor>2</Minor>
@@ -2596,14 +2596,14 @@ Initial release.
         <ExtensionDescription>Plugin for browse and play more that 100.000 online radio stations from tunein.com</ExtensionDescription>
         <VersionDescription>Compatibility for 1.8 Final</VersionDescription>
         <DevelopmentStatus>Stable</DevelopmentStatus>
-        <OnlineLocation>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/builds/RadioTime-1.2.5.82.MPE1</OnlineLocation>
+        <OnlineLocation>https://github.com/yoavain/mediaportal-tunein/raw/master/setup/builds/RadioTime-1.2.5.82.MPE1</OnlineLocation>
         <ReleaseDate>2014-07-01T23:40:24.6527746+03:00</ReleaseDate>
         <Tags>radio, online</Tags>
         <Location>builds\RadioTime-MAJOR.MINOR.BUILD.REVISION.MPE1</Location>
         <Params>
           <Items>
             <SectionParam Name="Online Icon">
-              <Value>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/tunein.png</Value>
+              <Value>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/tunein.png</Value>
               <ValueType>String</ValueType>
               <Description>The icon file of the package stored online (jpg,png,bmp)</Description>
             </SectionParam>
@@ -2763,9 +2763,9 @@ Initial release.
         <Name>RadioTime</Name>
         <Id>71cc3381-de92-482d-9556-7e86f67f8067</Id>
         <Author>Dukus; (released by yoavain)</Author>
-        <HomePage>http://code.google.com/p/radiotime-plugin-for-mediaportal/</HomePage>
+        <HomePage>https://github.com/yoavain/mediaportal-tunein</HomePage>
         <ForumPage>http://forum.team-mediaportal.com/forums/radiotime.666/</ForumPage>
-        <UpdateUrl>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/update.xml</UpdateUrl>
+        <UpdateUrl>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/update.xml</UpdateUrl>
         <Version>
           <Major>1</Major>
           <Minor>3</Minor>
@@ -2775,14 +2775,14 @@ Initial release.
         <ExtensionDescription>Plugin for browse and play more that 100.000 online radio stations from tunein.com</ExtensionDescription>
         <VersionDescription>Compatibility for 1.9 Final</VersionDescription>
         <DevelopmentStatus>Stable</DevelopmentStatus>
-        <OnlineLocation>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/builds/RadioTime-1.3.0.87.MPE1</OnlineLocation>
+        <OnlineLocation>https://github.com/yoavain/mediaportal-tunein/raw/master/setup/builds/RadioTime-1.3.0.87.MPE1</OnlineLocation>
         <ReleaseDate>2014-09-30T20:29:56.030855+03:00</ReleaseDate>
         <Tags>radio, online</Tags>
         <Location>builds\RadioTime-MAJOR.MINOR.BUILD.REVISION.MPE1</Location>
         <Params>
           <Items>
             <SectionParam Name="Online Icon">
-              <Value>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/tunein.png</Value>
+              <Value>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/tunein.png</Value>
               <ValueType>String</ValueType>
               <Description>The icon file of the package stored online (jpg,png,bmp)</Description>
             </SectionParam>
@@ -2942,9 +2942,9 @@ Initial release.
         <Name>RadioTime</Name>
         <Id>71cc3381-de92-482d-9556-7e86f67f8067</Id>
         <Author>Dukus; (released by yoavain)</Author>
-        <HomePage>http://code.google.com/p/radiotime-plugin-for-mediaportal/</HomePage>
+        <HomePage>https://github.com/yoavain/mediaportal-tunein</HomePage>
         <ForumPage>http://forum.team-mediaportal.com/forums/radiotime.666/</ForumPage>
-        <UpdateUrl>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/update.xml</UpdateUrl>
+        <UpdateUrl>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/update.xml</UpdateUrl>
         <Version>
           <Major>1</Major>
           <Minor>4</Minor>
@@ -2954,14 +2954,194 @@ Initial release.
         <ExtensionDescription>Plugin for browse and play more that 100.000 online radio stations from tunein.com</ExtensionDescription>
         <VersionDescription>Compatibility for 1.10 Final and above</VersionDescription>
         <DevelopmentStatus>Stable</DevelopmentStatus>
-        <OnlineLocation>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/builds/RadioTime-1.4.0.92.MPE1</OnlineLocation>
+        <OnlineLocation>https://github.com/yoavain/mediaportal-tunein/raw/master/setup/builds/RadioTime-1.4.0.92.MPE1</OnlineLocation>
         <ReleaseDate>2014-12-31T19:27:26.2059699+02:00</ReleaseDate>
         <Tags>radio, online</Tags>
         <Location>builds\RadioTime-MAJOR.MINOR.BUILD.REVISION.MPE1</Location>
         <Params>
           <Items>
             <SectionParam Name="Online Icon">
-              <Value>https://mediaportal-tunein.googlecode.com/svn/trunk/setup/tunein.png</Value>
+              <Value>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/tunein.png</Value>
+              <ValueType>String</ValueType>
+              <Description>The icon file of the package stored online (jpg,png,bmp)</Description>
+            </SectionParam>
+            <SectionParam Name="Configuration file">
+              <Value>%Plugins%\Windows\RadioTimePlugin.dll</Value>
+              <ValueType>Template</ValueType>
+              <Description>The file used to configure the extension.
+ If have .exe extension the will be executed
+ If have .dll extension used like MP plugin configuration</Description>
+            </SectionParam>
+            <SectionParam Name="Online Screenshots">
+              <Value />
+              <ValueType>String</ValueType>
+              <Description>Online stored screenshot urls separated by ; </Description>
+            </SectionParam>
+            <SectionParam Name="Force to uninstall on update">
+              <Value>YES</Value>
+              <ValueType>Bool</ValueType>
+              <Description>Show dialog and force to uninstall previous version when updating an extension. Should only be disabled if you are using an NSIS/MSI installer.</Description>
+            </SectionParam>
+          </Items>
+        </Params>
+      </GeneralInfo>
+      <UniqueFileList>
+        <Items />
+      </UniqueFileList>
+      <ProjectSettings>
+        <FolderGroups />
+      </ProjectSettings>
+      <IsSkin>false</IsSkin>
+    </PackageClass>
+    <PackageClass>
+      <Version>2.0</Version>
+      <Groups>
+        <Items>
+          <GroupItem Name="Skin">
+            <DisplayName>Skin</DisplayName>
+            <DefaulChecked>true</DefaulChecked>
+            <Description>Skin</Description>
+            <Files>
+              <Items />
+            </Files>
+          </GroupItem>
+          <GroupItem Name="Languages">
+            <DisplayName>Languages</DisplayName>
+            <DefaulChecked>true</DefaulChecked>
+            <Description>Languages</Description>
+            <Files>
+              <Items />
+            </Files>
+          </GroupItem>
+          <GroupItem Name="Settings">
+            <DisplayName>Settings</DisplayName>
+            <DefaulChecked>true</DefaulChecked>
+            <Description>Settings</Description>
+            <Files>
+              <Items />
+            </Files>
+          </GroupItem>
+          <GroupItem Name="Plugin">
+            <DisplayName>Plugin</DisplayName>
+            <DefaulChecked>true</DefaulChecked>
+            <Description>Plugin</Description>
+            <Files>
+              <Items />
+            </Files>
+          </GroupItem>
+        </Items>
+      </Groups>
+      <Sections>
+        <Items />
+      </Sections>
+      <Dependencies>
+        <Items>
+          <DependencyItem>
+            <Type>MediaPortal</Type>
+            <Id />
+            <MinVersion>
+              <Major>1</Major>
+              <Minor>1</Minor>
+              <Build>6</Build>
+              <Revision>27644</Revision>
+            </MinVersion>
+            <MaxVersion>
+              <Major>1</Major>
+              <Minor>1</Minor>
+              <Build>6</Build>
+              <Revision>27644</Revision>
+            </MaxVersion>
+            <WarnOnly>true</WarnOnly>
+            <Message>requires MediaPortal version 1.7.0 or higher!</Message>
+            <Name>MediaPortal</Name>
+          </DependencyItem>
+          <DependencyItem>
+            <Type>Skin</Type>
+            <Id />
+            <MinVersion>
+              <Major>1</Major>
+              <Minor>4</Minor>
+              <Build>0</Build>
+              <Revision>0</Revision>
+            </MinVersion>
+            <MaxVersion>
+              <Major>1</Major>
+              <Minor>4</Minor>
+              <Build>0</Build>
+              <Revision>0</Revision>
+            </MaxVersion>
+            <WarnOnly>true</WarnOnly>
+            <Message>requires Skin version 1.4.0.0 to 1.4.0.0.</Message>
+            <Name>Skin</Name>
+          </DependencyItem>
+          <DependencyItem>
+            <Type>Installer</Type>
+            <Id />
+            <MinVersion>
+              <Major>1</Major>
+              <Minor>9</Minor>
+              <Build>0</Build>
+              <Revision>0</Revision>
+            </MinVersion>
+            <MaxVersion>
+              <Major>1</Major>
+              <Minor>99</Minor>
+              <Build>999</Build>
+              <Revision>999</Revision>
+            </MaxVersion>
+            <WarnOnly>true</WarnOnly>
+            <Message>requires Installer version 1.9.0.0 to 1.99.999.999.</Message>
+            <Name>Installer</Name>
+          </DependencyItem>
+        </Items>
+      </Dependencies>
+      <PluginDependencies>
+        <Items>
+          <PluginDependencyItem AssemblyName="RadioTimePlugin.dll">
+            <CompatibleVersion>
+              <Items>
+                <CompatibleVersionItem>
+                  <MinRequiredVersion>1.7.0.0</MinRequiredVersion>
+                  <DesignedForVersion>1.7.0.0</DesignedForVersion>
+                </CompatibleVersionItem>
+              </Items>
+            </CompatibleVersion>
+            <SubSystemsUsed>
+              <Items>
+                <SubSystemItem Name="MP.Config" />
+                <SubSystemItem Name="MP.Players.Music" />
+                <SubSystemItem Name="MP.Players.Video" />
+                <SubSystemItem Name="MP.SkinEngine" />
+              </Items>
+            </SubSystemsUsed>
+          </PluginDependencyItem>
+        </Items>
+      </PluginDependencies>
+      <GeneralInfo>
+        <Name>RadioTime</Name>
+        <Id>71cc3381-de92-482d-9556-7e86f67f8067</Id>
+        <Author>Dukus; (released by yoavain)</Author>
+        <HomePage>https://github.com/yoavain/mediaportal-tunein</HomePage>
+        <ForumPage>http://forum.team-mediaportal.com/forums/radiotime.666/</ForumPage>
+        <UpdateUrl>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/update.xml</UpdateUrl>
+        <Version>
+          <Major>1</Major>
+          <Minor>4</Minor>
+          <Build>1</Build>
+          <Revision>96</Revision>
+        </Version>
+        <ExtensionDescription>Plugin for browse and play more that 100.000 online radio stations from tunein.com</ExtensionDescription>
+        <VersionDescription>Move to GitHub
+Compatibility for 1.11 Final and above</VersionDescription>
+        <DevelopmentStatus>Stable</DevelopmentStatus>
+        <OnlineLocation>https://github.com/yoavain/mediaportal-tunein/raw/master/setup/builds/RadioTime-1.4.1.96.MPE1</OnlineLocation>
+        <ReleaseDate>2015-04-01T22:57:51.4878157+03:00</ReleaseDate>
+        <Tags>radio, online</Tags>
+        <Location>builds\RadioTime-MAJOR.MINOR.BUILD.REVISION.MPE1</Location>
+        <Params>
+          <Items>
+            <SectionParam Name="Online Icon">
+              <Value>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/tunein.png</Value>
               <ValueType>String</ValueType>
               <Description>The icon file of the package stored online (jpg,png,bmp)</Description>
             </SectionParam>
