@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 //      Revision
 //
 
-[assembly: AssemblyVersion("1.4.0.$WCREV$")]
-[assembly: AssemblyFileVersion("1.4.0.$WCREV$")]
+[assembly: AssemblyVersion("1.4.2.$WCREV$")]
+[assembly: AssemblyFileVersion("1.4.2.$WCREV$")]
