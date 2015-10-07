@@ -53,7 +53,7 @@ namespace RadioTimePlugin
 
             FormatNames = new Dictionary<string, string>();
             FormatNames.Add("wma", "WMAudio v8/9/10");
-            FormatNames.Add("mp3", "standard MP3");
+            FormatNames.Add("mp3", "Standard MP3");
             FormatNames.Add("aac", "AAC and AAC+");
             FormatNames.Add("real", "Real Media");
             FormatNames.Add("flash", "RTMP (usually MP3 or AAC encoded)");
