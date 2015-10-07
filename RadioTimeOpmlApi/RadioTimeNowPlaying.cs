@@ -56,7 +56,8 @@ namespace RadioTimeOpmlApi
         /// Gets the specified stationid.
         /// </summary>
         /// <param name="stationid">The station id.</param>
-        public void Get(string stationid)
+        /// <param name="hassong">The station hass song or not</param>
+        public void Get(string stationid, bool hassong)
         {
             var gr = new RadioTime();
             gr.Settings = Grabber.Settings;
@@ -64,6 +65,8 @@ namespace RadioTimeOpmlApi
             var url = string.Format("http://opml.radiotime.com/Describe.ashx?c=nowplaying&id={0}&{1}", GuidId,
                 Grabber.Settings.GetParamString());
             gr.GetData(url, false, false);
+
+            var bool isshow = false;
             var line = 0;
             foreach (var outline in gr.Body)
             {
@@ -85,14 +88,33 @@ namespace RadioTimeOpmlApi
                     i = 0;
                     if (int.TryParse(outline.Remain, out i))
                         Remains = i;
+                    issgow = true;
+                    continue;
                 }
+
                 switch (line)
                 {
-                    case 1:
-                        Description = outline.Text;
+                    case 1: // if station has song then [Artists - Song] else [Description]
+                        if (!hassong)
+                        {
+                          Description = outline.Text;
+                        }
                         break;
-                    case 2:
-                        Location = outline.Text;
+                    case 2: // if station has song then [Genre | Description] else [Location]
+                        if (hassong)
+                        {
+                          Description = outline.Text;
+                        }
+                        else
+                        {
+                          Location = outline.Text;
+                        }
+                        break;
+                    case 3: // if station has song then [Location]
+                        if (hassong)
+                        {
+                          Location = outline.Text;
+                        }
                         break;
                 }
                 line++;
