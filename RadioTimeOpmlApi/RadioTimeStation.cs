@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Text;
@@ -43,6 +43,16 @@ namespace RadioTimeOpmlApi
         public string Slogan { get; set; }
         public string Adresss { get; set; }
 
+        public string CallSign { get; set; }
+        public string Band { get; set; }
+
+        public bool HasSong { get; set; }
+        public string Artist { get; set; }
+        public string Album { get; set; }
+        public string Song { get; set; }
+
+        public string Description { get; set; }
+
         public void Get(string guideid)
         {
             if (string.IsNullOrEmpty(guideid))
@@ -55,6 +65,7 @@ namespace RadioTimeOpmlApi
 
             //Log.Debug("Get Station " + sUrl);
             IsAvailable = false;
+            HasSong = false; 
             if (string.IsNullOrEmpty(GuideId))
                 return;
             IsAvailable = true;
@@ -111,6 +122,27 @@ namespace RadioTimeOpmlApi
                                         case "has_schedule":
                                             HasSchedule = childNode.InnerText == "false" ? false : true;
                                             break;
+                                        case "call_sign":
+                                            CallSign = childNode.InnerText;
+                                            break;
+                                        case "band":
+                                            Band = childNode.InnerText;
+                                            break;
+                                        case "has_song":
+                                            HasSong = childNode.InnerText == "false" ? false : true;
+                                            break;
+                                        case "current_artist":
+                                            Artist = childNode.InnerText;
+                                            break;
+                                        case "current_album":
+                                            Album = childNode.InnerText;
+                                            break;
+                                        case "current_song":
+                                            Song = childNode.InnerText;
+                                            break;
+                                        case "description":
+                                            Description = childNode.InnerText;
+                                            break;
                                     }
                                 }
                                 break;
@@ -136,6 +168,7 @@ namespace RadioTimeOpmlApi
                 }
                 Slogan = string.IsNullOrEmpty(Slogan) ? " " : Slogan;
                 Language = string.IsNullOrEmpty(Language) ? " " : Language;
+                Description = string.IsNullOrEmpty(Description) ? " " : Description;
             }
         }
 
