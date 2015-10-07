@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.IO;
 using System.Net;
@@ -109,7 +109,35 @@ namespace RadioTimePlugin
                     GUIPropertyManager.SetProperty("#RadioTime.Play.Format", " ");
 
                 GUIPropertyManager.SetProperty("#RadioTime.Play.Image", DownloadStationLogo(_currentItem));
-
+                //
+                Log.Debug("*** Station: "+"Name: "+_station.Name+"CallSign: "+_station.CallSign+"Language: "+_station.Language+"Logo: "+_station.Logo);
+                Log.Debug("*** Station: "+"Location: "+_station.Location+"Frequency: "+_station.Frequency+"Band: "+_station.Band);
+                Log.Debug("*** Station: "+"Slogan: "+_station.Slogan+"Adresss: "+_station.Adresss);
+                Log.Debug("*** Station: "+"HasSong: "+_station.HasSong.ToString());
+                Log.Debug("*** Station: "+"Artist: "+_station.Artist+"Album: "+_station.Album+"Song: "+_station.Song);
+                Log.Debug("*** Station: "+"Description: "+_station.Description);
+                foreach (RadioTimeOutline Genre in _station.Genres)
+                {
+                  Log.Debug("*** Station: "+"Genre: "+Genre.Text);
+                }
+                foreach (RadioTimeOutline Similar in _station.Similar)
+                {
+                  Log.Debug("*** Station: "+"Similar: "+Similar.Text);
+                }
+                //
+                Log.Debug("*** NowPlaying: "+"GuidId: "+_nowPlaying.GuidId+"PresetId: "+_nowPlaying.PresetId);
+                Log.Debug("*** NowPlaying: "+"Name: "+_nowPlaying.Name+"Image: "+_nowPlaying.Image+"ShowImage: "+_nowPlaying.ShowImage);
+                Log.Debug("*** NowPlaying: "+"Description: "+_nowPlaying.Description+"Location: "+_nowPlaying.Location);
+                Log.Debug("*** NowPlaying: "+"Duration: "+_nowPlaying.Duration+"Remains: "+_nowPlaying.Remains);
+                //
+                Log.Debug("*** #Play.Current.Thumb: "+GUIPropertyManager.GetProperty("#Play.Current.Thumb"));
+                Log.Debug("*** #Play.Current.Artist: "+GUIPropertyManager.GetProperty("#Play.Current.Artist"));
+                Log.Debug("*** #Play.Current.Title: "+GUIPropertyManager.GetProperty("#Play.Current.Title"));
+                Log.Debug("*** #Play.Current.Track: "+GUIPropertyManager.GetProperty("#Play.Current.Track"));
+                Log.Debug("*** #Play.Current.Album: "+GUIPropertyManager.GetProperty("#Play.Current.Album"));
+                Log.Debug("*** #Play.Current.Year: "+GUIPropertyManager.GetProperty("#Play.Current.Year"));
+                Log.Debug("*** #Play.Current.Rating: "+GUIPropertyManager.GetProperty("#Play.Current.Rating"));
+                //
                 doAdditionalStuffOnStarted();
 
                 ClearInternalVariables();
@@ -221,7 +249,7 @@ namespace RadioTimePlugin
                     //var nowPlaying = Settings.NowPlaying;
                     _nowPlaying = new RadioTimeNowPlaying();
                     _nowPlaying.Grabber = grabber;
-                    _nowPlaying.Get(item.GuidId);
+                    _nowPlaying.Get(item.GuidId, _station.HasSong);
 
                     var playerType = PlayerType.Video;
                     if (_setting.FormatPlayer.ContainsKey(item.Formats))
