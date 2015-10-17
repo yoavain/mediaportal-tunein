@@ -388,9 +388,13 @@ namespace RadioTimePlugin
                 if (gr.Body.Count == 1)
                 {
                     if (!string.IsNullOrEmpty(gr.Body[0].GuidId))
+                    {
                         DoPlay(gr.Body[0]);
+                    }
                     else if (!string.IsNullOrEmpty(gr.Body[0].Text))
+                    {
                         ErrMessage(gr.Body[0].Text);
+                    }
                 }
                 else
                     ErrMessage(Translation.NoStationsOrShowsAvailable);
@@ -1095,7 +1099,7 @@ namespace RadioTimePlugin
 
         private void DownloadLogoEnd(object sender, AsyncCompletedEventArgs e)
         {
-            if (e.Error == null)
+            if ((e.Error == null) && (!string.IsNullOrEmpty(curentDownlodingFile.FileName)))
             {
                 File.Copy(Path.GetTempPath() + @"\station.png", curentDownlodingFile.FileName, true);
                 UpdateGui();

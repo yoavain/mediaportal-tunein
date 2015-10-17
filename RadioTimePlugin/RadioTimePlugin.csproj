@@ -38,12 +38,15 @@
     <Reference Include="Common.Utils">
       <HintPath>..\External\Common.Utils.dll</HintPath>
     </Reference>
-    <Reference Include="Core, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Core">
       <HintPath>..\External\Core.dll</HintPath>
     </Reference>
     <Reference Include="Dialogs">
       <HintPath>..\External\Dialogs.dll</HintPath>
+    </Reference>
+    <Reference Include="FanartHandler">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External\FanartHandler.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -52,7 +55,7 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Utils, Version=1.1.7.0, Culture=neutral, processorArchitecture=x86">
+    <Reference Include="Utils">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\External\Utils.dll</HintPath>
       <Private>False</Private>
@@ -83,6 +86,7 @@
     </Compile>
     <Compile Include="StationSort.cs" />
     <Compile Include="Translation.cs" />
+    <Compile Include="UtilsFanartHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">

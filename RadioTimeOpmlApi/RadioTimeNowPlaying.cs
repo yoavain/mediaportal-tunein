@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 using System.IO;
 using System.Net;
 
@@ -25,6 +26,10 @@ namespace RadioTimeOpmlApi
 
         public string Name { get; set; }
 
+        public bool IsShow { get; set; }
+
+        public string ShowGuidId { get; set; }
+
         public string Image { get; set; }
 
         public string ShowImage { get; set; }
@@ -50,6 +55,8 @@ namespace RadioTimeOpmlApi
             Remains = 0;
             ShowImage = string.Empty;
             Image = string.Empty;
+            IsShow = false;
+            ShowGuidId = string.Empty;
         }
 
         /// <summary>
@@ -62,11 +69,9 @@ namespace RadioTimeOpmlApi
             var gr = new RadioTime();
             gr.Settings = Grabber.Settings;
             GuidId = stationid;
-            var url = string.Format("http://opml.radiotime.com/Describe.ashx?c=nowplaying&id={0}&{1}", GuidId,
-                Grabber.Settings.GetParamString());
+            var url = string.Format("http://opml.radiotime.com/Describe.ashx?c=nowplaying&id={0}&{1}", GuidId, Grabber.Settings.GetParamString());
             gr.GetData(url, false, false);
 
-            var bool isshow = false;
             var line = 0;
             foreach (var outline in gr.Body)
             {
@@ -80,15 +85,18 @@ namespace RadioTimeOpmlApi
 
                 if (outline.Key == "show")
                 {
-                    ShowImage = string.Format("http://radiotime-logos.s3.amazonaws.com/{0}.png", GuidId);
+                    // ShowImage = string.Format("http://radiotime-logos.s3.amazonaws.com/{0}.png", GuidId);
+                    ShowImage = string.Format("http://cdn-radiotime-logos.tunein.com/{0}.png", GuidId);
                     Description = outline.Text;
+                    IsShow = true;
+                    ShowGuidId = outline.GuidId;
+
                     var i = 0;
                     if (int.TryParse(outline.Duration, out i))
                         Duration = i;
                     i = 0;
                     if (int.TryParse(outline.Remain, out i))
                         Remains = i;
-                    issgow = true;
                     continue;
                 }
 
@@ -97,17 +105,21 @@ namespace RadioTimeOpmlApi
                     case 1: // if station has song then [Artists - Song] else [Description]
                         if (!hassong)
                         {
-                          Description = outline.Text;
+                          Description = (string.IsNullOrEmpty(Description) ? "" : " - ") + outline.Text;
                         }
                         break;
-                    case 2: // if station has song then [Genre | Description] else [Location]
+                    case 2: // if station has song then [Genre | Description] else if Show [Other] else [Location]
                         if (hassong)
                         {
-                          Description = outline.Text;
+                          // Description = outline.Text;
+                          Description = string.Empty;
                         }
                         else
                         {
-                          Location = outline.Text;
+                          if (IsShow) // !Show
+                          {
+                            Location = outline.Text;
+                          }
                         }
                         break;
                     case 3: // if station has song then [Location]
@@ -144,6 +156,7 @@ namespace RadioTimeOpmlApi
                 // this is true for instance for EVERY thailand internet connection (also needs to be set for banners/episodethumbs and any other http request we send)
                 //request.UserAgent = Settings.UserAgent;
                 request.Timeout = 20000;
+                request.Headers.Add("Accept-Language", CultureInfo.CurrentCulture.Name + "," + CultureInfo.CurrentCulture.TwoLetterISOLanguageName + ";q=0.7,en;q=0.3");
                 response = (HttpWebResponse) request.GetResponse();
 
                 if (response != null) // Get the stream associated with the response.

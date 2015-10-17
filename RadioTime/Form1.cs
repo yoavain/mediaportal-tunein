@@ -34,7 +34,7 @@ namespace Test
                 if (((RadioTimeOutline) listView1.SelectedItems[0].Tag).Type == RadioTimeOutline.OutlineType.audio)
                 {
                     var play = new RadioTimeNowPlaying();
-                    play.Get(((RadioTimeOutline) listView1.SelectedItems[0].Tag).StationId);
+                    play.Get(((RadioTimeOutline) listView1.SelectedItems[0].Tag).StationId,true);
                 }
                 RefreshList();
             }
@@ -111,7 +111,7 @@ namespace Test
                 //propertyGrid1.SelectedObject = websrv.Station_NowPlayingListGet(req);
                 var playing = new RadioTimeNowPlaying();
                 playing.Grabber = grabber;
-                playing.Get(((RadioTimeOutline) listView1.SelectedItems[0].Tag).GuidId);
+                playing.Get(((RadioTimeOutline) listView1.SelectedItems[0].Tag).GuidId,true);
             }
         }
 

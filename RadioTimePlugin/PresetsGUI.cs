@@ -113,7 +113,7 @@ namespace RadioTimePlugin
 
         private void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
-            if (e.Error == null)
+            if ((e.Error == null) && (!string.IsNullOrEmpty(curentDownlodingFile.FileName)))
             {
                 File.Copy(Path.GetTempPath() + @"\station.png", curentDownlodingFile.FileName, true);
                 var focusID = GetFocusControlId();

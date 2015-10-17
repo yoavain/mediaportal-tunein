@@ -37,7 +37,7 @@ namespace RadioTimePlugin
 
         private void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
-            if (e.Error == null)
+            if ((e.Error == null) && (!string.IsNullOrEmpty(curentDownlodingFile.FileName)))
             {
                 File.Copy(Path.GetTempPath() + @"\station.png", curentDownlodingFile.FileName, true);
 
@@ -65,7 +65,7 @@ namespace RadioTimePlugin
             updateStationLogoTimer.Elapsed -= OnDownloadTimedEvent;
             updateStationLogoTimer.Elapsed += OnDownloadTimedEvent;
             Client.DownloadFileCompleted += Client_DownloadFileCompleted;
-            //BassMusicPlayer.Player.InternetStreamSongChanged += Player_InternetStreamSongChanged;
+            BassMusicPlayer.Player.InternetStreamSongChanged += Player_InternetStreamSongChanged;
             // show the skin
             return Load(GUIGraphicsContext.Skin + @"\radiotimenowplaying.xml");
         }
@@ -74,6 +74,11 @@ namespace RadioTimePlugin
         {
             if (!g_Player.Playing)
                 return;
+
+            UpdatePlayProps();
+            return;
+
+            /*
             var engine = sender as BassAudioEngine;
             var tag = engine.GetStreamTags();
             var dlg1 = (GUIDialogNotify) GUIWindowManager.GetWindow((int) Window.WINDOW_DIALOG_NOTIFY);
@@ -84,6 +89,7 @@ namespace RadioTimePlugin
             dlg1.Reset();
             dlg1.TimeOut = 3;
             dlg1.DoModal(GetID);
+            */
         }
 
         protected override void OnPageLoad()

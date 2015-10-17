@@ -4,6 +4,7 @@ using System.Net;
 using System.Collections.Generic;
 using System.Xml;
 using System.Text;
+using System.Globalization;
 
 namespace RadioTimeOpmlApi
 {
@@ -387,8 +388,9 @@ namespace RadioTimeOpmlApi
             {
                 request = (HttpWebRequest) WebRequest.Create(sUrl);
                 request.Timeout = 20000;
+                request.Headers.Add("Accept-Language", CultureInfo.CurrentCulture.Name + "," + CultureInfo.CurrentCulture.TwoLetterISOLanguageName + ";q=0.7,en;q=0.3");
                 response = (HttpWebResponse) request.GetResponse();
-
+                 
                 if (response != null) // Get the stream associated with the response.
                     return response.GetResponseStream();
             }

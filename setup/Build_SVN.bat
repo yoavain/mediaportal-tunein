@@ -4,8 +4,8 @@ Title Building MediaPortal RadioTime (RELEASE)
 cd ..
 
 :: Prepare version
-for /f "tokens=*" %%a in ('git rev-list HEAD --count') do set REVISION=%%a 
-set REVISION=%REVISION: =%
+rem for /f "tokens=*" %%a in ('git rev-list HEAD --count') do set REVISION=%%a 
+rem set REVISION=%REVISION: =%
 subwcrev . RadioTime\Properties\AssemblyInfo.cs RadioTime\Properties\AssemblyInfo.cs
 subwcrev . RadioTimeOpmlApi\Properties\AssemblyInfo.cs RadioTimeOpmlApi\Properties\AssemblyInfo.cs
 subwcrev . RadioTimePlugin\Properties\AssemblyInfo.cs RadioTimePlugin\Properties\AssemblyInfo.cs
@@ -15,7 +15,7 @@ if "%programfiles(x86)%XXX"=="XXX" goto 32BIT
 	set PROGS=%programfiles(x86)%
 	goto CONT
 :32BIT
-	set PROGS=%ProgramFiles%	
+	set PROGS=%ProgramFiles%
 :CONT
 
 :: Build

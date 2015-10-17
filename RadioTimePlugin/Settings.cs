@@ -19,6 +19,7 @@ namespace RadioTimePlugin
 
         public static RadioTimeStation NowPlayingStation { get; set; }
         public static RadioTimeNowPlaying NowPlaying { get; set; }
+        public static RadioTimeShow NowPlayingShow { get; set; }
         public static string GuideId { get; set; }
         public static string GuideIdDescription { get; set; }
         public static Settings Instance { get; set; }

@@ -48,6 +48,7 @@
     <Compile Include="RadioTimeOutline.cs" />
     <Compile Include="RadioTimeSetting.cs" />
     <Compile Include="RadioTimeStation.cs" />
+    <Compile Include="RadioTimeShow.cs" />
     <Compile Include="RadioTimeWebServiceHelper.cs" />
     <Compile Include="Web References\com.radiotime.opml\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -204,6 +205,9 @@
     </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="FanartHandler">
+      <HintPath>..\External\FanartHandler.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.EnterpriseServices" />

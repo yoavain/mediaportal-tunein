@@ -8,21 +8,21 @@ using System.Globalization;
 
 namespace RadioTimeOpmlApi
 {
-    public class RadioTimeStation : ICloneable
+    public class RadioTimeShow : ICloneable
     {
         object ICloneable.Clone()
         {
             return Clone();
         }
 
-        public RadioTimeStation Clone()
+        public RadioTimeShow Clone()
         {
-            var returnStation = (RadioTimeStation) MemberwiseClone();
-            return returnStation;
+            var returnShow = (RadioTimeShow) MemberwiseClone();
+            return returnShow;
         }
 
 
-        public RadioTimeStation()
+        public RadioTimeShow()
         {
             Genres = new List<RadioTimeOutline>();
             Similar = new List<RadioTimeOutline>();
@@ -34,24 +34,13 @@ namespace RadioTimeOpmlApi
         public List<RadioTimeOutline> Similar { get; set; }
 
         public string Name { get; set; }
+        public string Hosts { get; set; }
         public bool IsPreset { get; set; }
-        public bool IsAvailable { get; set; }
-        public bool HasSchedule { get; set; }
+        public bool IsEvent { get; set; }
+        public bool HasTopic { get; set; }
         public string Language { get; set; }
         public string Logo { get; set; }
         public string Location { get; set; }
-        public string Frequency { get; set; }
-        public string Slogan { get; set; }
-        public string Adresss { get; set; }
-
-        public string CallSign { get; set; }
-        public string Band { get; set; }
-
-        public bool HasSong { get; set; }
-        public string Artist { get; set; }
-        public string Album { get; set; }
-        public string Song { get; set; }
-
         public string Description { get; set; }
 
         public void Get(string guideid)
@@ -64,12 +53,9 @@ namespace RadioTimeOpmlApi
                 "http://opml.radiotime.com/Describe.ashx?id={0}&detail=genre,recommendation&{1}", GuideId,
                 Grabber.Settings.GetParamString());
 
-            //Log.Debug("Get Station " + sUrl);
-            IsAvailable = false;
-            HasSong = false; 
+            //Log.Debug("Get Show " + sUrl);
             if (string.IsNullOrEmpty(GuideId))
                 return;
-            IsAvailable = true;
             var response = RetrieveData(sUrl);
             if (response != null)
             {
@@ -96,17 +82,14 @@ namespace RadioTimeOpmlApi
                                 {
                                     switch (childNode.Name.ToLower())
                                     {
-                                        case "name":
+                                        case "title":
                                             Name = childNode.InnerText;
+                                            break;
+                                        case "hosts":
+                                            Hosts = childNode.InnerText;
                                             break;
                                         case "language":
                                             Language = childNode.InnerText;
-                                            break;
-                                        case "frequency":
-                                            Frequency = childNode.InnerText;
-                                            break;
-                                        case "slogan":
-                                            Slogan = childNode.InnerText;
                                             break;
                                         case "logo":
                                             Logo = childNode.InnerText;
@@ -117,29 +100,11 @@ namespace RadioTimeOpmlApi
                                         case "is_preset":
                                             IsPreset = childNode.InnerText == "false" ? false : true;
                                             break;
-                                        case "is_available":
-                                            IsAvailable = childNode.InnerText == "false" ? false : true;
+                                        case "is_event":
+                                            IsEvent = childNode.InnerText == "false" ? false : true;
                                             break;
-                                        case "has_schedule":
-                                            HasSchedule = childNode.InnerText == "false" ? false : true;
-                                            break;
-                                        case "call_sign":
-                                            CallSign = childNode.InnerText;
-                                            break;
-                                        case "band":
-                                            Band = childNode.InnerText;
-                                            break;
-                                        case "has_song":
-                                            HasSong = childNode.InnerText == "false" ? false : true;
-                                            break;
-                                        case "current_artist":
-                                            Artist = childNode.InnerText;
-                                            break;
-                                        case "current_album":
-                                            Album = childNode.InnerText;
-                                            break;
-                                        case "current_song":
-                                            Song = childNode.InnerText;
+                                        case "has_topic":
+                                            HasTopic = childNode.InnerText == "false" ? false : true;
                                             break;
                                         case "description":
                                             Description = childNode.InnerText;
@@ -167,7 +132,6 @@ namespace RadioTimeOpmlApi
                 catch (Exception)
                 {
                 }
-                Slogan = string.IsNullOrEmpty(Slogan) ? " " : Slogan;
                 Language = string.IsNullOrEmpty(Language) ? " " : Language;
                 Description = string.IsNullOrEmpty(Description) ? " " : Description;
             }
