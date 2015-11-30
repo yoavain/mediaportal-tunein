@@ -45,21 +45,21 @@ namespace RadioTimePlugin
 
         protected void g_player_PlayBackChanged(g_Player.MediaType type, int stoptime, string filename)
         {
-            Log.Debug("*** g_player_PlayBackChanged: "+filename);
-            //ClearInternalVariables();
+            // Log.Debug("*** g_player_PlayBackChanged: "+filename);
+            // ClearInternalVariables();
             ClearProps();
         }
 
         protected void g_Player_PlayBackStopped(g_Player.MediaType type, int stoptime, string filename)
         {
-            Log.Debug("*** g_Player_PlayBackStopped: "+filename);
+            // Log.Debug("*** g_Player_PlayBackStopped: "+filename);
             ClearInternalVariables();
             ClearProps();
         }
 
         protected void g_player_PlayBackEnded(g_Player.MediaType type, string filename)
         {
-            Log.Debug("*** g_player_PlayBackEnded: "+filename);
+            // Log.Debug("*** g_player_PlayBackEnded: "+filename);
             ClearInternalVariables();
             ClearProps();
         }
@@ -71,249 +71,329 @@ namespace RadioTimePlugin
             // Log.Debug("_station is assigned: " + (_station != null).ToString());
             // Log.Debug("g_player FILE    1: " + g_Player.CurrentFile);
             // Log.Debug("_currentFileName 2: " + _currentFileName);
-            Log.Debug("*** g_Player_PlayBackStarted: "+PlayGuidId);
+            // Log.Debug("*** g_Player_PlayBackStarted: "+PlayGuidId);
 
             if (_currentItem == null || _nowPlaying == null || _station == null)
-                return;
+            {
+              return;
+            }
 
             if (g_Player.CurrentFile == _currentFileName || string.IsNullOrEmpty(g_Player.CurrentFile))
             {
-                Settings.NowPlaying = _nowPlaying.Clone();
-                Settings.NowPlayingStation = _station.Clone();
-                if (_show != null)
-                {
-                    Settings.NowPlayingShow = _show.Clone();
-                }
-                else
-                {
-                    Settings.NowPlayingShow = null;
-                }
-                PlayGuidId = _station.GuideId;
+              Settings.NowPlaying = _nowPlaying.Clone();
+              Settings.NowPlayingStation = _station.Clone();
+              if (_show != null)
+              {
+                Settings.NowPlayingShow = _show.Clone();
+              }
+              else
+              {
+                Settings.NowPlayingShow = null;
+              }
+              PlayGuidId = _station.GuideId;
 
-                GUIPropertyManager.SetProperty("#Play.Current.Thumb", DownloadStationLogo(_currentItem));
+              GUIPropertyManager.SetProperty("#Play.Current.Thumb", DownloadStationLogo(_currentItem));
 
-                // GUIPropertyManager.SetProperty("#RadioTime.Play.Station", _nowPlaying.Name);
-                // GUIPropertyManager.SetProperty("#RadioTime.Play.Station", _station.Name + " " + _station.Frequency + " " + _station.Band););
-                GUIPropertyManager.SetProperty("#RadioTime.Play.Station", _station.Name + " " + _station.Frequency + 
-                                                (!string.IsNullOrEmpty(_station.Name) && !string.IsNullOrEmpty(_station.Band) && _station.Name.IndexOf(_station.Band) < 0 ? " " + _station.Band : ""));
-                // GUIPropertyManager.SetProperty("#RadioTime.Play.StationLogo", GetStationLogoFileName(nowPlaying.Image));
-                GUIPropertyManager.SetProperty("#RadioTime.Play.Description", _station.Description);
-                GUIPropertyManager.SetProperty("#RadioTime.Play.Station.Description", _station.Description);
-                GUIPropertyManager.SetProperty("#RadioTime.Play.Slogan", _station.Slogan);
-                GUIPropertyManager.SetProperty("#RadioTime.Play.Language", _station.Language);
-                GUIPropertyManager.SetProperty("#RadioTime.Play.GuidId", PlayGuidId);
-
-                UpdateProps();
-
-                if (_setting.FormatNames.ContainsKey(_currentItem.Formats))
-                    GUIPropertyManager.SetProperty("#RadioTime.Play.Format", _setting.FormatNames[_currentItem.Formats]);
-                else
-                    GUIPropertyManager.SetProperty("#RadioTime.Play.Format", string.Empty);
-                //
-                GUIPropertyManager.SetProperty("#RadioTime.Play.Image", DownloadStationLogo(_currentItem));
-                //
-                doAdditionalStuffOnStarted();
-
-                ClearInternalVariables();
+              // GUIPropertyManager.SetProperty("#RadioTime.Play.Station", _nowPlaying.Name);
+              // GUIPropertyManager.SetProperty("#RadioTime.Play.Station", _station.Name + " " + _station.Frequency + " " + _station.Band););
+              GUIPropertyManager.SetProperty("#RadioTime.Play.Station", _station.Name + " " + _station.Frequency + 
+                                              (!string.IsNullOrEmpty(_station.Name) && !string.IsNullOrEmpty(_station.Band) && _station.Name.IndexOf(_station.Band) < 0 ? " " + _station.Band : ""));
+              // GUIPropertyManager.SetProperty("#RadioTime.Play.StationLogo", GetStationLogoFileName(nowPlaying.Image));
+              GUIPropertyManager.SetProperty("#RadioTime.Play.Description", _station.Description);
+              GUIPropertyManager.SetProperty("#RadioTime.Play.Station.Description", _station.Description);
+              GUIPropertyManager.SetProperty("#RadioTime.Play.Slogan", _station.Slogan);
+              GUIPropertyManager.SetProperty("#RadioTime.Play.Language", _station.Language);
+              GUIPropertyManager.SetProperty("#RadioTime.Play.GuidId", PlayGuidId);
+              //
+              UpdateProps();
+              //
+              GUIPropertyManager.SetProperty("#RadioTime.Play.Image", DownloadStationLogo(_currentItem));
+              //
+              doAdditionalStuffOnStarted();
+              //
+              ClearInternalVariables();
             }
         }
 
         public void UpdatePlayProps()
         {
-          Log.Debug("*** UpdatePlayProps");
+          // Log.Debug("*** UpdatePlayProps");
           try
           {
-              if (!g_Player.Playing)
-                  return;
+            if (!g_Player.Playing)
+            {
+              return;
+            }
 
-              PlayGuidId = (string.IsNullOrEmpty(PlayGuidId)) ? GUIPropertyManager.GetProperty("#RadioTime.Play.GuidId") : PlayGuidId;
-              if (string.IsNullOrEmpty(PlayGuidId))
-                  return;
+            PlayGuidId = (string.IsNullOrEmpty(PlayGuidId)) ? GUIPropertyManager.GetProperty("#RadioTime.Play.GuidId") : PlayGuidId;
+            if (string.IsNullOrEmpty(PlayGuidId))
+            {
+              return;
+            }
 
-              _station = new RadioTimeStation();
-              _station.Grabber = grabber;
-              _station.Get(PlayGuidId);
+            _station = new RadioTimeStation();
+            _station.Grabber = grabber;
+            _station.Get(PlayGuidId);
 
-              if (!string.IsNullOrEmpty(PlayGuidId) && _station.IsAvailable)
+            if (!string.IsNullOrEmpty(PlayGuidId) && _station.IsAvailable)
+            {
+              //var nowPlaying = Settings.NowPlaying;
+              _nowPlaying = new RadioTimeNowPlaying();
+              _nowPlaying.Grabber = grabber;
+              _nowPlaying.Get(PlayGuidId, _station.HasSong);
+              //
+              if (_nowPlaying.IsShow && !string.IsNullOrEmpty(_nowPlaying.ShowGuidId))
               {
-                  //var nowPlaying = Settings.NowPlaying;
-                  _nowPlaying = new RadioTimeNowPlaying();
-                  _nowPlaying.Grabber = grabber;
-                  _nowPlaying.Get(PlayGuidId, _station.HasSong);
-                  //
-                  if (_nowPlaying.IsShow && !string.IsNullOrEmpty(_nowPlaying.ShowGuidId))
-                  {
-                    _show = new RadioTimeShow();
-                    _show.Grabber = grabber;
-                    _show.Get(_nowPlaying.ShowGuidId) ;
-                  }
-                  //
-                  Settings.NowPlaying = _nowPlaying.Clone();
-                  Settings.NowPlayingStation = _station.Clone();
-                  if (_show != null)
-                  {
-                      Settings.NowPlayingShow = _show.Clone();
-                  }
-                  else
-                  {
-                      Settings.NowPlayingShow = null;
-                  }
-                  //
-                  UpdateProps();
+                _show = new RadioTimeShow();
+                _show.Grabber = grabber;
+                _show.Get(_nowPlaying.ShowGuidId) ;
               }
+              //
+              Settings.NowPlaying = _nowPlaying.Clone();
+              Settings.NowPlayingStation = _station.Clone();
+              if (_show != null)
+              {
+                Settings.NowPlayingShow = _show.Clone();
+              }
+              else
+              {
+                Settings.NowPlayingShow = null;
+              }
+              //
+              UpdateProps();
+            }
           }
           catch (Exception ex)
           {
-              Log.Debug("UpdatePlayProps: " + ex.Message);
+            Log.Debug("UpdatePlayProps: " + ex.Message);
           }
 
         }
 
         protected void UpdateProps()
         {
-          Log.Debug("*** UpdateProps");
+          // Log.Debug("*** UpdateProps");
           if (_nowPlaying == null || _station == null)
-              return;
+          {
+            return;
+          }
 
           try
           {
-              //
-              GUIPropertyManager.SetProperty("#Play.Current.Thumb", DownloadStationLogo((!string.IsNullOrEmpty(_nowPlaying.Image) ? _nowPlaying.Image : _station.Logo),
-                                                                                        (!string.IsNullOrEmpty(_nowPlaying.Image) ? _nowPlaying.Name : _station.Name)));
-              // GUIPropertyManager.SetProperty("#RadioTime.Play.Description", (!string.IsNullOrEmpty(_nowPlaying.Description) ? _nowPlaying.Description : _station.Description));
-              GUIPropertyManager.SetProperty("#RadioTime.Play.Description", _nowPlaying.Description);
-              GUIPropertyManager.SetProperty("#RadioTime.Play.Station.Description", _station.Description);
-              // GUIPropertyManager.SetProperty("#RadioTime.Play.Location", (!string.IsNullOrEmpty(_nowPlaying.Location) ? _nowPlaying.Location : _station.Location));
-              GUIPropertyManager.SetProperty("#RadioTime.Play.Location", _station.Location);
-              GUIPropertyManager.SetProperty("#RadioTime.Play.Duration", _nowPlaying.Duration.ToString());
-              GUIPropertyManager.SetProperty("#duration", ToMinutes(_nowPlaying.Duration.ToString()));
-              //
-              if(_station.HasSong)
+            //
+            GUIPropertyManager.SetProperty("#Play.Current.Thumb", DownloadStationLogo((!string.IsNullOrEmpty(_nowPlaying.Image) ? _nowPlaying.Image : _station.Logo),
+                                                                                      (!string.IsNullOrEmpty(_nowPlaying.Image) ? _nowPlaying.Name : _station.Name)));
+            // GUIPropertyManager.SetProperty("#RadioTime.Play.Description", (!string.IsNullOrEmpty(_nowPlaying.Description) ? _nowPlaying.Description : _station.Description));
+            GUIPropertyManager.SetProperty("#RadioTime.Play.Description", _nowPlaying.Description);
+            GUIPropertyManager.SetProperty("#RadioTime.Play.Station.Description", _station.Description);
+            // GUIPropertyManager.SetProperty("#RadioTime.Play.Location", (!string.IsNullOrEmpty(_nowPlaying.Location) ? _nowPlaying.Location : _station.Location));
+            GUIPropertyManager.SetProperty("#RadioTime.Play.Location", _station.Location);
+            GUIPropertyManager.SetProperty("#RadioTime.Play.Duration", _nowPlaying.Duration.ToString());
+            GUIPropertyManager.SetProperty("#duration", ToMinutes(_nowPlaying.Duration.ToString()));
+            //
+            if(_station.HasSong)
+            {
+              if (!string.IsNullOrEmpty(_station.Artist) && _station.Artist.Equals(_station.Artist.ToLower(), StringComparison.CurrentCulture))
               {
-                  if (!string.IsNullOrEmpty(_station.Artist) && _station.Artist.Equals(_station.Artist.ToLower(), StringComparison.CurrentCulture))
-                  {
-                      _station.Artist = _station.Artist.ToUpper().Trim();
-                  }
+                _station.Artist = _station.Artist.ToUpper().Trim();
+              }
 
-                  if (string.IsNullOrEmpty(_station.Album) && !string.IsNullOrEmpty(_station.Artist) && !string.IsNullOrEmpty(_station.Song))
-                  {
-                      _station.Album = UtilsFanartHandler.GetLastFMAlbum(_station.Artist, _station.Song);
-                      Log.Debug("Album from FH: Artist: " + _station.Artist + " Track: " + _station.Song + " Album: " + _station.Album);
-                  }
+              if (string.IsNullOrEmpty(_station.Album) && !string.IsNullOrEmpty(_station.Artist) && !string.IsNullOrEmpty(_station.Song))
+              {
+                _station.Album = UtilsFanartHandler.GetLastFMAlbum(_station.Artist, _station.Song);
+                Log.Debug("Album from FH: Artist: " + _station.Artist + " Track: " + _station.Song + " Album: " + _station.Album);
               }
-              //
-              GUIPropertyManager.SetProperty("#RadioTime.Play.HasSong", (_station.HasSong ? "true" : string.Empty));
-              GUIPropertyManager.SetProperty("#RadioTime.Play.Artist", (_station.HasSong ? _station.Artist : string.Empty));
-              GUIPropertyManager.SetProperty("#RadioTime.Play.Album", (_station.HasSong ? _station.Album : string.Empty));
-              GUIPropertyManager.SetProperty("#RadioTime.Play.Song", (_station.HasSong ? _station.Song : string.Empty));
-              //
-              string strGenres = GetDistinct(_station.Genres) ;
-              if (_nowPlaying.IsShow && _show != null)
+            }
+            //
+            GUIPropertyManager.SetProperty("#RadioTime.Play.HasSong", (_station.HasSong ? "true" : string.Empty));
+            GUIPropertyManager.SetProperty("#RadioTime.Play.Artist", (_station.HasSong ? _station.Artist : string.Empty));
+            GUIPropertyManager.SetProperty("#RadioTime.Play.Album", (_station.HasSong ? _station.Album : string.Empty));
+            GUIPropertyManager.SetProperty("#RadioTime.Play.Song", (_station.HasSong ? _station.Song : string.Empty));
+            //
+            string strGenres = GetDistinct(_station.Genres) ;
+            if (_nowPlaying.IsShow && _show != null)
+            {
+              string strShowGenres = GetDistinct(_show.Genres);
+              if (!string.IsNullOrEmpty(strShowGenres)) 
               {
-                  string strShowGenres = GetDistinct(_show.Genres);
-                  if (!string.IsNullOrEmpty(strShowGenres)) 
-                  {
-                      strGenres = strShowGenres;
-                  }
+                strGenres = strShowGenres;
               }
-              //
-              if(_station.HasSong)
+            }
+            //
+            var badTitle = GUIPropertyManager.GetProperty("#Play.Current.Title");
+            if (!string.IsNullOrEmpty(badTitle))
+            {
+              int streamUrlIndex = badTitle.IndexOf("';");
+              if (streamUrlIndex == badTitle.Length - 2)
               {
-                  // if (string.IsNullOrEmpty(GUIPropertyManager.GetProperty("#Play.Current.Artist")))
-                  if (!string.IsNullOrEmpty(_station.Artist))
-                  {
-                      GUIPropertyManager.SetProperty("#Play.Current.Artist", _station.Artist);
-                  }
-                  // if (string.IsNullOrEmpty(GUIPropertyManager.GetProperty("#Play.Current.Album")))
-                  if (!string.IsNullOrEmpty(_station.Album))
-                  {
-                      GUIPropertyManager.SetProperty("#Play.Current.Album", _station.Album);
-                  }
-                  // if (string.IsNullOrEmpty(GUIPropertyManager.GetProperty("#Play.Current.Title")))
-                  if (!string.IsNullOrEmpty(_station.Song))
-                  {
-                      GUIPropertyManager.SetProperty("#Play.Current.Title", _station.Song);
-                  }
-              } 
-              else if (_show != null)
+                badTitle = badTitle.Substring(0, streamUrlIndex);
+              }
+              streamUrlIndex = badTitle.IndexOf(";");
+              if (streamUrlIndex == badTitle.Length - 1)
               {
-                  if (string.IsNullOrEmpty(GUIPropertyManager.GetProperty("#Play.Current.Artist")))
-                  {
-                      GUIPropertyManager.SetProperty("#Play.Current.Artist", _show.Name);
-                  }
-                  if (string.IsNullOrEmpty(GUIPropertyManager.GetProperty("#Play.Current.Album")))
-                  {
-                      GUIPropertyManager.SetProperty("#Play.Current.Album", _show.Hosts);
-                  }
-                  if (string.IsNullOrEmpty(GUIPropertyManager.GetProperty("#Play.Current.Title")))
-                  {
-                      GUIPropertyManager.SetProperty("#Play.Current.Title", _show.Description);
-                  }
-                  if (!string.IsNullOrEmpty(_show.Location))
-                  {
-                      GUIPropertyManager.SetProperty("#RadioTime.Play.Location", _show.Location);
-                  }
-                  if (!string.IsNullOrEmpty(_show.Logo))
-                  {
-                      GUIPropertyManager.SetProperty("#Play.Current.Thumb", DownloadStationLogo(_show.Logo, _show.Name));
-                  }
+                badTitle = badTitle.Substring(0, streamUrlIndex);
+              }
+              GUIPropertyManager.SetProperty("#Play.Current.Title", badTitle);
+            }
+            //
+            if(_station.HasSong)
+            {
+              var curArtist = GUIPropertyManager.GetProperty("#Play.Current.Artist");
+              var curAlbum = GUIPropertyManager.GetProperty("#Play.Current.Album");
+              var curTitle = GUIPropertyManager.GetProperty("#Play.Current.Title");
+              if (string.IsNullOrEmpty(curArtist))
+              // if (!string.IsNullOrEmpty(_station.Artist))
+              {
+                  GUIPropertyManager.SetProperty("#Play.Current.Artist", _station.Artist);
+                  curArtist = _station.Artist;
+              }
+              if (string.IsNullOrEmpty(curAlbum))
+              // if (!string.IsNullOrEmpty(_station.Album))
+              {
+                  GUIPropertyManager.SetProperty("#Play.Current.Album", _station.Album);
+                  curAlbum = _station.Album;
+              }
+              if (string.IsNullOrEmpty(curTitle))
+              // if (!string.IsNullOrEmpty(_station.Song))
+              {
+                  GUIPropertyManager.SetProperty("#Play.Current.Title", _station.Song);
+                  curTitle = _station.Song;
+              }
+              // Fix for Album name = NowPlaying Name, replace with Real Album Name from FH
+              if ((!string.IsNullOrEmpty(_station.Name) || !string.IsNullOrEmpty(_nowPlaying.Name)) && 
+                  !string.IsNullOrEmpty(curArtist) && 
+                  !string.IsNullOrEmpty(curAlbum) && 
+                  !string.IsNullOrEmpty(curTitle))
+              {
+                // Log.Debug("====================================================================================================================================");
+                // Log.Debug("=== "+_station.Artist + " - " + curArtist + " - " + _station.Artist.Equals(curArtist, StringComparison.CurrentCultureIgnoreCase));
+                // Log.Debug("=== "+_station.Song + " - " + curTitle + " - " + _station.Song.Equals(curTitle, StringComparison.CurrentCultureIgnoreCase));
+                // if (!string.IsNullOrEmpty(_station.Name))
+                // Log.Debug("=== "+_station.Name + " - " + curAlbum + " - " + _station.Name.Equals(curAlbum, StringComparison.CurrentCultureIgnoreCase));
+                // if (!string.IsNullOrEmpty(_station.Name))
+                // Log.Debug("=== "+_nowPlaying.Name + " - " + curAlbum + " - " + _nowPlaying.Name.Equals(curAlbum, StringComparison.CurrentCultureIgnoreCase));
+
+                if (!string.IsNullOrEmpty(_nowPlaying.Name) &&
+                   _station.Artist.Equals(curArtist, StringComparison.CurrentCultureIgnoreCase) && 
+                   _station.Song.Equals(curTitle, StringComparison.CurrentCultureIgnoreCase) && 
+                   _station.Name.Equals(curAlbum, StringComparison.CurrentCultureIgnoreCase))
+                {
+                  GUIPropertyManager.SetProperty("#Play.Current.Album", _station.Album);  
+                }
+                else if (!string.IsNullOrEmpty(_nowPlaying.Name) &&
+                  _station.Artist.Equals(curArtist, StringComparison.CurrentCultureIgnoreCase) && 
+                  _station.Song.Equals(curTitle, StringComparison.CurrentCultureIgnoreCase) && 
+                  _nowPlaying.Name.Equals(curAlbum, StringComparison.CurrentCultureIgnoreCase))
+                {
+                  GUIPropertyManager.SetProperty("#Play.Current.Album", _station.Album);  
+                }
+                // Log.Debug("=== "+GUIPropertyManager.GetProperty("#Play.Current.Album"));
+                // Log.Debug("====================================================================================================================================");
+              }
+            } 
+            else if (_show != null)
+            {
+              if (string.IsNullOrEmpty(GUIPropertyManager.GetProperty("#Play.Current.Artist")))
+              {
+                GUIPropertyManager.SetProperty("#Play.Current.Artist", _show.Name);
+              }
+              if (string.IsNullOrEmpty(GUIPropertyManager.GetProperty("#Play.Current.Album")))
+              {
+                GUIPropertyManager.SetProperty("#Play.Current.Album", _show.Hosts);
+              }
+              if (string.IsNullOrEmpty(GUIPropertyManager.GetProperty("#Play.Current.Title")))
+              {
+                GUIPropertyManager.SetProperty("#Play.Current.Title", _show.Description);
+              }
+              if (!string.IsNullOrEmpty(_show.Location))
+              {
+                GUIPropertyManager.SetProperty("#RadioTime.Play.Location", _show.Location);
+              }
+              if (!string.IsNullOrEmpty(_show.Logo))
+              {
+                GUIPropertyManager.SetProperty("#Play.Current.Thumb", DownloadStationLogo(_show.Logo, _show.Name));
+              }
+            }
+            else
+            {
+              if (string.IsNullOrEmpty(GUIPropertyManager.GetProperty("#Play.Current.Artist")))
+              {
+                GUIPropertyManager.SetProperty("#Play.Current.Artist", _nowPlaying.Description);
+              }
+            }
+            //
+            if (!string.IsNullOrEmpty(GUIPropertyManager.GetProperty("#Play.Current.Genre")))
+            {
+              GUIPropertyManager.SetProperty("#Play.Current.Genre", strGenres);
+            }
+            if (string.IsNullOrEmpty(GUIPropertyManager.GetProperty("#Play.Current.Track")))
+            {
+              GUIPropertyManager.SetProperty("#Play.Current.Track", GUIPropertyManager.GetProperty("#Play.Current.Artist") + " - " + 
+                                                                    GUIPropertyManager.GetProperty("#Play.Current.Album") + " - " + 
+                                                                    GUIPropertyManager.GetProperty("#Play.Current.Title"));
+            }
+            //
+            if (_currentItem != null)
+            {
+              GUIPropertyManager.SetProperty("#Play.Current.Rating", (_currentItem.ReliabilityIdAsInt/10).ToString());
+              GUIPropertyManager.SetProperty("#Play.Current.FileType", _currentItem.Formats);
+              GUIPropertyManager.SetProperty("#Play.Current.BitRate", _currentItem.Bitrate);
+
+              if (_setting.FormatNames.ContainsKey(_currentItem.Formats))
+              {
+                GUIPropertyManager.SetProperty("#RadioTime.Play.Format", _setting.FormatNames[_currentItem.Formats]);
               }
               else
               {
-                  if (string.IsNullOrEmpty(GUIPropertyManager.GetProperty("#Play.Current.Artist")))
-                  {
-                      GUIPropertyManager.SetProperty("#Play.Current.Artist", _nowPlaying.Description);
-                  }
+                GUIPropertyManager.SetProperty("#RadioTime.Play.Format", string.Empty);
               }
-              if (!string.IsNullOrEmpty(GUIPropertyManager.GetProperty("#Play.Current.Genre")))
-              {
-                  GUIPropertyManager.SetProperty("#Play.Current.Genre", strGenres);
-              }
-              //
-              Log.Debug("*** Station: "+"Name: "+_station.Name+" CallSign: "+_station.CallSign+" Language: "+_station.Language+" Logo: "+_station.Logo);
-              Log.Debug("*** Station: "+"Location: "+_station.Location+" Frequency: "+_station.Frequency+" Band: "+_station.Band);
-              Log.Debug("*** Station: "+"Slogan: "+_station.Slogan+" Adresss: "+_station.Adresss);
-              Log.Debug("*** Station: "+"HasSong: "+_station.HasSong.ToString());
-              Log.Debug("*** Station: "+"Artist: ["+_station.Artist+"] Album: ["+_station.Album+"] Song: ["+_station.Song+"]");
-              Log.Debug("*** Station: "+"Description: "+_station.Description);
-              Log.Debug("*** Station: "+"Genres: "+strGenres);
-              /*
-              foreach (RadioTimeOutline Similar in _station.Similar)
-              {
-                Log.Debug("*** Station: "+"Similar: - "+Similar.Text);
-              }
-              */
-              //
-              Log.Debug("*** NowPlaying: "+"GuidId: "+_nowPlaying.GuidId+" PresetId: "+_nowPlaying.PresetId);
-              Log.Debug("*** NowPlaying: "+"Name: "+_nowPlaying.Name+" Image: "+_nowPlaying.Image+" ShowImage: "+_nowPlaying.ShowImage);
-              Log.Debug("*** NowPlaying: "+"Description: "+_nowPlaying.Description+" Location: "+_nowPlaying.Location);
-              Log.Debug("*** NowPlaying: "+"Duration: "+_nowPlaying.Duration+" Remains: "+_nowPlaying.Remains);
-              //
-              if (_show != null)
-              {
-                  Log.Debug("*** Show: "+"GuideId: "+_show.GuideId);
-                  Log.Debug("*** Show: "+"Name: "+_show.Name + " Hosts: "+_show.Hosts);
-                  Log.Debug("*** Show: "+"IsPreset: "+_show.IsPreset);
-                  Log.Debug("*** Show: "+"IsEvent: "+_show.IsEvent);
-                  Log.Debug("*** Show: "+"HasTopic: "+_show.HasTopic);   
-                  Log.Debug("*** Show: "+"Language: "+_show.Language);
-                  Log.Debug("*** Show: "+"Logo: "+_show.Logo);
-                  Log.Debug("*** Show: "+"Location: "+_show.Location);
-                  Log.Debug("*** Show: "+"Description: "+_show.Description);
-              }
-              //
-              Log.Debug("*** #Play.Current.Thumb: "+GUIPropertyManager.GetProperty("#Play.Current.Thumb"));
-              Log.Debug("*** #Play.Current.Artist: "+GUIPropertyManager.GetProperty("#Play.Current.Artist"));
-              Log.Debug("*** #Play.Current.Album: "+GUIPropertyManager.GetProperty("#Play.Current.Album"));
-              Log.Debug("*** #Play.Current.Title: "+GUIPropertyManager.GetProperty("#Play.Current.Title"));
-              Log.Debug("*** #Play.Current.Track: "+GUIPropertyManager.GetProperty("#Play.Current.Track"));
-              Log.Debug("*** #Play.Current.Year: "+GUIPropertyManager.GetProperty("#Play.Current.Year"));
-              Log.Debug("*** #Play.Current.Rating: "+GUIPropertyManager.GetProperty("#Play.Current.Rating"));
-              //
+            }
+            //
+            Log.Debug("*** Station: "+"Name: "+_station.Name+" CallSign: "+_station.CallSign+" Language: "+_station.Language+" Logo: "+_station.Logo);
+            Log.Debug("*** Station: "+"Location: "+_station.Location+" Frequency: "+_station.Frequency+" Band: "+_station.Band);
+            Log.Debug("*** Station: "+"Slogan: "+_station.Slogan+" Adresss: "+_station.Adresss);
+            Log.Debug("*** Station: "+"HasSong: "+_station.HasSong.ToString());
+            Log.Debug("*** Station: "+"Artist: ["+_station.Artist+"] Album: ["+_station.Album+"] Song: ["+_station.Song+"]");
+            Log.Debug("*** Station: "+"Description: "+_station.Description);
+            Log.Debug("*** Station: "+"Genres: "+strGenres);
+            /*
+            foreach (RadioTimeOutline Similar in _station.Similar)
+            {
+              Log.Debug("*** Station: "+"Similar: - "+Similar.Text);
+            }
+            */
+            //
+            Log.Debug("*** NowPlaying: "+"GuidId: "+_nowPlaying.GuidId+" PresetId: "+_nowPlaying.PresetId);
+            Log.Debug("*** NowPlaying: "+"Name: "+_nowPlaying.Name+" Image: "+_nowPlaying.Image+" ShowImage: "+_nowPlaying.ShowImage);
+            Log.Debug("*** NowPlaying: "+"Description: "+_nowPlaying.Description+" Location: "+_nowPlaying.Location);
+            Log.Debug("*** NowPlaying: "+"Duration: "+_nowPlaying.Duration+" Remains: "+_nowPlaying.Remains);
+            //
+            if (_show != null)
+            {
+              Log.Debug("*** Show: "+"GuideId: "+_show.GuideId);
+              Log.Debug("*** Show: "+"Name: "+_show.Name + " Hosts: "+_show.Hosts);
+              Log.Debug("*** Show: "+"IsPreset: "+_show.IsPreset);
+              Log.Debug("*** Show: "+"IsEvent: "+_show.IsEvent);
+              Log.Debug("*** Show: "+"HasTopic: "+_show.HasTopic);   
+              Log.Debug("*** Show: "+"Language: "+_show.Language);
+              Log.Debug("*** Show: "+"Logo: "+_show.Logo);
+              Log.Debug("*** Show: "+"Location: "+_show.Location);
+              Log.Debug("*** Show: "+"Description: "+_show.Description);
+            }
+            //
+            Log.Debug("*** #Play.Current.Thumb: "+GUIPropertyManager.GetProperty("#Play.Current.Thumb"));
+            Log.Debug("*** #Play.Current.Artist: "+GUIPropertyManager.GetProperty("#Play.Current.Artist"));
+            Log.Debug("*** #Play.Current.Album: "+GUIPropertyManager.GetProperty("#Play.Current.Album"));
+            Log.Debug("*** #Play.Current.Title: "+GUIPropertyManager.GetProperty("#Play.Current.Title"));
+            Log.Debug("*** #Play.Current.Track: "+GUIPropertyManager.GetProperty("#Play.Current.Track"));
+            Log.Debug("*** #Play.Current.Year: "+GUIPropertyManager.GetProperty("#Play.Current.Year"));
+            Log.Debug("*** #Play.Current.Rating: "+GUIPropertyManager.GetProperty("#Play.Current.Rating"));
+            Log.Debug("*** #Play.Current.BitRate: "+GUIPropertyManager.GetProperty("#Play.Current.BitRate"));
+            Log.Debug("*** #Play.Current.FileType: "+GUIPropertyManager.GetProperty("#Play.Current.FileType"));
           }
           catch (Exception ex)
           {
-              Log.Debug("UpdateProps: " + ex.Message);
+            Log.Debug("UpdateProps: " + ex.Message);
           }
         }
 
@@ -356,6 +436,8 @@ namespace RadioTimePlugin
             GUIPropertyManager.SetProperty("#Play.Current.Track", string.Empty);
             GUIPropertyManager.SetProperty("#Play.Current.Album", string.Empty);
             GUIPropertyManager.SetProperty("#Play.Current.Year", string.Empty);
+            GUIPropertyManager.SetProperty("#Play.Current.BitRate", string.Empty);
+            GUIPropertyManager.SetProperty("#Play.Current.FileType", string.Empty);
             GUIPropertyManager.SetProperty("#Play.Current.Rating", "0");
         }
 
