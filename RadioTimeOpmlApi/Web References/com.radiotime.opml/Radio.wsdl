@@ -108,6 +108,7 @@
           <s:element minOccurs="1" maxOccurs="1" name="homogeneous" type="s:boolean" />
           <s:element minOccurs="1" maxOccurs="1" name="canAddToFavorite" type="s:boolean" />
           <s:element minOccurs="1" maxOccurs="1" name="canScroll" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="albumArtURI" type="s:string" />
         </s:sequence>
       </s:complexType>
       <s:element name="credentials" type="tns:credentials" />
