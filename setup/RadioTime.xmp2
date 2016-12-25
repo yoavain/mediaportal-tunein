@@ -325,8 +325,8 @@ Click Next to continue or Cancel to exit Setup.</Value>
           <Build>6</Build>
           <Revision>27644</Revision>
         </MaxVersion>
-        <WarnOnly>true</WarnOnly>
-        <Message>requires MediaPortal version 1.7.0 or higher!</Message>
+        <WarnOnly>false</WarnOnly>
+        <Message>Requires MediaPortal version 1.16 Pre or higher!</Message>
         <Name>MediaPortal</Name>
       </DependencyItem>
       <DependencyItem>
@@ -345,7 +345,7 @@ Click Next to continue or Cancel to exit Setup.</Value>
           <Revision>0</Revision>
         </MaxVersion>
         <WarnOnly>true</WarnOnly>
-        <Message>requires Skin version 1.4.0.0 to 1.4.0.0.</Message>
+        <Message>Requires Skin version 1.4.0.0 to 1.4.0.0.</Message>
         <Name>Skin</Name>
       </DependencyItem>
       <DependencyItem>
@@ -353,8 +353,8 @@ Click Next to continue or Cancel to exit Setup.</Value>
         <Id />
         <MinVersion>
           <Major>1</Major>
-          <Minor>9</Minor>
-          <Build>0</Build>
+          <Minor>15</Minor>
+          <Build>100</Build>
           <Revision>0</Revision>
         </MinVersion>
         <MaxVersion>
@@ -364,7 +364,7 @@ Click Next to continue or Cancel to exit Setup.</Value>
           <Revision>999</Revision>
         </MaxVersion>
         <WarnOnly>true</WarnOnly>
-        <Message>requires Installer version 1.9.0.0 to 1.99.999.999.</Message>
+        <Message>Requires Installer version 1.15.100.0 to 1.99.999.999.</Message>
         <Name>Installer</Name>
       </DependencyItem>
     </Items>
@@ -375,8 +375,8 @@ Click Next to continue or Cancel to exit Setup.</Value>
         <CompatibleVersion>
           <Items>
             <CompatibleVersionItem>
-              <MinRequiredVersion>1.7.0.0</MinRequiredVersion>
-              <DesignedForVersion>1.7.0.0</DesignedForVersion>
+              <MinRequiredVersion>1.15.100.0</MinRequiredVersion>
+              <DesignedForVersion>1.15.100.0</DesignedForVersion>
             </CompatibleVersionItem>
           </Items>
         </CompatibleVersion>
@@ -400,16 +400,15 @@ Click Next to continue or Cancel to exit Setup.</Value>
     <UpdateUrl>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/update.xml</UpdateUrl>
     <Version>
       <Major>1</Major>
-      <Minor>4</Minor>
-      <Build>2</Build>
+      <Minor>5</Minor>
+      <Build>0</Build>
       <Revision>0</Revision>
     </Version>
     <ExtensionDescription>Plugin for browse and play more that 100.000 online radio stations from tunein.com</ExtensionDescription>
-    <VersionDescription>Move to GitHub
-Compatibility for 1.12 Final and above</VersionDescription>
+    <VersionDescription>Compatibility for 1.16 Pre Release</VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
     <OnlineLocation>https://github.com/yoavain/mediaportal-tunein/raw/master/setup/builds/RadioTime-{VERSION}.MPE1</OnlineLocation>
-    <ReleaseDate>2015-07-06T22:38:05</ReleaseDate>
+    <ReleaseDate>2016-12-24T22:38:05</ReleaseDate>
     <Tags>radio, online</Tags>
     <Location>builds\RadioTime-MAJOR.MINOR.BUILD.REVISION.MPE1</Location>
     <Params>
@@ -604,7 +603,7 @@ Compatibility for 1.12 Final and above</VersionDescription>
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>tunein.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{a2e19d5e-e799-4dc9-a0cd-0a18a978e715}-tunein.png</ZipFileName>
+        <ZipFileName>Installer{CopyFile}\{dac5a321-09fd-48d9-9ef7-868c7d007451}-tunein.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
     </Items>

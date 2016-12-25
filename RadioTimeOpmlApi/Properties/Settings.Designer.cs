@@ -26,7 +26,7 @@ namespace RadioTimeOpmlApi.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://services.radiotime.com/RadioTime.asmx")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://opml.radiotime.com/RadioTime.asmx")]
         public string RadioTimeOpmlApi_com_radiotime_services_RadioTimeWebService {
             get {
                 return ((string)(this["RadioTimeOpmlApi_com_radiotime_services_RadioTimeWebService"]));

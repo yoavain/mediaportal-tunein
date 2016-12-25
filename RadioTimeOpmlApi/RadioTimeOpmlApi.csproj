@@ -48,7 +48,6 @@
     <Compile Include="RadioTimeOutline.cs" />
     <Compile Include="RadioTimeSetting.cs" />
     <Compile Include="RadioTimeStation.cs" />
-    <Compile Include="RadioTimeShow.cs" />
     <Compile Include="RadioTimeWebServiceHelper.cs" />
     <Compile Include="Web References\com.radiotime.opml\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -192,10 +191,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>RadioTimeOpmlApi_com_radiotime_opml_Radio</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="http://services.radiotime.com/RadioTime.asmx%3fWSDL">
+    <WebReferenceUrl Include="http://opml.radiotime.com/RadioTime.asmx%3fWSDL">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\com.radiotime.services\</RelPath>
-      <UpdateFromURL>http://services.radiotime.com/RadioTime.asmx%3fWSDL</UpdateFromURL>
+      <UpdateFromURL>http://opml.radiotime.com/RadioTime.asmx%3fWSDL</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -205,9 +204,6 @@
     </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="FanartHandler">
-      <HintPath>..\External\FanartHandler.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.EnterpriseServices" />
