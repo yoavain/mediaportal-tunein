@@ -10,17 +10,19 @@ if "%programfiles(x86)%XXX"=="XXX" goto 32BIT
 	set PROGS=%ProgramFiles%	
 :CONT
 
+IF NOT EXIST "%PROGS%\Team MediaPortal\MediaPortal\" SET PROGS=C:
+
 :: Get version from DLL
 FOR /F "tokens=1-3" %%i IN ('tools\sigcheck.exe "..\RadioTimePlugin\bin\Release\RadioTimePlugin.dll"') DO ( IF "%%i %%j"=="File version:" SET version=%%k )
 
 :: trim version
 SET version=%version:~0,-1%
-
+ECHO %version%
 :: Temp xmp2 file
 copy RadioTime.xmp2 RadioTimeTemp.xmp2
 
 :: Sed "update-{VERSION}.xml" from xmp2 file
-tools\sed.exe -i "s/update-{VERSION}.xml/update-%version%.xml/g" RadioTimeTemp.xmp2
+Tools\sed.exe -i "s/update-{VERSION}.xml/update-%version%.xml/g" RadioTimeTemp.xmp2
 
 :: Build MPE1
 "%PROGS%\Team MediaPortal\MediaPortal\MPEMaker.exe" RadioTimeTemp.xmp2 /B /V=%version% /UpdateXML
