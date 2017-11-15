@@ -167,7 +167,6 @@ namespace RadioTimePlugin
           {
             Log.Debug("UpdatePlayProps: " + ex.Message);
           }
-
         }
 
         protected void UpdateProps()
@@ -177,6 +176,8 @@ namespace RadioTimePlugin
           {
             return;
           }
+
+          GUIPropertyManager.SetProperty("#RadioTime.Play.Updated", "true");
 
           try
           {
@@ -349,6 +350,7 @@ namespace RadioTimePlugin
               }
             }
             //
+            /*
             Log.Debug("*** Station: "+"Name: "+_station.Name+" CallSign: "+_station.CallSign+" Language: "+_station.Language+" Logo: "+_station.Logo);
             Log.Debug("*** Station: "+"Location: "+_station.Location+" Frequency: "+_station.Frequency+" Band: "+_station.Band);
             Log.Debug("*** Station: "+"Slogan: "+_station.Slogan+" Adresss: "+_station.Adresss);
@@ -363,6 +365,7 @@ namespace RadioTimePlugin
             }
             */
             //
+            /*
             Log.Debug("*** NowPlaying: "+"GuidId: "+_nowPlaying.GuidId+" PresetId: "+_nowPlaying.PresetId);
             Log.Debug("*** NowPlaying: "+"Name: "+_nowPlaying.Name+" Image: "+_nowPlaying.Image+" ShowImage: "+_nowPlaying.ShowImage);
             Log.Debug("*** NowPlaying: "+"Description: "+_nowPlaying.Description+" Location: "+_nowPlaying.Location);
@@ -390,11 +393,13 @@ namespace RadioTimePlugin
             Log.Debug("*** #Play.Current.Rating: "+GUIPropertyManager.GetProperty("#Play.Current.Rating"));
             Log.Debug("*** #Play.Current.BitRate: "+GUIPropertyManager.GetProperty("#Play.Current.BitRate"));
             Log.Debug("*** #Play.Current.FileType: "+GUIPropertyManager.GetProperty("#Play.Current.FileType"));
+            */
           }
           catch (Exception ex)
           {
             Log.Debug("UpdateProps: " + ex.Message);
           }
+          GUIPropertyManager.SetProperty("#RadioTime.Play.Updated", "false");
         }
 
         protected void ClearInternalVariables()
@@ -411,6 +416,7 @@ namespace RadioTimePlugin
             Settings.NowPlaying = new RadioTimeNowPlaying();
             Settings.NowPlayingStation = new RadioTimeStation();
             Settings.NowPlayingShow = new RadioTimeShow();
+
             GUIPropertyManager.SetProperty("#RadioTime.Play.Station", string.Empty);
             GUIPropertyManager.SetProperty("#RadioTime.Play.StationLogo", string.Empty);
             GUIPropertyManager.SetProperty("#RadioTime.Play.Duration", string.Empty);
@@ -425,6 +431,7 @@ namespace RadioTimePlugin
             GUIPropertyManager.SetProperty("#RadioTime.Play.Album", string.Empty);
             GUIPropertyManager.SetProperty("#RadioTime.Play.Song", string.Empty);
             GUIPropertyManager.SetProperty("#RadioTime.Play.GuidId", string.Empty);
+            GUIPropertyManager.SetProperty("#RadioTime.Play.Updated", "false");
             PlayGuidId = string.Empty;
         }
 
