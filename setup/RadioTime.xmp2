@@ -394,10 +394,10 @@ Click Next to continue or Cancel to exit Setup.</Value>
   <GeneralInfo>
     <Name>RadioTime</Name>
     <Id>71cc3381-de92-482d-9556-7e86f67f8067</Id>
-    <Author>Dukus; (released by yoavain)</Author>
+    <Author>Dukus; (released by yoavain, tuned by ajs)</Author>
     <HomePage>https://github.com/yoavain/mediaportal-tunein</HomePage>
     <ForumPage>http://forum.team-mediaportal.com/forums/radiotime.666/</ForumPage>
-    <UpdateUrl>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/update.xml</UpdateUrl>
+    <UpdateUrl>https://raw.githubusercontent.com/andrewjswan/mediaportal-tunein/master/setup/update.xml</UpdateUrl>
     <Version>
       <Major>1</Major>
       <Minor>5</Minor>
@@ -408,7 +408,7 @@ Click Next to continue or Cancel to exit Setup.</Value>
     <VersionDescription>Compatibility for 1.16 Pre Release
 Internal fixes</VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
-    <OnlineLocation>https://github.com/yoavain/mediaportal-tunein/raw/master/setup/builds/RadioTime-{VERSION}.MPE1</OnlineLocation>
+    <OnlineLocation>https://raw.githubusercontent.com/andrewjswan/mediaportal-tunein/master/setup/builds/RadioTime-{VERSION}.MPE1</OnlineLocation>
     <ReleaseDate>2017-11-15T22:38:05</ReleaseDate>
     <Tags>radio, online</Tags>
     <Location>builds\RadioTime-MAJOR.MINOR.BUILD.REVISION.MPE1</Location>
@@ -420,7 +420,7 @@ Internal fixes</VersionDescription>
           <Description>The icon file of the package (jpg,png,bmp)</Description>
         </SectionParam>
         <SectionParam Name="Online Icon">
-          <Value>https://raw.githubusercontent.com/yoavain/mediaportal-tunein/master/setup/tunein.png</Value>
+          <Value>https://raw.githubusercontent.com/andrewjswan/mediaportal-tunein/master/setup/tunein.png</Value>
           <ValueType>String</ValueType>
           <Description>The icon file of the package stored online (jpg,png,bmp)</Description>
         </SectionParam>
