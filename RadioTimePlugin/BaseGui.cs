@@ -274,17 +274,17 @@ namespace RadioTimePlugin
                 // if (!string.IsNullOrEmpty(_station.Name))
                 // Log.Debug("=== "+_nowPlaying.Name + " - " + curAlbum + " - " + _nowPlaying.Name.Equals(curAlbum, StringComparison.CurrentCultureIgnoreCase));
 
-                if (!string.IsNullOrEmpty(_nowPlaying.Name) &&
+                if (!string.IsNullOrEmpty(_station.Name) &&
                    _station.Artist.Equals(curArtist, StringComparison.CurrentCultureIgnoreCase) && 
                    _station.Song.Equals(curTitle, StringComparison.CurrentCultureIgnoreCase) && 
-                   _station.Name.Equals(curAlbum, StringComparison.CurrentCultureIgnoreCase))
+                   _station.Name.ToLowerInvariant().Contains(curAlbum.ToLowerInvariant()))
                 {
                   GUIPropertyManager.SetProperty("#Play.Current.Album", _station.Album);  
                 }
                 else if (!string.IsNullOrEmpty(_nowPlaying.Name) &&
                   _station.Artist.Equals(curArtist, StringComparison.CurrentCultureIgnoreCase) && 
                   _station.Song.Equals(curTitle, StringComparison.CurrentCultureIgnoreCase) && 
-                  _nowPlaying.Name.Equals(curAlbum, StringComparison.CurrentCultureIgnoreCase))
+                  _nowPlaying.Name.ToLowerInvariant().Contains(curAlbum.ToLowerInvariant()))
                 {
                   GUIPropertyManager.SetProperty("#Play.Current.Album", _station.Album);  
                 }

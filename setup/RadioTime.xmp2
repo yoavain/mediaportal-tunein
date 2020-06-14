@@ -395,7 +395,7 @@ Click Next to continue or Cancel to exit Setup.</Value>
     <Name>RadioTime</Name>
     <Id>71cc3381-de92-482d-9556-7e86f67f8067</Id>
     <Author>Dukus; (released by yoavain, tuned by ajs)</Author>
-    <HomePage>https://github.com/yoavain/mediaportal-tunein</HomePage>
+    <HomePage>https://github.com/andrewjswan/mediaportal-tunein</HomePage>
     <ForumPage>http://forum.team-mediaportal.com/forums/radiotime.666/</ForumPage>
     <UpdateUrl>https://raw.githubusercontent.com/andrewjswan/mediaportal-tunein/master/setup/update.xml</UpdateUrl>
     <Version>
@@ -405,11 +405,10 @@ Click Next to continue or Cancel to exit Setup.</Value>
       <Revision>0</Revision>
     </Version>
     <ExtensionDescription>Plugin for browse and play more that 100.000 online radio stations from tunein.com</ExtensionDescription>
-    <VersionDescription>Compatibility for 1.16 Pre Release
-Internal fixes</VersionDescription>
+    <VersionDescription>Internal fixes and tuning</VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
     <OnlineLocation>https://raw.githubusercontent.com/andrewjswan/mediaportal-tunein/master/setup/builds/RadioTime-{VERSION}.MPE1</OnlineLocation>
-    <ReleaseDate>2017-11-15T22:38:05</ReleaseDate>
+    <ReleaseDate>2020-06-14T22:38:05</ReleaseDate>
     <Tags>radio, online</Tags>
     <Location>builds\RadioTime-MAJOR.MINOR.BUILD.REVISION.MPE1</Location>
     <Params>
