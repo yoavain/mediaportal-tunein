@@ -142,7 +142,7 @@
         <VersionDescription>Compatibility for 1.16 Pre Release
 Internal fixes</VersionDescription>
         <DevelopmentStatus>Stable</DevelopmentStatus>
-        <OnlineLocation>https://github.com/andrewjswan/mediaportal-tunein/raw/master/setup/builds/RadioTime-1.5.0.117.MPE1</OnlineLocation>
+        <OnlineLocation>https://raw.githubusercontent.com/andrewjswan/mediaportal-tunein/master/setup/builds/RadioTime-1.5.0.117.MPE1</OnlineLocation>
         <ReleaseDate>2017-11-15T20:37:10.6153276+02:00</ReleaseDate>
         <Tags>radio, online</Tags>
         <Location>builds\RadioTime-MAJOR.MINOR.BUILD.REVISION.MPE1</Location>
@@ -316,13 +316,13 @@ Internal fixes</VersionDescription>
           <Major>1</Major>
           <Minor>5</Minor>
           <Build>0</Build>
-          <Revision>0</Revision>
+          <Revision>120</Revision>
         </Version>
         <ExtensionDescription>Plugin for browse and play more that 100.000 online radio stations from tunein.com</ExtensionDescription>
         <VersionDescription>Internal fixes and tuning</VersionDescription>
         <DevelopmentStatus>Stable</DevelopmentStatus>
-        <OnlineLocation>https://raw.githubusercontent.com/andrewjswan/mediaportal-tunein/master/setup/builds/RadioTime-1.5.0.0.MPE1</OnlineLocation>
-        <ReleaseDate>2020-06-14T19:21:02.7976151+03:00</ReleaseDate>
+        <OnlineLocation>https://raw.githubusercontent.com/andrewjswan/mediaportal-tunein/master/setup/builds/RadioTime-1.5.0.120.MPE1</OnlineLocation>
+        <ReleaseDate>2020-06-14T19:29:26.3674307+03:00</ReleaseDate>
         <Tags>radio, online</Tags>
         <Location>builds\RadioTime-MAJOR.MINOR.BUILD.REVISION.MPE1</Location>
         <Params>
